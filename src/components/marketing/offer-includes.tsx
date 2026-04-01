@@ -1,17 +1,34 @@
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 
-const items = [
-  'Responsywna strona (mobile + desktop)',
-  'Wykonanie projektu',
-  'Hosting',
-  'Konfiguracja domeny',
-  'SEO',
-  'Formularz kontaktowy',
-  'SSL (https)',
-  'Kod źródłowy na GitHub',
-  'Dokumentacja',
-  '30 dni darmowych poprawek',
+const groups = [
+  {
+    title: 'Gotowa strona, która działa',
+    items: [
+      'Strona dopasowana do Twojej firmy i oferty',
+      'Działa płynnie na telefonie i komputerze',
+      'Szybkie ładowanie (klient nie ucieka po 2 sekundach)',
+      'Czytelna prezentacja usług + jasny kontakt',
+    ],
+  },
+  {
+    title: 'Wszystko ogarnięte za Ciebie',
+    items: [
+      'Hosting i domena skonfigurowane od A do Z',
+      'Certyfikat bezpieczeństwa (https)',
+      'Formularz kontaktowy gotowy do użycia',
+      'Podstawowe SEO (żeby można było Cię znaleźć w Google)',
+    ],
+  },
+  {
+    title: 'Bezpieczny start i brak stresu',
+    items: [
+      '30 dni darmowych poprawek po wdrożeniu',
+      'Pomoc w przygotowaniu treści (nie zostajesz z tym sam)',
+      'Strona gotowa do dalszej rozbudowy',
+      'Pełna kontrola — strona należy do Ciebie',
+    ],
+  },
 ];
 
 export function OfferIncludes() {
@@ -19,23 +36,25 @@ export function OfferIncludes() {
     <section className="bg-zinc-50 py-24">
       <Container>
         <SectionHeading
-          title="Nasza oferta - tworzenie stron www"
+          title="Nasza oferta — tworzenie stron WWW"
           subtitle="Wszystko czego potrzebujesz."
         />
-        <div className="mx-auto max-w-3xl">
-          <ul className="grid gap-3 sm:grid-cols-2">
-            {items.map((item) => (
-              <li
-                key={item}
-                className="flex items-center gap-3 rounded-lg border border-zinc-200 bg-white px-4 py-3 text-sm text-zinc-700 shadow-sm"
-              >
-                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-900 text-xs text-white">
-                  ✓
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
+        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-3">
+          {groups.map((group) => (
+            <div key={group.title} className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm">
+              <h3 className="mb-4 text-sm font-semibold text-zinc-900">{group.title}</h3>
+              <ul className="flex flex-col gap-2">
+                {group.items.map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-zinc-900 text-[10px] text-white">
+                      ✓
+                    </span>
+                    <span className="text-sm text-zinc-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </Container>
     </section>

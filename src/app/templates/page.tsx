@@ -22,11 +22,10 @@ export default function TemplatesPage() {
             ← Strona główna
           </Link>
           <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
-            Szablony do wyboru
+            Co przykładowo możesz otrzymać
           </h1>
           <p className="mt-3 max-w-xl text-lg text-zinc-500">
-            Każde demo to działająca strona — nie mockup. Klikaj, scrolluj,
-            oceniaj. Gdy wybierzesz styl, resztą zajmuję się ja.
+            Kliknij i obejrzyj pełne demo — nie screenshot, tylko działająca strona.
           </p>
         </div>
 
