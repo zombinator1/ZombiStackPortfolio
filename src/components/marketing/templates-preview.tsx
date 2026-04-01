@@ -11,7 +11,7 @@ export function TemplatesPreview() {
     <section id="szablony" className="bg-zinc-50 py-24">
       <Container>
         <SectionHeading
-          title="Przykładowe szablony"
+          title="Co przykładowo możesz otrzymać"
           subtitle="Kliknij i obejrzyj pełne demo — nie screenshot, tylko działająca strona."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

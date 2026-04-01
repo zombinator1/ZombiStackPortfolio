@@ -3,14 +3,14 @@ import { SectionHeading } from '@/components/ui/section-heading';
 
 const items = [
   'Responsywna strona (mobile + desktop)',
-  'Hosting przez rok w cenie',
-  'Własna domena .pl lub .com',
-  'Podstawowe SEO (tytuły, opisy, schema)',
+  'Wykonanie projektu',
+  'Hosting',
+  'Konfiguracja domeny',
+  'SEO',
   'Formularz kontaktowy',
-  'Google Analytics 4',
   'SSL (https)',
-  'Szybkość — Core Web Vitals w zieleni',
   'Kod źródłowy na GitHub',
+  'Dokumentacja',
   '30 dni darmowych poprawek',
 ];
 
@@ -19,8 +19,8 @@ export function OfferIncludes() {
     <section className="bg-zinc-50 py-24">
       <Container>
         <SectionHeading
-          title="Co zawiera strona"
-          subtitle="Wszystko czego potrzebuje lokalna firma — bez zbędnych dodatków."
+          title="Nasza oferta - tworzenie stron www"
+          subtitle="Wszystko czego potrzebujesz."
         />
         <div className="mx-auto max-w-3xl">
           <ul className="grid gap-3 sm:grid-cols-2">

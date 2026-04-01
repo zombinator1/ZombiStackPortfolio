@@ -15,10 +15,10 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <OfferIncludes />
       <TemplatesPreview />
       <ProcessSteps />
-      <GoogleReviews />
-      <OfferIncludes />
+      {/* <GoogleReviews /> */}
       <ValueProps />
       <CtaBand />
     </>

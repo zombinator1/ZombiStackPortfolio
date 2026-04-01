@@ -4,21 +4,33 @@ import { SectionHeading } from '@/components/ui/section-heading';
 const steps = [
   {
     number: '01',
-    title: 'Wybierasz szablon',
+    title: 'Wysłanie zapytania',
     description:
-      'Przeglądasz demo i wskazujesz styl, który pasuje do Twojej firmy. Możesz też opisać słowami, czego potrzebujesz.',
+      'Skontaktuj się z nami telefonicznie lub poprzez e-mail i opisz swoje potrzeby.',
   },
   {
     number: '02',
-    title: 'Dostarczasz treści',
+    title: 'Kontakt z naszej strony',
     description:
-      'Wysyłasz mi logo, krótki opis usług, zdjęcia i dane kontaktowe. Nie musisz pisać elaboratów — pomogę zadając pytania.',
+      'Skontaktujemy się z Tobą w możliwie najkrótszym terminie. Dopytamy o szczegóły, które pozwolą zaproponować wersje demonstracyjną.',
   },
   {
     number: '03',
-    title: 'Strona jest gotowa',
+    title: 'Prezentacja wersji demo',
+    description:
+      'Prezentujemy wersję demonstracyjną Twojej strony, dogrywamy szczegóły i nanosimy poprawki. Dopiero po Twojej akceptacji przechodzimy do realizacji.',
+  },
+  {
+    number: '04',
+    title: 'Dostawa strony',
     description:
       'W ciągu 7 dni dostajesz działającą stronę na swojej domenie. Szybka, responsywna, z podstawowym SEO.',
+  },
+  {
+    number: '05',
+    title: 'Wsparcie techniczne i darmowe modyfikacje.',
+    description:
+      'Jesteśmy w kontakcie i oferujemy wsparcie techniczne oraz darmowe modyfikacje przez 90 dni.',
   },
 ];
 
@@ -28,7 +40,7 @@ export function ProcessSteps() {
       <Container>
         <SectionHeading
           title="Jak wygląda współpraca"
-          subtitle="Trzy kroki dzielą Cię od nowej strony."
+          subtitle="Te kroki dzielą Cię od nowej strony."
         />
         <div className="grid gap-8 sm:grid-cols-3">
           {steps.map((step) => (

@@ -17,14 +17,6 @@ export function Hero() {
             Wybierasz szablon z gotowego demo, dostarczasz treści i logo —
             Twoja strona jest online. Bez miesięcy czekania, bez ceny agencji.
           </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button href="/templates" size="lg">
-              Sprawdź demo szablonów
-            </Button>
-            <Button href="mailto:kontakt@zombistack.pl" size="lg" variant="secondary">
-              Napisz do mnie
-            </Button>
-          </div>
         </div>
       </Container>
     </section>
