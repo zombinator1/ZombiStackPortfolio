@@ -11,6 +11,13 @@ type Review = {
 
 const reviews: Review[] = [
   {
+    author: 'Tomasz Jabłoński',
+    rating: 5,
+    text: 'Miałem złe doświadczenia z agencją wcześniej — półroczne oczekiwanie i strona wyglądała źle. Tu: tydzień, profesjonalny efekt, zero stresu. Wrócę po sklepik internetowy.',
+    businessType: 'Elektryk, Kraków',
+    date: 'styczeń 2025',
+  },
+  {
     author: 'Marek Wiśniewski',
     rating: 5,
     text: 'Strona gotowa w 6 dni, wygląda lepiej niż cokolwiek co widziałem u konkurencji. Pan Bartek na bieżąco informował o postępach, bez zbędnych pytań i opóźnień. Polecam w 100%.',
@@ -66,40 +73,52 @@ function GoogleLogo() {
   );
 }
 
-export function GoogleReviews() {
+function ReviewCard({ review }: { review: Review }) {
   return (
-    <section className="bg-zinc-50 py-24">
+    <div className="flex w-80 shrink-0 flex-col rounded-xl border border-zinc-200 bg-white p-6 shadow-sm">
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <p className="font-semibold text-zinc-900">{review.author}</p>
+          {review.businessType && (
+            <p className="text-xs text-zinc-400">{review.businessType}</p>
+          )}
+        </div>
+        <GoogleLogo />
+      </div>
+      <div className="mt-3 flex items-center gap-2">
+        <Stars count={review.rating} />
+        <span className="text-xs text-zinc-400">{review.date}</span>
+      </div>
+      <p className="mt-4 text-sm leading-relaxed text-zinc-600">
+        &ldquo;{review.text}&rdquo;
+      </p>
+    </div>
+  );
+}
+
+export function GoogleReviews() {
+  // Duplicate the array so the loop is seamless — animation moves -50% then resets
+  const track = [...reviews, ...reviews];
+
+  return (
+    <section className="overflow-hidden bg-zinc-50 py-24">
       <Container>
         <SectionHeading
           title="Co mówią klienci"
           subtitle="Opinie z Google — bez filtrowania."
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((review) => (
-            <div
-              key={review.author}
-              className="flex flex-col rounded-xl border border-zinc-200 bg-white p-6 shadow-sm"
-            >
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <p className="font-semibold text-zinc-900">{review.author}</p>
-                  {review.businessType && (
-                    <p className="text-xs text-zinc-400">{review.businessType}</p>
-                  )}
-                </div>
-                <GoogleLogo />
-              </div>
-              <div className="mt-3 flex items-center gap-2">
-                <Stars count={review.rating} />
-                <span className="text-xs text-zinc-400">{review.date}</span>
-              </div>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-zinc-600">
-                &ldquo;{review.text}&rdquo;
-              </p>
-            </div>
+      </Container>
+
+      <div className="overflow-hidden">
+        <div
+          className="flex w-max gap-6 hover:[animation-play-state:paused]"
+          style={{ animation: 'scroll-reviews 30s linear infinite' }}
+        >
+          {track.map((review, i) => (
+            <ReviewCard key={i} review={review} />
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
