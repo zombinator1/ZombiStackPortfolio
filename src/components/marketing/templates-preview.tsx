@@ -11,7 +11,7 @@ export function TemplatesPreview() {
     <section id="szablony" className="bg-zinc-50 py-24">
       <Container>
         <SectionHeading
-          title="Gotowe szablony do wyboru"
+          title="Przykładowe szablony"
           subtitle="Kliknij i obejrzyj pełne demo — nie screenshot, tylko działająca strona."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -20,8 +20,8 @@ export function TemplatesPreview() {
           ))}
         </div>
         <p className="mt-10 text-center text-sm text-zinc-400">
-          Więcej szablonów w przygotowaniu. Nie widzisz swojej branży?{' '}
-          <Link href="mailto:kontakt@zombistack.pl" className="underline hover:text-zinc-600">
+          {/* To tylko przykłady{' '} */}
+          <Link href="/#kontakt" className="underline hover:text-zinc-600">
             Napisz — zrobimy coś na miarę.
           </Link>
         </p>

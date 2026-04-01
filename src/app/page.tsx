@@ -8,7 +8,7 @@ import { ValueProps } from '@/components/marketing/value-props';
 import { CtaBand } from '@/components/marketing/cta-band';
 
 export const metadata: Metadata = {
-  title: 'Strony WWW dla lokalnych firm — szybko i bez przepłacania',
+  title: 'Strony WWW dla firm — szybko i bez przepłacania',
 };
 
 export default function HomePage() {

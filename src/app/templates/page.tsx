@@ -8,7 +8,7 @@ import { getTemplates } from '@/lib/templates';
 export const metadata: Metadata = {
   title: 'Szablony demo',
   description:
-    'Przeglądaj gotowe szablony stron WWW. Kliknij i obejrzyj działające demo przed podjęciem decyzji.',
+    'Przeglądaj przkładowe strony WWW. Kliknij i obejrzyj działające demo przed podjęciem decyzji.',
 };
 
 export default function TemplatesPage() {

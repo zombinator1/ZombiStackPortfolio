@@ -19,9 +19,9 @@ export function CtaBand() {
 
           {/* Headline */}
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Twoja strona online
+            Powiedz, jakiej strony potrzebujesz.
             <br />
-            <span className="text-zinc-400">w 7 dni.</span>
+            {/* <span className="text-zinc-400">w 7 dni.</span> */}
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">

@@ -7,7 +7,7 @@ export function Hero() {
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-zinc-400">
-            Strony WWW dla lokalnych firm
+            Strony WWW dla firm
           </p>
           <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">
             Profesjonalna strona{' '}
