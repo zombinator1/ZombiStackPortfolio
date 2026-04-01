@@ -25,8 +25,7 @@ export function CtaBand() {
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
-            Powiedz mi czym się zajmujesz — dobiorę szablon i przygotuję wycenę.
-            Zero formalności, zero zaliczki przed zobaczeniem projektu.
+            Wyślij 2–3 zdania o firmie → pokażę Ci najlepszy wariant
           </p>
 
           {/* Stats row */}

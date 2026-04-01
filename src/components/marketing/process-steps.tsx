@@ -4,33 +4,21 @@ import { SectionHeading } from '@/components/ui/section-heading';
 const steps = [
   {
     number: '01',
-    title: 'Wysłanie zapytania',
+    title: 'Opisz swoją firmę',
     description:
-      'Skontaktuj się z nami telefonicznie lub poprzez e-mail i opisz swoje potrzeby.',
+      'Wyślij 2–3 zdania: czym się zajmujesz, dla kogo i gdzie działasz. Jeśli masz starą stronę albo Facebooka — podeślij link.',
   },
   {
     number: '02',
-    title: 'Kontakt z naszej strony',
+    title: 'Dostajesz gotowy kierunek',
     description:
-      'Skontaktujemy się z Tobą w możliwie najkrótszym terminie. Dopytamy o szczegóły, które pozwolą zaproponować wersje demonstracyjną.',
+    'Na podstawie tego co wyślesz, proponuję konkretny szablon dopasowany do Twojej branży. Widzisz od razu, jak będzie wyglądać Twoja strona — bez zgadywania i bez niespodzianek.',
   },
   {
     number: '03',
-    title: 'Prezentacja wersji demo',
+    title: 'Ja ogarniam resztę',
     description:
-      'Prezentujemy wersję demonstracyjną Twojej strony, dogrywamy szczegóły i nanosimy poprawki. Dopiero po Twojej akceptacji przechodzimy do realizacji.',
-  },
-  {
-    number: '04',
-    title: 'Dostawa strony',
-    description:
-      'W ciągu 7 dni dostajesz działającą stronę na swojej domenie. Szybka, responsywna, z podstawowym SEO.',
-  },
-  {
-    number: '05',
-    title: 'Wsparcie techniczne i darmowe modyfikacje.',
-    description:
-      'Jesteśmy w kontakcie i oferujemy wsparcie techniczne oraz darmowe modyfikacje przez 90 dni.',
+      'Dostosowuję stronę pod Twoją firmę, uzupełniam treści i publikuję ją online. Ty nie musisz ogarniać technikaliów ani brać udziału w dziesiątkach decyzji.',
   },
 ];
 

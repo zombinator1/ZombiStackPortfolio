@@ -12,16 +12,6 @@ const reasons = [
     description:
       'Zamiast tygodni projektowania — zaczynamy od sprawdzonej bazy. Czas do startu liczymy w dniach, nie miesiącach.',
   },
-  {
-    title: 'Niższy koszt, ta sama jakość',
-    description:
-      'Nie płacisz za wymyślanie układu od zera. Koszt szablonu rozkłada się na wielu klientów, jakość pozostaje wysoka.',
-  },
-  {
-    title: 'Gotowa na wzrost',
-    description:
-      'Potrzebujesz za rok nowej podstrony albo sklepu? Kod jest czysty i gotowy do rozbudowy. Bez przepisywania od zera.',
-  },
 ];
 
 export function ValueProps() {
