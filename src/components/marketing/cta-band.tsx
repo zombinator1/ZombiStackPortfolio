@@ -11,15 +11,11 @@ export function CtaBand() {
             Gotowy na nową stronę?
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Napisz do mnie, powiedz czym się zajmujesz — wskażę Ci szablon,
+            Napisz do mnie, powiedz czym się zajmujesz — wskażę Ci szablon
             który pasuje do Twojej firmy. Bez zobowiązań.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button
-              href={`mailto:${siteConfig.contact.email}`}
-              size="lg"
-              className="bg-white text-zinc-900 hover:bg-zinc-100 border-white"
-            >
+            <Button href={`mailto:${siteConfig.contact.email}`} size="lg" variant="light">
               Napisz e-mail
             </Button>
             <Button href="/templates" size="lg" variant="ghost" className="text-zinc-300 hover:bg-zinc-800 hover:text-white">

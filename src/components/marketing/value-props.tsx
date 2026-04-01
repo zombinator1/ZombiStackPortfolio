@@ -1,26 +1,26 @@
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 
-const props = [
+const reasons = [
   {
     title: 'Widzisz co kupujesz',
     description:
       'Demo to działająca strona, nie mockup w Figmie. Klikasz, scrollujesz, oceniasz. Zero niespodzianek po opłaceniu faktury.',
   },
   {
-    title: 'Szybciej niż „od zera"',
+    title: 'Gotowe w 7 dni, nie 7 tygodni',
     description:
       'Zamiast tygodni projektowania — zaczynamy od sprawdzonej bazy. Czas do startu liczymy w dniach, nie miesiącach.',
   },
   {
-    title: 'Niższy koszt, wyższa jakość',
+    title: 'Niższy koszt, ta sama jakość',
     description:
-      'Nie płacisz za wymyślanie układu strony od nowa. Koszt szablonu rozkłada się na wielu klientów, jakość zostaje wysoka.',
+      'Nie płacisz za wymyślanie układu od zera. Koszt szablonu rozkłada się na wielu klientów, jakość pozostaje wysoka.',
   },
   {
-    title: 'Łatwa rozbudowa',
+    title: 'Gotowa na wzrost',
     description:
-      'Potrzebujesz za rok nowej podstrony albo sklepu? Kod jest czysty i gotowy do dalszego rozwoju. Bez przepisywania od zera.',
+      'Potrzebujesz za rok nowej podstrony albo sklepu? Kod jest czysty i gotowy do rozbudowy. Bez przepisywania od zera.',
   },
 ];
 
@@ -29,14 +29,14 @@ export function ValueProps() {
     <section className="bg-white py-24">
       <Container>
         <SectionHeading
-          title="Dlaczego model oparty na szablonach"
-          subtitle="To nie kompromis — to rozsądek."
+          title="Dlaczego klienci to wybierają"
+          subtitle="Szybciej, taniej i bez niespodzianek — nie dlatego że tak twierdzę, ale dlatego że tak działa ten model."
         />
-        <div className="grid gap-8 sm:grid-cols-2">
-          {props.map((prop) => (
-            <div key={prop.title} className="rounded-xl border border-zinc-100 p-6">
-              <h3 className="mb-2 text-base font-semibold text-zinc-900">{prop.title}</h3>
-              <p className="text-sm leading-relaxed text-zinc-500">{prop.description}</p>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {reasons.map((reason) => (
+            <div key={reason.title} className="rounded-xl border border-zinc-100 p-6">
+              <h3 className="mb-2 text-base font-semibold text-zinc-900">{reason.title}</h3>
+              <p className="text-sm leading-relaxed text-zinc-500">{reason.description}</p>
             </div>
           ))}
         </div>
