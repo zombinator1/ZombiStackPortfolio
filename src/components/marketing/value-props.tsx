@@ -22,10 +22,10 @@ export function ValueProps() {
           title="Dlaczego klienci to wybierają"
           subtitle="Szybciej, taniej i bez niespodzianek — nie dlatego że tak twierdzę, ale dlatego że tak działa ten model."
         />
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-5 sm:grid-cols-2">
           {reasons.map((reason) => (
             <div key={reason.title} className="rounded-xl border border-zinc-200 bg-white p-8 shadow-sm">
-              <h3 className="mb-2 text-base font-semibold text-zinc-900">{reason.title}</h3>
+              <h3 className="mb-3 text-lg font-semibold tracking-tight text-zinc-900">{reason.title}</h3>
               <p className="text-sm leading-relaxed text-zinc-500">{reason.description}</p>
             </div>
           ))}

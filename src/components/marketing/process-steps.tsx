@@ -12,7 +12,7 @@ const steps = [
     number: '02',
     title: 'Dostajesz gotowy kierunek',
     description:
-    'Na podstawie tego co wyślesz, proponuję konkretny szablon dopasowany do Twojej branży. Widzisz od razu, jak będzie wyglądać Twoja strona — bez zgadywania i bez niespodzianek.',
+      'Na podstawie tego co wyślesz, proponuję konkretny szablon dopasowany do Twojej branży. Widzisz od razu, jak będzie wyglądać Twoja strona — bez zgadywania i bez niespodzianek.',
   },
   {
     number: '03',
@@ -30,11 +30,15 @@ export function ProcessSteps() {
           title="Jak wygląda współpraca"
           subtitle="Te kroki dzielą Cię od nowej strony."
         />
-        <div className="grid gap-8 sm:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-3">
           {steps.map((step) => (
-            <div key={step.number} className="relative rounded-xl border border-zinc-100 bg-zinc-50 p-6">
-              <p className="mb-3 text-4xl font-black text-zinc-200">{step.number}</p>
-              <h3 className="mb-2 text-lg font-semibold text-zinc-900">{step.title}</h3>
+            <div key={step.number} className="rounded-xl border border-zinc-100 bg-zinc-50/70 p-8">
+              <p className="mb-5 text-5xl font-black leading-none tracking-tighter text-zinc-200">
+                {step.number}
+              </p>
+              <h3 className="mb-2 text-base font-semibold tracking-tight text-zinc-900">
+                {step.title}
+              </h3>
               <p className="text-sm leading-relaxed text-zinc-500">{step.description}</p>
             </div>
           ))}

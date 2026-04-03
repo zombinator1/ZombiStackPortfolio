@@ -39,17 +39,19 @@ export function OfferIncludes() {
           title="Nasza oferta — tworzenie stron WWW"
           subtitle="Wszystko czego potrzebujesz."
         />
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-3">
           {groups.map((group) => (
-            <div key={group.title} className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm">
-              <h3 className="mb-4 text-sm font-semibold text-zinc-900">{group.title}</h3>
-              <ul className="flex flex-col gap-2">
+            <div key={group.title} className="rounded-xl border border-zinc-200 bg-white p-7 shadow-sm">
+              <h3 className="mb-5 border-b border-zinc-100 pb-4 text-[15px] font-semibold text-zinc-900">
+                {group.title}
+              </h3>
+              <ul className="flex flex-col gap-3">
                 {group.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5">
-                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-zinc-900 text-[10px] text-white">
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-zinc-900 text-[9px] font-bold text-white">
                       ✓
                     </span>
-                    <span className="text-sm text-zinc-600">{item}</span>
+                    <span className="text-sm leading-snug text-zinc-600">{item}</span>
                   </li>
                 ))}
               </ul>
