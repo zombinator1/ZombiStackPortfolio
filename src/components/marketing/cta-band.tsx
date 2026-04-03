@@ -1,4 +1,5 @@
 import { Container } from '@/components/ui/container';
+import { ContactForm } from '@/components/marketing/contact-form';
 
 const reassurances = [
   'Odpowiadam w ciągu 24h',
@@ -37,43 +38,8 @@ export function CtaBand() {
             </ul>
           </div>
 
-          {/* Right — form (UI only) */}
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-8">
-            <div className="flex flex-col gap-5">
-              <div>
-                <label className="mb-1.5 block text-xs font-medium text-zinc-400">
-                  Opisz firmę i czego potrzebujesz
-                </label>
-                <textarea
-                  rows={5}
-                  placeholder="Np. Jestem elektrykiem w Gdańsku, obsługuję klientów indywidualnych i firmy. Chcę mieć stronę żeby ludzie mogli mnie łatwo znaleźć i się ze mną skontaktować."
-                  className="w-full resize-none rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-zinc-500"
-                />
-              </div>
-              <div>
-                <label className="mb-1.5 block text-xs font-medium text-zinc-400">
-                  Imię i adres e-mail
-                </label>
-                <input
-                  type="text"
-                  placeholder="Jan Kowalski, jan@firma.pl"
-                  className="w-full rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-zinc-500"
-                />
-              </div>
-              <button
-                type="button"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3.5 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-100"
-              >
-                Wyślij wiadomość
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-            <p className="mt-4 text-center text-xs text-zinc-600">
-              Nie sprzedaję danych. Nie wysyłam spamu.
-            </p>
-          </div>
+          {/* Right */}
+          <ContactForm />
 
         </div>
       </Container>
