@@ -33,7 +33,7 @@ const groups = [
 
 export function OfferIncludes() {
   return (
-    <section className="bg-zinc-50 py-24">
+    <section className="bg-white py-24">
       <Container>
         <SectionHeading
           title="Nasza oferta — tworzenie stron WWW"

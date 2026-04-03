@@ -16,7 +16,7 @@ const reasons = [
 
 export function ValueProps() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-zinc-50 py-24">
       <Container>
         <SectionHeading
           title="Dlaczego klienci to wybierają"
@@ -24,7 +24,7 @@ export function ValueProps() {
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {reasons.map((reason) => (
-            <div key={reason.title} className="rounded-xl border border-zinc-100 p-6">
+            <div key={reason.title} className="rounded-xl border border-zinc-200 bg-white p-8 shadow-sm">
               <h3 className="mb-2 text-base font-semibold text-zinc-900">{reason.title}</h3>
               <p className="text-sm leading-relaxed text-zinc-500">{reason.description}</p>
             </div>

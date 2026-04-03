@@ -32,8 +32,8 @@ export function ProcessSteps() {
         />
         <div className="grid gap-8 sm:grid-cols-3">
           {steps.map((step) => (
-            <div key={step.number} className="relative">
-              <p className="mb-3 text-4xl font-black text-zinc-100">{step.number}</p>
+            <div key={step.number} className="relative rounded-xl border border-zinc-100 bg-zinc-50 p-6">
+              <p className="mb-3 text-4xl font-black text-zinc-200">{step.number}</p>
               <h3 className="mb-2 text-lg font-semibold text-zinc-900">{step.title}</h3>
               <p className="text-sm leading-relaxed text-zinc-500">{step.description}</p>
             </div>
