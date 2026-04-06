@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { TemplatesPreview } from '@/components/marketing/templates-preview';
+import { DemosPreview } from '@/components/marketing/demos-preview';
 import { ProcessSteps } from '@/components/marketing/process-steps';
 import { ValueProps } from '@/components/marketing/value-props';
 import { CtaBand } from '@/components/marketing/cta-band';
@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       <PremiumHero />
       <OfferIncludes />
-      <TemplatesPreview />
+      <DemosPreview />
       <ProcessSteps />
       {/* <GoogleReviews /> */}
       <ValueProps />
