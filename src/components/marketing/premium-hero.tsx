@@ -58,8 +58,8 @@ function HeroHeading() {
       </h1>
 
       <p className="max-w-xl text-lg leading-8 text-zinc-600 sm:text-xl">
-        Projektuję szybkie, estetyczne strony dla małych firm i specjalistów.
-        Bez chaosu, bez przeładowania, z naciskiem na czytelność, zaufanie i kontakt od klienta.
+        Bez przeładowania, bez przypadkowego designu i bez „tanich” sekcji.
+        Tworzę estetyczne strony usługowe, które jasno pokazują ofertę i prowadzą klienta do kontaktu.
       </p>
     </div>
   );
