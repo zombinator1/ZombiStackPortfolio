@@ -7,6 +7,7 @@ import { OfferIncludes } from '@/components/marketing/offer-includes';
 import { ValueProps } from '@/components/marketing/value-props';
 import { CtaBand } from '@/components/marketing/cta-band';
 import { PremiumHero } from '@/components/marketing/premium-hero';
+import { PremiumOfferIncludes } from '@/components/marketing/premium-offer-includes';
 
 export const metadata: Metadata = {
   title: 'Strony WWW dla firm — szybko i bez przepłacania',
@@ -16,7 +17,7 @@ export default function HomePage() {
   return (
     <>
       <PremiumHero />
-      <OfferIncludes />
+      <PremiumOfferIncludes />
       <TemplatesPreview />
       <ProcessSteps />
       {/* <GoogleReviews /> */}
