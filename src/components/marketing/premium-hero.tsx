@@ -29,7 +29,7 @@ function HeroBadge() {
   return (
     <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-zinc-200/80 bg-white/90 px-4 py-2 text-sm font-medium text-zinc-700 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur">
       <span className="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600" />
-      Strony WWW dla firm, które mają wyglądać profesjonalnie
+      Profesjonalne strony WWW dla firm
     </div>
   );
 }
@@ -40,7 +40,7 @@ function HeroHeading() {
       <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-zinc-900 sm:text-6xl lg:text-7xl">
         Nowoczesna strona, która
         <span className="block bg-gradient-to-r from-zinc-950 via-slate-900 to-indigo-800 bg-clip-text text-transparent">
-          wygląda premium i sprzedaje usługi
+          zdobywa klientów
         </span>
       </h1>
 
