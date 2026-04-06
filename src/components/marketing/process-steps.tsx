@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { sectionAccents } from '@/config/accents';
 
 const steps = [
   {
@@ -22,26 +23,7 @@ const steps = [
   },
 ];
 
-const accents = [
-  {
-    line: 'via-indigo-400/60',
-    glow: 'from-indigo-500/10 via-transparent to-transparent',
-    orb: 'bg-indigo-300/16',
-    badge: 'from-zinc-950 via-slate-900 to-indigo-900',
-  },
-  {
-    line: 'via-sky-400/60',
-    glow: 'from-sky-500/10 via-transparent to-transparent',
-    orb: 'bg-sky-300/16',
-    badge: 'from-zinc-950 via-slate-900 to-sky-900',
-  },
-  {
-    line: 'via-violet-400/60',
-    glow: 'from-violet-500/10 via-transparent to-transparent',
-    orb: 'bg-violet-300/16',
-    badge: 'from-zinc-950 via-slate-900 to-violet-900',
-  },
-];
+const accents = sectionAccents;
 
 export function ProcessSteps() {
   return (

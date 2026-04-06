@@ -1,6 +1,7 @@
 import { BackgroundDecor } from '@/components/background-decor';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { sectionAccents } from '@/config/accents';
 
 const groups = [
   {
@@ -32,32 +33,7 @@ const groups = [
   },
 ];
 
-const accents = [
-  {
-    badge: 'from-zinc-950 via-slate-900 to-indigo-900',
-    check: 'from-zinc-900 to-indigo-800',
-    glow: 'from-indigo-500/10 via-transparent to-transparent',
-    orb: 'bg-indigo-400/14',
-    line: 'via-indigo-400/65',
-    ring: 'ring-indigo-500/8',
-  },
-  {
-    badge: 'from-zinc-950 via-slate-900 to-sky-900',
-    check: 'from-slate-900 to-sky-800',
-    glow: 'from-sky-500/10 via-transparent to-transparent',
-    orb: 'bg-sky-400/14',
-    line: 'via-sky-400/65',
-    ring: 'ring-sky-500/8',
-  },
-  {
-    badge: 'from-zinc-950 via-slate-900 to-violet-900',
-    check: 'from-slate-900 to-violet-800',
-    glow: 'from-violet-500/10 via-transparent to-transparent',
-    orb: 'bg-violet-400/14',
-    line: 'via-violet-400/65',
-    ring: 'ring-violet-500/8',
-  },
-];
+const accents = sectionAccents;
 
 export function OfferIncludes() {
   return (

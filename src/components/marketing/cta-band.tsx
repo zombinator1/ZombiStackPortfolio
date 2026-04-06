@@ -29,7 +29,7 @@ export function CtaBand() {
             <ul className="mt-8 flex flex-col gap-3.5">
               {reassurances.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-sm text-zinc-400">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-zinc-700 text-[10px] text-zinc-500">
+                  <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-zinc-700 to-indigo-800 text-[10px] font-bold text-white shadow-[0_4px_12px_rgba(15,23,42,0.3)]">
                     ✓
                   </span>
                   {item}

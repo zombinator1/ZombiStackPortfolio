@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { sectionAccents } from '@/config/accents';
 
 const reasons = [
   {
@@ -14,20 +15,7 @@ const reasons = [
   },
 ];
 
-const accents = [
-  {
-    badge: 'from-zinc-950 via-slate-900 to-indigo-900',
-    glow: 'from-indigo-500/10 via-transparent to-transparent',
-    line: 'via-indigo-400/60',
-    orb: 'bg-indigo-300/16',
-  },
-  {
-    badge: 'from-zinc-950 via-slate-900 to-violet-900',
-    glow: 'from-violet-500/10 via-transparent to-transparent',
-    line: 'via-violet-400/60',
-    orb: 'bg-violet-300/16',
-  },
-];
+const accents = sectionAccents;
 
 export function ValueProps() {
   return (

@@ -10,7 +10,7 @@ export function SiteHeader() {
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="text-lg font-bold text-zinc-900 hover:text-zinc-700"
+            className="bg-gradient-to-r from-zinc-950 to-indigo-800 bg-clip-text text-lg font-bold text-transparent"
           >
             {siteConfig.name}
           </Link>
