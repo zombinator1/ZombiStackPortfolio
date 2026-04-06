@@ -166,32 +166,32 @@ function StatsSection() {
 
 const services = [
   {
-    icon: '🏗️',
+    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80',
     title: 'Instalacje w nowym budownictwie',
     description: 'Kompletna instalacja elektryczna od projektu po odbiór. Dom, mieszkanie, lokal — jeden wykonawca od początku do końca.',
   },
   {
-    icon: '🔧',
-    title: 'Remonty i modernizacje',
-    description: 'Wymiana starej instalacji, dodanie nowych obwodów, przesunięcie gniazdek i włączników. Bez zbędnego kucia.',
-  },
-  {
-    icon: '⚠️',
-    title: 'Usuwanie awarii 24/7',
-    description: 'Brak prądu, przepalone bezpieczniki, iskrzące gniazdko — dojazd w ciągu 2 godzin, 7 dni w tygodniu.',
-  },
-  {
-    icon: '🔌',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80',
     title: 'Rozdzielnice i tablice',
     description: 'Montaż i wymiana rozdzielnic, zabezpieczeń RCD i liczników. Pełny certyfikat odbioru po wykonaniu.',
   },
   {
-    icon: '💡',
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80',
+    title: 'Usuwanie awarii 24/7',
+    description: 'Brak prądu, przepalone bezpieczniki, iskrzące gniazdko — dojazd w ciągu 2 godzin, 7 dni w tygodniu.',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=600&q=80',
+    title: 'Remonty i modernizacje',
+    description: 'Wymiana starej instalacji, dodanie nowych obwodów, przesunięcie gniazdek i włączników. Bez zbędnego kucia.',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80',
     title: 'Oświetlenie LED i smart home',
     description: 'Projektowanie i montaż oświetlenia LED, systemy ściemniania, inteligentne sterowanie Philips Hue / KNX.',
   },
   {
-    icon: '🚗',
+    image: 'https://images.unsplash.com/photo-1593941707882-a56bbc8fea63?auto=format&fit=crop&w=600&q=80',
     title: 'Ładowarki do aut elektrycznych',
     description: 'Montaż wallboxów i stacji ładowania dla firm i klientów indywidualnych. Dofinansowanie NFOŚiGW.',
   },
@@ -209,13 +209,23 @@ function ServicesSection() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="group rounded-2xl border border-zinc-100 bg-zinc-50/60 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-amber-200 hover:bg-amber-50/40 hover:shadow-[0_12px_40px_rgba(245,158,11,0.08)]"
+              className="group overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,23,42,0.10)]"
             >
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white text-2xl shadow-sm ring-1 ring-zinc-100 transition group-hover:ring-amber-200">
-                {s.icon}
+              <div className="relative h-44 w-full overflow-hidden bg-zinc-100">
+                <Image
+                  src={s.image}
+                  alt={s.title}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 to-transparent" />
               </div>
-              <h3 className="mb-2 font-semibold text-zinc-900">{s.title}</h3>
-              <p className="text-sm leading-relaxed text-zinc-500">{s.description}</p>
+              <div className="p-5">
+                <h3 className="mb-1.5 font-semibold text-zinc-900">{s.title}</h3>
+                <p className="text-sm leading-relaxed text-zinc-500">{s.description}</p>
+              </div>
             </div>
           ))}
         </div>
