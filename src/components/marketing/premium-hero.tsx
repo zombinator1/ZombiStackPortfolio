@@ -60,7 +60,7 @@ function HeroActions() {
   return (
     <div className="mt-10 flex flex-col gap-4 sm:flex-row">
       <Link
-        href="#szablony"
+        href="#demo"
         className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-zinc-950 via-slate-900 to-indigo-900 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(15,23,42,0.18)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.24)]"
       >
         Zobacz demo

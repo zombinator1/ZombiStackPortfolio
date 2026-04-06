@@ -27,7 +27,7 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <Button href="/templates" size="sm">
+          <Button href="/#demo" size="sm">
             Zobacz demo
           </Button>
         </div>
