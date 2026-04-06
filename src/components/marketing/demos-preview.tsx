@@ -12,6 +12,7 @@ const demos = [
     description: 'Ciemny premium design z żółtym akcentem. Hero z dużym CTA, sekcja usług, realizacje ze zdjęciami, opinie Google i formularz kontaktowy.',
     image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
     accent: 'Amber · Dark',
+    accentClass: 'bg-amber-400 text-zinc-900',
   },
   {
     href: '/demos/personal-trainer',
@@ -20,6 +21,7 @@ const demos = [
     description: 'Elegancki design w tonacji rose i stone. Sekcja o trenerze, rodzaje treningu, cennik z 3 pakietami, opinie i formularz kontaktowy.',
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
     accent: 'Rose · Premium',
+    accentClass: 'bg-rose-500 text-white',
   },
 ];
 
@@ -79,7 +81,7 @@ function DemoCard({ demo }: { demo: typeof demos[number] }) {
           unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/30 to-transparent" />
-        <div className="absolute bottom-3 left-3 rounded-full bg-amber-400 px-2.5 py-1 text-xs font-bold text-zinc-900">
+        <div className={`absolute bottom-3 left-3 rounded-full px-2.5 py-1 text-xs font-bold ${demo.accentClass}`}>
           {demo.accent}
         </div>
       </div>
