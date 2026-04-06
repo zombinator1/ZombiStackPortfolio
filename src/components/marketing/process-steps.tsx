@@ -13,7 +13,7 @@ const steps = [
     number: '02',
     title: 'Dostajesz gotowy kierunek',
     description:
-      'Na podstawie tego co wyślesz, proponuję konkretny szablon dopasowany do Twojej branży. Widzisz od razu, jak będzie wyglądać Twoja strona — bez zgadywania i bez niespodzianek.',
+      'Na podstawie tego co wyślesz, proponuję konkretny projekt dopasowany do Twojej firmy. Widzisz od razu, jak będzie wyglądać Twoja strona — bez zgadywania i bez niespodzianek.',
   },
   {
     number: '03',

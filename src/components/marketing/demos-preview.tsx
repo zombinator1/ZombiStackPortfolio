@@ -13,6 +13,14 @@ const demos = [
     image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
     accent: 'Amber · Dark',
   },
+  {
+    href: '/demos/personal-trainer',
+    name: 'Trenerka personalna',
+    category: 'Fitness & Zdrowie',
+    description: 'Elegancki design w tonacji rose i stone. Sekcja o trenerze, rodzaje treningu, cennik z 3 pakietami, opinie i formularz kontaktowy.',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
+    accent: 'Rose · Premium',
+  },
 ];
 
 export function DemosPreview() {
@@ -35,7 +43,6 @@ export function DemosPreview() {
 
             {/* Placeholder cards */}
             <ComingSoonCard label="Restauracja / Kawiarnia" />
-            <ComingSoonCard label="Fryzjer / Kosmetyczka" />
           </div>
 
           <p className="mt-10 text-center text-sm text-zinc-400">
