@@ -55,8 +55,8 @@ export function ProcessSteps() {
                   <div className="absolute inset-[1px] rounded-[calc(2rem-1px)] bg-gradient-to-b from-white via-white to-zinc-50/40" />
 
                   <div className="relative">
-                    <div
-                      className={`mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${accent.badge} text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,23,42,0.18)]`}
+                    <div className="mb-5 text-5xl font-black leading-none tracking-tighter bg-gradient-to-br ${accent.badge} text-sm-200 font-semibold "
+                      // className={`mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${accent.badge} text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,23,42,0.18)]`}
                     >
                       {step.number}
                     </div>

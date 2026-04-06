@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Hero } from '@/components/marketing/hero';
 import { TemplatesPreview } from '@/components/marketing/templates-preview';
 import { ProcessSteps } from '@/components/marketing/process-steps';
 import { ValueProps } from '@/components/marketing/value-props';
