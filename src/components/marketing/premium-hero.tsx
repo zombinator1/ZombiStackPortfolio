@@ -38,16 +38,15 @@ function HeroBadge() {
 function HeroHeading() {
   return (
     <div className="space-y-6">
-      <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-zinc-900 sm:text-6xl lg:text-7xl">
-        Nowoczesna strona, która
-        <span className="block bg-gradient-to-r from-zinc-950 via-slate-900 to-indigo-800 bg-clip-text text-transparent">
-          zdobywa klientów
+      <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-zinc-900 sm:text-5xl lg:text-6xl">
+        Gotowa strona sprzedażowa dla Twojego{' '}
+        <span className="block bg-gradient-to-r from-zinc-900 via-indigo-700 to-indigo-500 bg-clip-text pb-1 text-transparent">
+          biznesu w 7 dni
         </span>
       </h1>
 
       <p className="max-w-xl text-lg leading-8 text-zinc-600 sm:text-xl">
-        Bez przeładowania, bez przypadkowego designu i bez „tanich” sekcji.
-        Tworzę estetyczne strony usługowe, które jasno pokazują ofertę i prowadzą klienta do kontaktu.
+        Wybierasz styl, ja dopasowuję treść, wdrażam i konfiguruję wszystko od A do Z.
       </p>
     </div>
   );
@@ -80,7 +79,7 @@ function HeroActions() {
 function HeroProof() {
   return (
     <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-zinc-500">
-      {['Nowoczesny design', 'Responsywność mobile-first', 'Szybkie wdrożenie'].map((item) => (
+      {['Gotowa do wysyłania klientom', 'Pełna konfiguracja'].map((item) => (
         <div key={item} className="flex items-center gap-2">
           <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-slate-700 to-indigo-700" />
           {item}

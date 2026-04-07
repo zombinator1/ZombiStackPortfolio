@@ -26,7 +26,7 @@ export function TemplatesPreview() {
           </div>
           <p className="mt-10 text-center text-sm text-zinc-400">
             <Link href="/#kontakt" className="underline hover:text-zinc-600">
-              Napisz — zrobimy coś na miarę.
+              Napisz — zrobię coś na miarę.
             </Link>
           </p>
         </div>

@@ -34,8 +34,8 @@ export function DemosPreview() {
       <Container>
         <div className="relative z-10">
           <SectionHeading
-            title="Przykłady gotowych stron"
-            subtitle="Kliknij i obejrzyj pełne demo — działająca strona, nie screenshot."
+            title="Wybierz styl swojej strony"
+            subtitle="Każdy projekt to gotowa baza, którą dostosuję do Twojego biznesu."
           />
 
           <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -50,7 +50,7 @@ export function DemosPreview() {
           <p className="mt-10 text-center text-sm text-zinc-400">
             Nie widzisz swojej branży?{' '}
             <Link href="/#kontakt" className="underline hover:text-zinc-600">
-              Napisz — zrobimy coś na miarę.
+              Napisz — zrobię coś na miarę.
             </Link>
           </p>
         </div>

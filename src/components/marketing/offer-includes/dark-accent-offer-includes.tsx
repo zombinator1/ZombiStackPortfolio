@@ -8,26 +8,24 @@ const groups = [
     title: 'Gotowa strona, która działa',
     items: [
       'Strona dopasowana do Twojej firmy i oferty',
-      'Działa płynnie na telefonie i komputerze',
-      'Szybkie ładowanie (klient nie ucieka po 2 sekundach)',
+      'Pomoc w przygotowaniu treści (nie zostajesz z tym sam)',
       'Czytelna prezentacja usług + jasny kontakt',
     ],
   },
   {
-    title: 'Wszystko ogarnięte za Ciebie',
+    title: 'Konfiguracja od A do Z',
     items: [
-      'Hosting i domena skonfigurowane od A do Z',
-      'Certyfikat bezpieczeństwa (https)',
+      'Hosting, domena i https',
       'Formularz kontaktowy gotowy do użycia',
       'Podstawowe SEO (żeby można było Cię znaleźć w Google)',
+      'Działa płynnie na telefonie i komputerze',
     ],
   },
   {
     title: 'Bezpieczny start i brak stresu',
     items: [
-      '30 dni darmowych poprawek po wdrożeniu',
-      'Pomoc w przygotowaniu treści (nie zostajesz z tym sam)',
-      'Strona gotowa do dalszej rozbudowy',
+      'Za robociznę płacisz dopiero po wdrożeniu strony',
+      'Coś nie gra? Chcesz zmienić tekst, zdjęcie, kolor? Dodać nową sekcję? Przez 30 dni po uruchomieniu poprawiam wszystko bez dodatkowych opłat',
       'Pełna kontrola — strona należy do Ciebie',
     ],
   },
@@ -43,7 +41,7 @@ export function OfferIncludes() {
       <Container>
         <div className="relative z-10">
           <SectionHeading
-            title="Nasza oferta — tworzenie stron WWW"
+            title="Moja oferta — tworzenie stron WWW"
             subtitle="Wszystko czego potrzebujesz."
           />
 

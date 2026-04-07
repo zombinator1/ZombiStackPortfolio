@@ -5,21 +5,21 @@ import { sectionAccents } from '@/config/accents';
 const steps = [
   {
     number: '01',
-    title: 'Opisz swoją firmę',
+    title: 'Wybierasz stronę',
     description:
-      'Wyślij 2–3 zdania: czym się zajmujesz, dla kogo i gdzie działasz. Jeśli masz starą stronę albo Facebooka — podeślij link.',
+      'Przeglądasz demo i wybierasz styl dopasowany do Twojego biznesu.',
   },
   {
     number: '02',
-    title: 'Dostajesz gotowy kierunek',
+    title: 'Dopasowuję treści',
     description:
-      'Na podstawie tego co wyślesz, proponuję konkretny projekt dopasowany do Twojej firmy. Widzisz od razu, jak będzie wyglądać Twoja strona — bez zgadywania i bez niespodzianek.',
+      'Uzupełniam stronę o Twoją ofertę, usługi i dane',
   },
   {
     number: '03',
-    title: 'Ja ogarniam resztę',
+    title: 'Publikujemy',
     description:
-      'Dostosowuję stronę pod Twoją firmę, uzupełniam treści i publikuję ją online. Ty nie musisz ogarniać technikaliów ani brać udziału w dziesiątkach decyzji.',
+      'Strona działa i jest gotowa do zdobywania klientów',
   },
 ];
 
@@ -36,7 +36,7 @@ export function ProcessSteps() {
         <div className="relative z-10">
           <SectionHeading
             title="Jak wygląda współpraca"
-            subtitle="Te kroki dzielą Cię od nowej strony."
+            subtitle="Całość trwa do 7 dni."
           />
 
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
