@@ -105,7 +105,7 @@ function HeroPreview() {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3]">
+        <div className="relative aspect-[3/4]">
           <Image
             src="/mockup3.png"
             alt="Podgląd strony"
