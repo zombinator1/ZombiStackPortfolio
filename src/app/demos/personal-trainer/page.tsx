@@ -26,12 +26,20 @@ function DemoBanner() {
       <p className="text-xs text-stone-400">
         <span className="font-semibold text-stone-200">Tryb demo</span> — treści są fikcyjne. Przykład jak może wyglądać Twoja strona.
       </p>
-      <Link
-        href="/#kontakt"
-        className="shrink-0 rounded-full bg-rose-400 px-3 py-1 text-xs font-bold text-white transition hover:bg-rose-300"
-      >
-        Chcę taką stronę →
-      </Link>
+      <div className="flex shrink-0 items-center gap-2">
+        <Link
+          href="/#demo"
+          className="rounded-full border border-stone-700 px-3 py-1 text-xs font-medium text-stone-400 transition hover:border-stone-500 hover:text-stone-200"
+        >
+          ← Powrót
+        </Link>
+        <Link
+          href="/#kontakt"
+          className="rounded-full bg-rose-400 px-3 py-1 text-xs font-bold text-white transition hover:bg-rose-300"
+        >
+          Chcę taką stronę →
+        </Link>
+      </div>
     </div>
   );
 }
@@ -42,10 +50,10 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-stone-100 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
-        <div>
+        <a href="#hero">
           <span className="text-base font-bold tracking-tight text-stone-900">Marta Kowalska</span>
           <span className="ml-2 hidden text-xs font-medium text-stone-400 sm:inline">Personal Trainer</span>
-        </div>
+        </a>
         <nav className="hidden items-center gap-7 md:flex">
           {[
             ['O mnie', '#o-mnie'],
@@ -73,7 +81,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden bg-stone-950">
+    <section id="hero" className="relative min-h-[90vh] overflow-hidden bg-stone-950">
       <Image
         src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80"
         alt="Marta Kowalska — trenerka personalna"

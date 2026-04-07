@@ -27,12 +27,20 @@ function DemoBanner() {
       <p className="text-xs text-zinc-400">
         <span className="font-semibold text-zinc-200">Tryb demo</span> — treści są fikcyjne. To przykład jak może wyglądać Twoja strona.
       </p>
-      <Link
-        href="/#kontakt"
-        className="shrink-0 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-zinc-900 transition hover:bg-amber-300"
-      >
-        Chcę taką stronę →
-      </Link>
+      <div className="flex shrink-0 items-center gap-2">
+        <Link
+          href="/#demo"
+          className="rounded-full border border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-400 transition hover:border-zinc-500 hover:text-zinc-200"
+        >
+          ← Powrót
+        </Link>
+        <Link
+          href="/#kontakt"
+          className="rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-zinc-900 transition hover:bg-amber-300"
+        >
+          Chcę taką stronę →
+        </Link>
+      </div>
     </div>
   );
 }
@@ -43,10 +51,10 @@ function ElectricianNav() {
   return (
     <header className="sticky top-0 z-40 border-b border-zinc-800 bg-zinc-950/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
-        <div className="flex items-center gap-2">
+        <a href="#hero" className="flex items-center gap-2">
           <span className="text-amber-400">⚡</span>
           <span className="text-base font-bold text-white">ElektroPro</span>
-        </div>
+        </a>
         <nav className="hidden items-center gap-7 md:flex">
           {[
             ['Usługi', '#uslugi'],
@@ -75,7 +83,7 @@ function ElectricianNav() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[88vh] overflow-hidden bg-zinc-950">
+    <section id="hero" className="relative min-h-[88vh] overflow-hidden bg-zinc-950">
       <Image
         src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=80"
         alt="Elektryk przy tablicy rozdzielczej"

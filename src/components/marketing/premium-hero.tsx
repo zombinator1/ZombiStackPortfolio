@@ -46,7 +46,7 @@ function HeroHeading() {
       </h1>
 
       <p className="max-w-xl text-lg leading-8 text-zinc-600 sm:text-xl">
-        Wybierasz styl, ja dopasowuję treść, wdrażam i konfiguruję wszystko od A do Z.
+        Prowadzisz swój lokalny biznes? Jeśli potrzebujesz pokazać się w internecie, na google maps to dobrze trafiłeś.
       </p>
     </div>
   );

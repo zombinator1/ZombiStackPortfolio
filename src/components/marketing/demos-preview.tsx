@@ -34,7 +34,7 @@ export function DemosPreview() {
       <Container>
         <div className="relative z-10">
           <SectionHeading
-            title="Wybierz styl swojej strony"
+            title="Przykładowe strony"
             subtitle="Każdy projekt to gotowa baza, którą dostosuję do Twojego biznesu."
           />
 
