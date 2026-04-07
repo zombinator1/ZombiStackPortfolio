@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { BackgroundDecor } from '../background-decor';
 
@@ -105,45 +106,13 @@ function HeroPreview() {
           </div>
         </div>
 
-        <div className="relative grid gap-6 p-6 sm:p-8">
-          <div className="rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-950 via-slate-900 to-indigo-900 p-6 text-white shadow-[0_18px_50px_rgba(15,23,42,0.22)]">
-            <div className="mb-4 inline-flex rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-zinc-200">
-              Premium website
-            </div>
-            <div className="max-w-sm text-2xl font-semibold leading-tight">
-              Strona usługowa, która buduje zaufanie od pierwszego ekranu
-            </div>
-            <div className="mt-6 h-10 w-32 rounded-full bg-white/90" />
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-3">
-            {[20, 24, 16].map((w, i) => (
-              <div key={i} className="rounded-2xl border border-zinc-200 bg-zinc-50/80 p-4">
-                <div className="mb-3 h-24 rounded-xl bg-white shadow-sm" />
-                <div className={`h-3 rounded bg-zinc-200 ${w === 20 ? 'w-20' : w === 24 ? 'w-24' : 'w-16'}`} />
-                <div className={`mt-2 h-3 rounded bg-zinc-100 ${w === 20 ? 'w-28' : w === 24 ? 'w-16' : 'w-24'}`} />
-              </div>
-            ))}
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-5">
-              <div className="mb-3 h-4 w-40 rounded bg-zinc-200" />
-              <div className="space-y-2">
-                <div className="h-3 w-full rounded bg-zinc-100" />
-                <div className="h-3 w-[92%] rounded bg-zinc-100" />
-                <div className="h-3 w-[80%] rounded bg-zinc-100" />
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-zinc-200 bg-zinc-50/80 p-5">
-              <div className="mb-3 h-4 w-24 rounded bg-zinc-200" />
-              <div className="space-y-3">
-                <div className="h-10 rounded-xl bg-white shadow-sm" />
-                <div className="h-10 rounded-xl bg-white shadow-sm" />
-              </div>
-            </div>
-          </div>
+        <div className="relative aspect-[4/3]">
+          <Image
+            src="/mockup3.png"
+            alt="Podgląd strony"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
 
