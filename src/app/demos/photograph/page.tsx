@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 /* Icons */
@@ -23,8 +22,6 @@ const { Award, Camera, Check, Clock, Instagram, Facebook, Mail, MapPin, Phone, S
 export default function PhotographDemo() {
   return (
     <div className="font-sans antialiased">
-      <DemoBanner />
-      <Nav />
       <HeroSection />
       <IntroSection />
       <StatsSection />
@@ -32,56 +29,7 @@ export default function PhotographDemo() {
       <ServicesSection />
       <TestimonialsSection />
       <ContactSection />
-      <Footer />
     </div>
-  );
-}
-
-/* ─── Demo Banner ─────────────────────────────────────────────────────────── */
-
-function DemoBanner() {
-  return (
-    <div className="relative z-50 flex items-center justify-between gap-4 bg-zinc-900 px-4 py-2.5 sm:px-6">
-      <p className="text-xs text-zinc-400">
-        <span className="font-semibold text-zinc-200">Tryb demo</span> — treści są fikcyjne. To przykład jak może wyglądać Twoja strona.
-      </p>
-      <div className="flex shrink-0 items-center gap-2">
-        <Link
-          href="/#demo"
-          className="rounded-full border border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-400 transition hover:border-zinc-500 hover:text-zinc-200"
-        >
-          ← Powrót
-        </Link>
-        <Link
-          href="/#kontakt"
-          className="rounded-full bg-amber-600 px-3 py-1 text-xs font-bold text-white transition hover:bg-amber-500"
-        >
-          Chcę taką stronę →
-        </Link>
-      </div>
-    </div>
-  );
-}
-
-/* ─── Navigation ──────────────────────────────────────────────────────────── */
-
-function Nav() {
-  return (
-    <nav className="sticky top-0 z-40 border-b border-zinc-200/80 bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-        <a href="#hero" className="font-serif text-xl font-semibold text-zinc-900">
-          Anna Kowalska
-        </a>
-        <div className="hidden items-center gap-8 sm:flex">
-          <a href="#portfolio" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">Portfolio</a>
-          <a href="#uslugi" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">Usługi</a>
-          <a href="#o-mnie" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">O mnie</a>
-          <a href="#kontakt" className="rounded-full bg-zinc-900 px-5 py-2 text-sm font-semibold text-white transition hover:bg-amber-700">
-            Umów sesję
-          </a>
-        </div>
-      </div>
-    </nav>
   );
 }
 
@@ -109,7 +57,7 @@ function HeroSection() {
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="#portfolio"
+            href="/demos/photograph/portfolio"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-zinc-900 transition hover:bg-amber-400"
           >
             Zobacz Portfolio
@@ -532,17 +480,3 @@ function FormField({ id, label, type, placeholder, value, onChange, required }: 
   );
 }
 
-/* ─── Footer ──────────────────────────────────────────────────────────────── */
-
-function Footer() {
-  return (
-    <footer className="border-t border-zinc-200 bg-white py-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="font-serif text-lg font-semibold text-zinc-900">Anna Kowalska Fotografia</p>
-          <p className="text-sm text-zinc-500">© 2025 Anna Kowalska. Wszelkie prawa zastrzeżone.</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
