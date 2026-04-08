@@ -22,7 +22,7 @@ const groups = [
     ],
   },
   {
-    title: 'Bezpieczny start i brak stresu',
+    title: 'Gwarancja Satysfakcji',
     items: [
       'Za robociznę płacisz dopiero po wdrożeniu strony',
       'Coś nie gra? Chcesz zmienić tekst, zdjęcie, kolor? Dodać nową sekcję? Przez 30 dni po uruchomieniu poprawiam wszystko bez dodatkowych opłat',
