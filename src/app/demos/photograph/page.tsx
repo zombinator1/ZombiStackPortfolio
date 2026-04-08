@@ -135,12 +135,12 @@ function StatsSection() {
 /* ─── Portfolio ───────────────────────────────────────────────────────────── */
 
 const portfolioImages = [
-  { src: 'https://images.unsplash.com/photo-1768900044120-650653953a6a?auto=format&fit=crop&w=800&q=80', title: 'Śluby' },
-  { src: 'https://images.unsplash.com/photo-1706824261828-6127b3beb64d?auto=format&fit=crop&w=800&q=80', title: 'Portrety' },
-  { src: 'https://images.unsplash.com/photo-1603367563698-67012943fd67?auto=format&fit=crop&w=800&q=80', title: 'Rodzinne' },
-  { src: 'https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?auto=format&fit=crop&w=800&q=80', title: 'Biznesowe' },
-  { src: 'https://images.unsplash.com/photo-1621797005674-48e0150206da?auto=format&fit=crop&w=800&q=80', title: 'Narzeczeńskie' },
-  { src: 'https://images.unsplash.com/photo-1770896686915-140095250023?auto=format&fit=crop&w=800&q=80', title: 'Artystyczne' },
+  { src: 'https://images.unsplash.com/photo-1768900044120-650653953a6a?auto=format&fit=crop&w=800&q=80', title: 'Śluby', href: '/demos/photograph/portfolio/weddings' },
+  { src: 'https://images.unsplash.com/photo-1706824261828-6127b3beb64d?auto=format&fit=crop&w=800&q=80', title: 'Portrety', href: '/demos/photograph/portfolio/portraits' },
+  { src: 'https://images.unsplash.com/photo-1603367563698-67012943fd67?auto=format&fit=crop&w=800&q=80', title: 'Rodzinne', href: '/demos/photograph/portfolio/family' },
+  { src: 'https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?auto=format&fit=crop&w=800&q=80', title: 'Biznesowe', href: '/demos/photograph/portfolio/business' },
+  { src: 'https://images.unsplash.com/photo-1621797005674-48e0150206da?auto=format&fit=crop&w=800&q=80', title: 'Narzeczeńskie', href: '/demos/photograph/portfolio/weddings' },
+  { src: 'https://images.unsplash.com/photo-1770896686915-140095250023?auto=format&fit=crop&w=800&q=80', title: 'Artystyczne', href: '/demos/photograph/portfolio/portraits' },
 ];
 
 function PortfolioSection() {
@@ -156,8 +156,8 @@ function PortfolioSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {portfolioImages.map(({ src, title }) => (
-            <div key={title} className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-zinc-100">
+          {portfolioImages.map(({ src, title, href }) => (
+            <a key={title} href={href} className="group relative block aspect-[4/5] overflow-hidden rounded-xl bg-zinc-100">
               <Image
                 src={src}
                 alt={title}
@@ -169,8 +169,9 @@ function PortfolioSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-zinc-900/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="absolute bottom-0 left-0 right-0 translate-y-4 p-6 text-white transition-transform group-hover:translate-y-0">
                 <h3 className="font-serif text-xl font-semibold">{title}</h3>
+                <p className="mt-1 text-sm text-amber-300">Zobacz galerię →</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
