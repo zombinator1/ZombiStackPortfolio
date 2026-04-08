@@ -23,6 +23,15 @@ const demos = [
     accent: 'Rose · Premium',
     accentClass: 'bg-rose-500 text-white',
   },
+  {
+    href: '/demos/photograph',
+    name: 'Fotografka — Anna Kowalska',
+    category: 'Fotografia',
+    description: 'Jasny, elegancki design z akcentem amber. Portfolio zdjęć, cennik sesji ślubnych i portretowych, opinie klientów i formularz rezerwacji.',
+    image: 'https://images.unsplash.com/photo-1549872063-e752dd3c88f2?auto=format&fit=crop&w=800&q=80',
+    accent: 'Amber · Light',
+    accentClass: 'bg-amber-600 text-white',
+  },
 ];
 
 export function DemosPreview() {
@@ -38,12 +47,11 @@ export function DemosPreview() {
             subtitle="Każdy projekt to gotowa baza, którą dostosuję do Twojego biznesu."
           />
 
-          <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {demos.map((demo) => (
               <DemoCard key={demo.href} demo={demo} />
             ))}
 
-            {/* Placeholder cards */}
             <ComingSoonCard label="Restauracja / Kawiarnia" />
           </div>
 
