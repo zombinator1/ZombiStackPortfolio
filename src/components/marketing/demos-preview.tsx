@@ -44,7 +44,6 @@ export function DemosPreview() {
         <div className="relative z-10">
           <SectionHeading
             title="Przykładowe strony"
-            subtitle="Każdy projekt to gotowa baza, którą dostosuję do Twojego biznesu."
           />
 
           <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
