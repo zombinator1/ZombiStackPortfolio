@@ -5,21 +5,27 @@ import { sectionAccents } from '@/config/accents';
 const steps = [
   {
     number: '01',
-    title: 'Wybierasz stronę',
+    title: 'Rozmowa i strategia',
     description:
-      'Przeglądasz demo i wybierasz styl dopasowany do Twojego biznesu.',
+      'Nie zaczynam od kodowania. Najpierw rozmawiamy o Twoim biznesie, klientach i celach, jakie ma spełniać strona. Na tej podstawie dobieram strukturę i układ, który najlepiej sprzeda Twoje usługi.',
   },
   {
     number: '02',
-    title: 'Dopasowuję treści',
+    title: 'Projekt i Twoja akceptacja',
     description:
-      'Uzupełniam stronę o Twoją ofertę, usługi i dane',
+      'Przygotowuję wstępną wersję strony opartą na sprawdzonych, wysoko konwertujących układach. Omawiamy ją wspólnie — dopiero gdy w 100% zaakceptujesz wygląd i treści, przechodzę do właściwego wdrożenia.',
   },
   {
     number: '03',
-    title: 'Publikujemy',
+    title: 'Wdrożenie i testy',
     description:
-      'Strona działa i jest gotowa do zdobywania klientów',
+      'Buduję stronę, dbając o to, by ładowała się błyskawicznie i wyglądała świetnie na każdym telefonie. Podpinam formularz kontaktowy, analitykę i podstawowe SEO, żeby klienci mogli Cię łatwo znaleźć w Google.',
+  },
+  {
+    number: '04',
+    title: 'Publikacja i opieka',
+    description:
+      'Uruchamiamy stronę pod Twoją domeną. Przez pierwsze 30 dni po starcie masz u mnie darmowe wsparcie — jeśli będziesz chciał zmienić tekst, podmienić zdjęcie lub dodać nową sekcję, zrobię to bez dodatkowych opłat.',
   },
 ];
 
@@ -36,42 +42,47 @@ export function ProcessSteps() {
         <div className="relative z-10">
           <SectionHeading
             title="Jak wygląda współpraca"
-            subtitle="Całość trwa do 7 dni."
+            subtitle="Przejrzysty proces, w którym na każdym kroku wiesz, co się dzieje."
           />
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-3">
-            {steps.map((step, index) => {
-              const accent = accents[index];
+          {/* Connector line visible on desktop */}
+          <div className="relative mt-14">
+            <div className="absolute top-10 left-0 right-0 hidden h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent lg:block" />
 
-              return (
-                <div
-                  key={step.number}
-                  
-                  className="group relative overflow-hidden rounded-[2rem] border border-zinc-200/80 bg-white/95 p-8 ring-1 ring-zinc-950/5 shadow-[0_20px_80px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_100px_rgba(15,23,42,0.10)]"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${accent.glow} opacity-90`} />
-                  <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${accent.line} to-transparent`} />
-                  <div className={`absolute right-0 top-0 h-28 w-28 rounded-full ${accent.orb} blur-3xl transition duration-500 group-hover:scale-110`} />
-                  <div className="absolute inset-[1px] rounded-[calc(2rem-1px)] bg-gradient-to-b from-white via-white to-zinc-50/40" />
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {steps.map((step, index) => {
+                const accent = accents[index];
 
-                  <div className="relative">
-                    <div className="mb-5 text-5xl font-black leading-none tracking-tighter bg-gradient-to-br ${accent.badge} text-sm-200 font-semibold "
-       
-                    >
-                      {step.number}
+                return (
+                  <div
+                    key={step.number}
+                    className="group relative overflow-hidden rounded-[2rem] border border-zinc-200/80 bg-white/95 p-8 ring-1 ring-zinc-950/5 shadow-[0_20px_80px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_100px_rgba(15,23,42,0.10)]"
+                  >
+                    <div className={`absolute inset-0 bg-gradient-to-br ${accent.glow} opacity-90`} />
+                    <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${accent.line} to-transparent`} />
+                    <div className={`absolute right-0 top-0 h-28 w-28 rounded-full ${accent.orb} blur-3xl transition duration-500 group-hover:scale-110`} />
+                    <div className="absolute inset-[1px] rounded-[calc(2rem-1px)] bg-gradient-to-b from-white via-white to-zinc-50/40" />
+
+                    <div className="relative">
+                      {/* Step number badge */}
+                      <div
+                        className={`mb-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br ${accent.badge} text-sm font-bold text-white shadow-sm`}
+                      >
+                        {step.number}
+                      </div>
+
+                      <h3 className="mb-3 text-lg font-semibold tracking-tight text-zinc-900">
+                        {step.title}
+                      </h3>
+
+                      <p className="text-sm leading-7 text-zinc-600">
+                        {step.description}
+                      </p>
                     </div>
-
-                    <h3 className="mb-3 text-lg font-semibold tracking-tight text-zinc-900">
-                      {step.title}
-                    </h3>
-
-                    <p className="text-sm leading-7 text-zinc-600">
-                      {step.description}
-                    </p>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </Container>
