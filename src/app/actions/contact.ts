@@ -14,21 +14,25 @@ export async function sendContactEmail(
   formData: FormData
 ): Promise<ContactFormState> {
   const description = (formData.get('description') as string)?.trim();
-  const contact = (formData.get('contact') as string)?.trim();
+  const name = (formData.get('name') as string)?.trim();
+  const email = (formData.get('email') as string)?.trim();
+  const phone = (formData.get('phone') as string)?.trim();
 
-  if (!description || !contact) {
-    return { status: 'error', message: 'Wypełnij wszystkie pola.' };
+  if (!description || !name || !email) {
+    return { status: 'error', message: 'Wypełnij wszystkie wymagane pola.' };
   }
 
   try {
     await resend.emails.send({
       from: 'formularz@zombistack.com',
       to: 'bzabekk@gmail.com',
-      subject: `Nowe zapytanie — ${contact}`,
+      subject: `Nowe zapytanie — ${name}`,
       text: [
         `Nowe zapytanie ze strony zombistack.pl`,
         ``,
-        `Nadawca: ${contact}`,
+        `Imię i nazwisko: ${name}`,
+        `E-mail: ${email}`,
+        ...(phone ? [`Telefon: ${phone}`] : []),
         ``,
         `---`,
         ``,
