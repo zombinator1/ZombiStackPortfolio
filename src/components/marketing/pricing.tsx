@@ -4,7 +4,7 @@ import { SectionHeading } from '@/components/ui/section-heading';
 const plans = [
   {
     name: 'Strona Wizytówka',
-    price: 'od 4 000 zł',
+    price: 'od 1 500 zł',
     timeline: 'ok. 2 tygodnie',
     description:
       'Profesjonalna one-page dla firmy, która chce być widoczna w Google i zrobić dobre pierwsze wrażenie.',
@@ -26,7 +26,7 @@ const plans = [
   },
   {
     name: 'Strona Firmowa',
-    price: 'od 7 000 zł',
+    price: 'od 2 500 zł',
     timeline: 'ok. 3–4 tygodnie',
     description:
       'Rozbudowana strona z wieloma podstronami i systemem zarządzania treścią. Idealna dla firm, które chcą rosnąć.',
@@ -49,7 +49,7 @@ const plans = [
   },
   {
     name: 'Sklep Internetowy',
-    price: 'od 13 500 zł',
+    price: 'od 6 000 zł',
     timeline: 'ok. 6–8 tygodni',
     description:
       'Kompletna platforma e-commerce gotowa do sprzedaży. Od projektu po integrację z płatnościami i kurierami.',
