@@ -382,7 +382,7 @@ function ContactSection() {
             <div className="space-y-6">
               <ContactItem Icon={Phone} label="Telefon" value="+48 123 456 789" href="tel:+48123456789" sub="Pon–Pt: 9:00–18:00" />
               <ContactItem Icon={Mail} label="Email" value="anna@fotografia.pl" href="mailto:anna@fotografia.pl" sub="Odpowiadam w ciągu 24h" />
-              <ContactItem Icon={MapPin} label="Lokalizacja" value="Warszawa i okolice" sub="Dojazd w całej Polsce" />
+              <ContactItem Icon={MapPin} label="Lokalizacja" value="Warszawa" sub="Ul. Przykładowa 12" />
             </div>
             <div className="mt-10 border-t border-zinc-200 pt-8">
               <p className="mb-4 font-semibold text-zinc-900">Obserwuj mnie</p>
