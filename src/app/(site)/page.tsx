@@ -16,11 +16,7 @@ export default function HomePage() {
     <>
       <PremiumHero />
       <DemosPreview />
-      {/* <OfferIncludes /> */}
-      {/* ── Wybierz jeden wariant "O mnie" i usuń pozostałe ── */}
-
       <AboutMeE />
-      {/* ─────────────────────────────────────────────────── */}
       <ProcessSteps />
       <Pricing />
       <CtaBand />
