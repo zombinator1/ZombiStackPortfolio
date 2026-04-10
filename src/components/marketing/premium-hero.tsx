@@ -39,9 +39,9 @@ function HeroHeading() {
   return (
     <div className="space-y-6">
       <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-zinc-900 sm:text-5xl lg:text-6xl">
-        Gotowa strona dla Twojego{' '}
+        Gotowa strona dla {' '}
         <span className="block bg-gradient-to-r from-zinc-900 via-indigo-700 to-indigo-500 bg-clip-text pb-1 text-transparent">
-          biznesu
+          Twojego biznesu
         </span>
       </h1>
 

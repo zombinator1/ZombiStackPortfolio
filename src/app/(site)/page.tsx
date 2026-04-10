@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <PremiumHero />
       <DemosPreview />
-      <OfferIncludes />
+      {/* <OfferIncludes /> */}
       {/* ── Wybierz jeden wariant "O mnie" i usuń pozostałe ── */}
 
       <AboutMeE />
