@@ -42,7 +42,7 @@ export function ProcessSteps() {
         <div className="relative z-10">
           <SectionHeading
             title="Jak wygląda współpraca"
-            subtitle="Przejrzysty proces, w którym na każdym kroku wiesz, co się dzieje."
+            // subtitle="Całość trwa do 7 dni."
           />
 
           {/* Connector line visible on desktop */}

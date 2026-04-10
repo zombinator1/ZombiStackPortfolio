@@ -47,12 +47,11 @@ export function DemosPreview() {
             subtitle="Każdy projekt to gotowa baza, którą dostosuję do Twojego biznesu."
           />
 
-          <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {demos.map((demo) => (
               <DemoCard key={demo.href} demo={demo} />
             ))}
 
-            <ComingSoonCard label="Restauracja / Kawiarnia" />
           </div>
 
           <p className="mt-10 text-center text-sm text-zinc-400">
@@ -114,12 +113,3 @@ function DemoCard({ demo }: { demo: typeof demos[number] }) {
   );
 }
 
-function ComingSoonCard({ label }: { label: string }) {
-  return (
-    <div className="flex flex-col items-center justify-center gap-3 rounded-[2rem] border border-dashed border-zinc-200 bg-zinc-50/40 p-10 text-center">
-      <div className="text-2xl">🔜</div>
-      <p className="text-sm font-medium text-zinc-500">{label}</p>
-      <p className="text-xs text-zinc-400">Wkrótce</p>
-    </div>
-  );
-}

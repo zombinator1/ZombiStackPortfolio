@@ -39,14 +39,14 @@ function HeroHeading() {
   return (
     <div className="space-y-6">
       <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-zinc-900 sm:text-5xl lg:text-6xl">
-        Gotowa strona sprzedażowa dla Twojego{' '}
+        Strona internetowa dla Twojego{' '}
         <span className="block bg-gradient-to-r from-zinc-900 via-indigo-700 to-indigo-500 bg-clip-text pb-1 text-transparent">
-          biznesu w 7 dni
+          biznesu
         </span>
       </h1>
 
       <p className="max-w-xl text-lg leading-8 text-zinc-600 sm:text-xl">
-        Prowadzisz swój lokalny biznes? Jeśli potrzebujesz pokazać się w internecie, na google maps to dobrze trafiłeś.
+        Prowadzisz jednoosobowy, mały lub średni biznes? Jeśli potrzebujesz pokazać się w internecie, na google maps to dobrze trafiłeś.
       </p>
     </div>
   );
@@ -91,37 +91,55 @@ function HeroProof() {
 
 function HeroPreview() {
   return (
-    <div className="relative mx-auto max-w-2xl">
-      <div className="absolute inset-0 translate-y-6 rounded-[2rem] bg-gradient-to-br from-indigo-300/18 via-slate-300/10 to-transparent blur-2xl" />
+    <div className="relative mx-auto w-full max-w-[640px]">
+      {/* Ambient glow behind the card */}
+      <div className="absolute inset-0 translate-y-8 scale-95 rounded-[2rem] bg-gradient-to-br from-rose-300/20 via-indigo-300/15 to-transparent blur-3xl" />
 
-      <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200/80 bg-white/95 ring-1 ring-indigo-500/5 shadow-[0_24px_90px_rgba(15,23,42,0.10)]">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/6 via-transparent to-transparent" />
-        <div className="flex items-center gap-2 border-b border-zinc-200 bg-zinc-50/90 px-5 py-4">
-          <span className="h-3 w-3 rounded-full bg-red-300" />
-          <span className="h-3 w-3 rounded-full bg-amber-300" />
-          <span className="h-3 w-3 rounded-full bg-emerald-300" />
-          <div className="ml-4 rounded-full border border-zinc-200 bg-white px-4 py-1 text-xs text-zinc-500">
-            twoja-strona.pl
+      {/* Browser chrome frame */}
+      <div className="relative overflow-hidden rounded-[1.5rem] border border-zinc-200/80 bg-white shadow-[0_32px_100px_rgba(15,23,42,0.14)] ring-1 ring-zinc-950/5">
+        {/* Title bar */}
+        <div className="flex items-center gap-2 border-b border-zinc-200 bg-zinc-50/95 px-4 py-3">
+          <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
+          <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
+          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
+          <div className="ml-3 flex flex-1 items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-400">
+            <svg className="h-3 w-3 shrink-0 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm0 0V7m0 4v4" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+            twoja-firma.pl
           </div>
         </div>
 
-        <div className="relative aspect-[3/4]">
+        {/* Screenshot — natural 16:9-ish ratio, no cropping issues */}
+        <div className="relative w-full">
           <Image
-            src="/mockup3.png"
-            alt="Podgląd strony"
-            fill
-            className="object-cover"
+            src="/mockup-personal-trainer.jpg"
+            alt="Przykładowa strona — trenerka personalna"
+            width={1280}
+            height={820}
+            className="w-full object-cover object-top"
+            priority
           />
+          {/* Subtle bottom fade so it blends into the page */}
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/60 to-transparent" />
         </div>
       </div>
 
-      <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-zinc-200/80 bg-white/95 p-4 ring-1 ring-indigo-500/5 shadow-[0_18px_50px_rgba(15,23,42,0.10)] backdrop-blur md:block">
-        <div className="text-xs font-medium uppercase tracking-[0.18em] text-zinc-400">
-          Efekt
-        </div>
-        <div className="mt-1 bg-gradient-to-r from-zinc-950 to-indigo-800 bg-clip-text text-sm font-semibold text-transparent">
-          Estetyka + czytelna oferta + mocniejsze CTA
-        </div>
+      {/* Floating badge — bottom left */}
+      <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-zinc-200/80 bg-white/95 px-4 py-3 shadow-[0_16px_50px_rgba(15,23,42,0.10)] backdrop-blur-sm md:block">
+        <p className="text-[10px] font-semibold uppercase tracking-widest text-zinc-400">Przykład</p>
+        <p className="mt-0.5 bg-gradient-to-r from-zinc-900 to-rose-600 bg-clip-text text-sm font-semibold text-transparent">
+          Trenerka personalna
+        </p>
+      </div>
+
+      {/* Floating badge — top right */}
+      <div className="absolute -right-4 -top-4 hidden rounded-2xl border border-zinc-200/80 bg-white/95 px-4 py-3 shadow-[0_16px_50px_rgba(15,23,42,0.10)] backdrop-blur-sm md:block">
+        <p className="text-[10px] font-semibold uppercase tracking-widest text-zinc-400">Czas realizacji</p>
+        <p className="mt-0.5 bg-gradient-to-r from-zinc-900 to-indigo-700 bg-clip-text text-sm font-semibold text-transparent">
+          2–4 tygodnie
+        </p>
       </div>
     </div>
   );
