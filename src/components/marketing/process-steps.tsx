@@ -19,7 +19,7 @@ const steps = [
     number: '03',
     title: 'Wdrożenie i testy',
     description:
-      'Buduję stronę, dbając o to, by ładowała się błyskawicznie i wyglądała świetnie na każdym telefonie. Podpinam formularze kontaktowe, analitykę i podstawowe SEO, aby klienci mogli Cię łatwo znaleźć w Google.',
+      'Buduję stronę, dbając o to, by ładowała się błyskawicznie i wyglądała świetnie na każdym urządzeniu. Podpinam formularze kontaktowe, analitykę i podstawowe SEO, aby klienci mogli Cię łatwo znaleźć w Google.',
   },
   {
     number: '04',
