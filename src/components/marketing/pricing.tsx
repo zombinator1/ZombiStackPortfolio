@@ -92,6 +92,32 @@ export function Pricing() {
             subtitle="Każdy projekt wyceniam indywidualnie po bezpłatnej konsultacji. Poniżej znajdziesz orientacyjne widełki, żebyś wiedział czego się spodziewać."
           />
 
+          {/* Portfolio offer callout */}
+          <div className="mb-10 overflow-hidden rounded-2xl border border-indigo-200/60 bg-gradient-to-r from-indigo-50 via-white to-sky-50 p-6 shadow-sm">
+            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <span className="mb-2 inline-block rounded-full bg-indigo-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-indigo-700">
+                  Oferta dla pierwszych klientów
+                </span>
+                <h3 className="text-lg font-semibold tracking-tight text-zinc-900">
+                  Strona bez opłaty za pracę — płacisz tylko za domenę i hosting
+                </h3>
+                <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-zinc-500">
+                  Buduję portfolio, dlatego pierwsze <span className="font-semibold text-zinc-700">3 strony</span> tworzę bez wynagrodzenia.
+                  Płacisz wyłącznie za domenę i hosting — łącznie ok.{' '}
+                  <span className="font-semibold text-zinc-700">250 zł/rok</span>.
+                  W zamian proszę o możliwość umieszczenia projektu w portfolio i krótką opinię.
+                </p>
+              </div>
+              <a
+                href="/#kontakt"
+                className="shrink-0 rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-zinc-700"
+              >
+                Bądź pierwszym klientem
+              </a>
+            </div>
+          </div>
+
           <div className="grid gap-6 sm:grid-cols-3">
             {plans.map((plan) => (
               <div
