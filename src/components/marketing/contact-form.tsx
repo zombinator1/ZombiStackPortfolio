@@ -38,16 +38,48 @@ export function ContactForm() {
             className="w-full resize-none rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-zinc-500"
           />
         </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label htmlFor="name" className="mb-1.5 block text-xs font-medium text-zinc-400">
+              Imię i nazwisko <span className="text-red-400">*</span>
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              autoComplete="name"
+              placeholder="Jan Kowalski"
+              className="w-full rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-zinc-500"
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="mb-1.5 block text-xs font-medium text-zinc-400">
+              Adres e-mail <span className="text-red-400">*</span>
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autoComplete="email"
+              placeholder="jan@firma.pl"
+              className="w-full rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-zinc-500"
+            />
+          </div>
+        </div>
+
         <div>
-          <label htmlFor="contact" className="mb-1.5 block text-xs font-medium text-zinc-400">
-            Imię i adres e-mail
+          <label htmlFor="phone" className="mb-1.5 block text-xs font-medium text-zinc-400">
+            Numer telefonu <span className="text-zinc-600">(opcjonalnie)</span>
           </label>
           <input
-            id="contact"
-            name="contact"
-            type="text"
-            required
-            placeholder="Jan Kowalski, jan@firma.pl"
+            id="phone"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            placeholder="+48 600 000 000"
             className="w-full rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-zinc-500"
           />
         </div>
