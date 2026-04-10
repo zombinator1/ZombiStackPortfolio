@@ -36,7 +36,7 @@ export function ProcessSteps() {
         <div className="relative z-10">
           <SectionHeading
             title="Jak wygląda współpraca"
-            subtitle="Całość trwa do 7 dni."
+            // subtitle="Całość trwa do 7 dni."
           />
 
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
