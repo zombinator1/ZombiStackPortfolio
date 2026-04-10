@@ -23,4 +23,12 @@ export const sectionAccents = [
     line: 'via-violet-400/60',
     ring: 'ring-violet-500/8',
   },
+  {
+    badge: 'from-zinc-950 via-slate-900 to-emerald-900',
+    check: 'from-slate-900 to-emerald-800',
+    glow: 'from-emerald-500/10 via-transparent to-transparent',
+    orb: 'bg-emerald-300/16',
+    line: 'via-emerald-400/60',
+    ring: 'ring-emerald-500/8',
+  },
 ];

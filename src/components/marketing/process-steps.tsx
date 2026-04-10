@@ -5,21 +5,27 @@ import { sectionAccents } from '@/config/accents';
 const steps = [
   {
     number: '01',
-    title: 'Wybierasz stronę',
+    title: 'Rozmowa i strategia',
     description:
-      'Przeglądasz demo i wybierasz styl dopasowany do Twojego biznesu.',
+      'Nie zaczynam od kodowania. Najpierw rozmawiamy o Twoim biznesie, klientach i celach, jakie ma spełniać strona. Na tej podstawie dobieram odpowiednią strukturę i układ, który najlepiej sprzeda Twoje usługi.',
   },
   {
     number: '02',
-    title: 'Dopasowuję treści',
+    title: 'Projekt i Twoja akceptacja',
     description:
-      'Uzupełniam stronę o Twoją ofertę, usługi i dane',
+      'Przygotowuję wstępną wersję strony opartą na sprawdzonych, wysoko konwertujących układach. Omawiamy ją wspólnie. Dopiero gdy w 100% zaakceptujesz wygląd i treści, przechodzę do właściwego wdrożenia.',
   },
   {
     number: '03',
-    title: 'Publikujemy',
+    title: 'Wdrożenie i testy',
     description:
-      'Strona działa i jest gotowa do zdobywania klientów',
+      'Buduję stronę, dbając o to, by ładowała się błyskawicznie i wyglądała świetnie na każdym telefonie. Podpinam formularze kontaktowe, analitykę i podstawowe SEO, aby klienci mogli Cię łatwo znaleźć w Google.',
+  },
+  {
+    number: '04',
+    title: 'Publikacja i opieka',
+    description:
+      'Uruchamiamy stronę pod Twoją domeną. Ale to nie koniec — przez pierwsze 30 dni po starcie masz u mnie darmowe wsparcie. Jeśli będziesz chciał zmienić tekst, podmienić zdjęcie lub dodać nową sekcję, zrobię to bez dodatkowych opłat.',
   },
 ];
 
