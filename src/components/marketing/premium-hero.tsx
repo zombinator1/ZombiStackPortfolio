@@ -39,14 +39,14 @@ function HeroHeading() {
   return (
     <div className="space-y-6">
       <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-zinc-900 sm:text-5xl lg:text-6xl">
-        Gotowa strona sprzedażowa dla Twojego{' '}
+        Gotowa strona dla Twojego{' '}
         <span className="block bg-gradient-to-r from-zinc-900 via-indigo-700 to-indigo-500 bg-clip-text pb-1 text-transparent">
-          biznesu w 7 dni
+          biznesu
         </span>
       </h1>
 
       <p className="max-w-xl text-lg leading-8 text-zinc-600 sm:text-xl">
-        Prowadzisz swój lokalny biznes? Jeśli potrzebujesz pokazać się w internecie, na google maps to dobrze trafiłeś.
+        Prowadzisz jednoosobowy, mały czy średni biznes? Jeśli potrzebujesz pokazać się w internecie, na google maps to dobrze trafiłeś.
       </p>
     </div>
   );
