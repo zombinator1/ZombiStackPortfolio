@@ -27,7 +27,7 @@ const demos = [
     href: '/demos/photograph',
     name: 'Fotografka — Anna Kowalska',
     category: 'Fotografia',
-    description: 'Strona dla uzytkownika który potrzebuje zarządzać zawartością. Do takiej strony pdpinam system do samodzielnego zarządzania contentem (CMS).',
+    description: 'Strona dla uzytkownika który potrzebuje zarządzać zawartością. Do takiej strony podpinam system do samodzielnego zarządzania contentem (CMS).',
     image: 'https://images.unsplash.com/photo-1549872063-e752dd3c88f2?auto=format&fit=crop&w=800&q=80',
     accent: 'Amber · Light',
     accentClass: 'bg-amber-600 text-white',
