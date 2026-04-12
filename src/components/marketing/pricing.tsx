@@ -165,11 +165,6 @@ export function Pricing() {
 
                 {/* Content */}
                 <div className="relative">
-                  {plan.featured && (
-                    <span className="mb-4 inline-block rounded-full bg-zinc-900 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white">
-                      Najpopularniejszy
-                    </span>
-                  )}
 
                   <span className={`mb-3 inline-block rounded-full px-2.5 py-0.5 text-[11px] font-medium ${plan.accent.badge}`}>
                     {plan.tagline}

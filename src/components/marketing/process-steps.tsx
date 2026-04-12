@@ -23,7 +23,7 @@ const steps = [
     number: '02',
     title: 'Projekt i Twoja akceptacja',
     description:
-      'Przygotowuję wstępną wersję strony. Analizuję ofertę konkurencji. Dbam aby rozwiać wszelkie wątpliwośći klienta. Omawiamy ją wspólnie. Dopiero gdy w 100% zaakceptujesz wygląd i treści, przechodzę do właściwego wdrożenia.',
+      'Przygotowuję wstępną wersję strony. Analizuję ofertę konkurencji i podobnne strony z Twojej branży. Dbam aby rozwiać wszelkie wątpliwośći klienta. Omawiamy ją wspólnie, po Twojej akceptacji, przechodzę do właściwego wdrożenia.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
         <rect x="3" y="3" width="18" height="18" rx="3" />
