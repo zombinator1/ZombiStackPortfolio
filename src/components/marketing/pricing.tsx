@@ -29,7 +29,7 @@ const plans = [
     price: 'od 2 500 zł',
     timeline: 'ok. 3–4 tygodnie',
     description:
-      'Rozbudowana strona z wieloma podstronami i systemem zarządzania treścią. Idealna dla firm, które chcą rosnąć.',
+      'Rozbudowana strona z wieloma podstronami i systemem zarządzania treścią. Idealna dla firm, które chcą prezentować swoje nowe projekty.',
     features: [
       'Do 6 podstron (usługi, blog, cennik…)',
       'Panel CMS — edytujesz treści sam',
@@ -146,11 +146,11 @@ export function Pricing() {
                 {/* Content */}
                 <div className="relative">
                   {/* Popular badge */}
-                  {plan.featured && (
+                  {/* {plan.featured && (
                     <span className="mb-4 inline-block rounded-full bg-zinc-900 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white">
                       Najpopularniejszy
                     </span>
-                  )}
+                  )} */}
 
                   <h3 className="text-lg font-semibold tracking-tight text-zinc-900">
                     {plan.name}

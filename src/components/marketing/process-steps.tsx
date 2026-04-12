@@ -41,7 +41,7 @@ const steps = [
     number: '03',
     title: 'Wdrożenie i testy',
     description:
-      'Buduję stronę, dbając o to, by ładowała się błyskawicznie i wyglądała świetnie na każdym urządzeniu. Podpinam formularze kontaktowe, analitykę i podstawowe SEO, aby klienci mogli Cię łatwo znaleźć w Google.',
+      'Buduję stronę, dbając o to, by ładowała się błyskawicznie i wyglądała świetnie na każdym urządzeniu. Podpinam formularze kontaktowe, analitykę i SEO, aby klienci mogli Cię łatwo znaleźć w Google.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
         <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
