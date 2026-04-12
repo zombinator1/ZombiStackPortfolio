@@ -9,16 +9,10 @@ const plans = [
     timeline: 'ok. 2 tygodnie',
     description:
       'Profesjonalna one-page dla firmy, która chce być widoczna w Google i zrobić dobre pierwsze wrażenie.',
-    features: [
-      'Indywidualny projekt graficzny',
+    highlights: [
+      'One-page — wszystko w jednym miejscu',
       'Sekcje: usługi, o firmie, opinie, kontakt',
-      'Responsywna na telefon i tablet',
-      'Szybkie ładowanie i podstawowe SEO',
       'Formularz kontaktowy + Google Maps',
-      'Pomoc z tekstami i zdjęciami',
-      'Szkolenie z obsługi (30 min)',
-      'Kopia zapasowa',
-      '2 rundy poprawek + 30 dni opieki',
     ],
     accent: {
       glow: 'from-indigo-500/8 via-transparent to-transparent',
@@ -36,16 +30,10 @@ const plans = [
     timeline: 'ok. 3–4 tygodnie',
     description:
       'Rozbudowana strona z wieloma podstronami, kontem e-mail na domenie i integracją z Google Analytics.',
-    features: [
+    highlights: [
       'Do 6 podstron (usługi, blog, cennik…)',
       'Konto e-mail na domenie (ty@firma.pl)',
-      'Integracja z Google Analytics',
-      'Optymalizacja SEO on-page',
-      'Blog / sekcja aktualności',
-      'Pomoc z tekstami i zdjęciami',
-      'Szkolenie z obsługi (30 min)',
-      'Kopia zapasowa',
-      '2 rundy poprawek + 30 dni opieki',
+      'Blog / aktualności + Google Analytics',
     ],
     accent: {
       glow: 'from-sky-500/8 via-transparent to-transparent',
@@ -57,19 +45,16 @@ const plans = [
     featured: true,
   },
   {
-    name: 'Strona Pro',
+    name: 'Strona Firmowa CMS',
     tagline: 'Zarządzam treścią sam',
     price: 'od 4 000 zł',
     timeline: 'ok. 4–6 tygodni',
     description:
-      'Wszystko z Firmowej, plus panel CMS i makieta UI zatwierdzona przed wdrożeniem.',
-    features: [
+      'Wszystko z Firmowej, plus panel CMS — edytujesz teksty i zdjęcia bez programisty.',
+    highlights: [
       'Wszystko ze Strony Firmowej',
-      'Panel CMS — edytujesz treści bez programisty',
-      'Makieta UI przed wdrożeniem',
-      'Analityka konwersji (kliknięcia, formularze)',
+      'Panel CMS — zmieniasz treści sam',
       'Priorytetowa opieka po wdrożeniu',
-      '2 rundy poprawek + 30 dni opieki',
     ],
     accent: {
       glow: 'from-violet-500/8 via-transparent to-transparent',
@@ -83,29 +68,36 @@ const plans = [
 ];
 
 const tableRows = [
-  { label: 'One-page (wszystko na jednej stronie)', values: [true, false, false] },
-  { label: 'Do 6 podstron', values: [false, true, true] },
-  { label: 'Indywidualny projekt graficzny', values: [true, true, true] },
-  { label: 'Responsywna (telefon, tablet)', values: [true, true, true] },
-  { label: 'Formularz kontaktowy', values: [true, true, true] },
-  { label: 'Google Maps', values: [true, true, true] },
-  { label: 'SSL + szybkie ładowanie', values: [true, true, true] },
-  { label: 'Podstawowe SEO', values: [true, true, true] },
-  { label: 'Pomoc z tekstami i zdjęciami', values: [true, true, true] },
-  { label: 'Szkolenie z obsługi (30 min)', values: [true, true, true] },
-  { label: 'Kopia zapasowa', values: [true, true, true] },
+  { label: 'Liczba podstron', values: ['1 (one-page)', 'do 6', 'do 6'] },
   { label: 'Konto e-mail na domenie', values: [false, true, true] },
-  { label: 'Google Analytics', values: [false, true, true] },
   { label: 'Blog / aktualności', values: [false, true, true] },
+  { label: 'Google Analytics', values: [false, true, true] },
   { label: 'Panel CMS', values: [false, false, true] },
-  { label: 'Makieta UI przed wdrożeniem', values: [false, false, true] },
-  { label: 'Analityka konwersji', values: [false, false, true] },
-  { label: '2 rundy poprawek w cenie', values: [true, true, true] },
-  { label: '30 dni opieki po wdrożeniu', values: [true, true, true] },
 ];
 
 const checkColors = ['text-indigo-600', 'text-sky-600', 'text-violet-600'];
 const colHighlight = [false, true, false];
+
+function TableCell({ val, colIdx }: { val: boolean | string; colIdx: number }) {
+  if (typeof val === 'string') {
+    return (
+      <div className={`flex items-center justify-center p-4 ${colHighlight[colIdx] ? 'bg-zinc-900/[0.03]' : ''}`}>
+        <span className="text-sm font-medium text-zinc-700">{val}</span>
+      </div>
+    );
+  }
+  return (
+    <div className={`flex items-center justify-center p-4 ${colHighlight[colIdx] ? 'bg-zinc-900/[0.03]' : ''}`}>
+      {val ? (
+        <svg className={`h-5 w-5 ${checkColors[colIdx]}`} viewBox="0 0 20 20" fill="currentColor">
+          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+        </svg>
+      ) : (
+        <span className="h-[2px] w-4 rounded-full bg-zinc-200" />
+      )}
+    </div>
+  );
+}
 
 export function Pricing() {
   return (
@@ -167,9 +159,7 @@ export function Pricing() {
                 {/* Top accent line */}
                 <div className={`absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent ${plan.accent.line} to-transparent`} />
                 {/* Orb */}
-                <div
-                  className={`absolute right-0 top-0 h-32 w-32 rounded-full ${plan.accent.orb} blur-3xl transition duration-700 group-hover:scale-125`}
-                />
+                <div className={`absolute right-0 top-0 h-32 w-32 rounded-full ${plan.accent.orb} blur-3xl transition duration-700 group-hover:scale-125`} />
                 {/* Inner gradient */}
                 <div className="absolute inset-[1px] rounded-[calc(2rem-1px)] bg-gradient-to-b from-white via-white to-zinc-50/50" />
 
@@ -203,24 +193,26 @@ export function Pricing() {
 
                   <div className="my-6 h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
 
+                  {/* Key highlights — only differentiators */}
                   <ul className="flex flex-col gap-2.5">
-                    {plan.features.map((feature) => (
+                    {plan.highlights.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <span
-                          className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full ${plan.accent.checkBg} text-[9px] font-bold text-white shadow-sm`}
-                        >
+                        <span className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full ${plan.accent.checkBg} text-[9px] font-bold text-white shadow-sm`}>
                           ✓
                         </span>
-                        <span className="text-sm leading-snug text-zinc-600">
-                          {feature}
-                        </span>
+                        <span className="text-sm leading-snug text-zinc-600">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
+                  {/* Standard inclusions note */}
+                  <p className="mt-4 text-xs leading-relaxed text-zinc-400">
+                    + projekt graficzny, responsywność, SSL, SEO, Google Maps, pomoc z tekstami, szkolenie, 30 dni darmowych poprawek
+                  </p>
+
                   <a
                     href="/#kontakt"
-                    className={`mt-8 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all duration-200 ${
+                    className={`mt-6 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all duration-200 ${
                       plan.featured
                         ? 'bg-zinc-900 text-white shadow-md hover:bg-zinc-700 hover:shadow-lg'
                         : 'bg-zinc-100 text-zinc-900 hover:bg-zinc-200'
@@ -236,10 +228,10 @@ export function Pricing() {
             ))}
           </div>
 
-          {/* Comparison table */}
-          <div className="mt-20">
-            <h3 className="mb-8 text-center text-xl font-bold tracking-tight text-zinc-900">
-              Szczegółowe porównanie pakietów
+          {/* Comparison table — differentiators only */}
+          <div className="mt-16">
+            <h3 className="mb-6 text-center text-lg font-semibold tracking-tight text-zinc-700">
+              Co różni pakiety?
             </h3>
             <div className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-[0_8px_40px_rgba(15,23,42,0.06)]">
               {/* Header */}
@@ -270,22 +262,19 @@ export function Pricing() {
                     {row.label}
                   </div>
                   {row.values.map((val, colIdx) => (
-                    <div
-                      key={colIdx}
-                      className={`flex items-center justify-center p-4 ${colHighlight[colIdx] ? 'bg-zinc-900/[0.03]' : ''}`}
-                    >
-                      {val ? (
-                        <svg className={`h-5 w-5 ${checkColors[colIdx]}`} viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      ) : (
-                        <span className="h-[2px] w-4 rounded-full bg-zinc-200" />
-                      )}
-                    </div>
+                    <TableCell key={colIdx} val={val} colIdx={colIdx} />
                   ))}
                 </div>
               ))}
             </div>
+
+            {/* Standard inclusions note */}
+            <p className="mt-5 text-center text-xs text-zinc-400">
+              Wszystkie pakiety zawierają:{' '}
+              <span className="text-zinc-500">
+                indywidualny projekt graficzny, responsywność, SSL, szybkie ładowanie, SEO, Google Maps, pomoc z tekstami i zdjęciami, szkolenie z obsługi (30 min), kopia zapasowa oraz 30 dni darmowych poprawek po wdrożeniu.
+              </span>
+            </p>
           </div>
 
           {/* Footer note */}
