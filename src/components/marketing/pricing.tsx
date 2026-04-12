@@ -3,7 +3,8 @@ import { SectionHeading } from '@/components/ui/section-heading';
 
 const plans = [
   {
-    name: 'Strona Wizytówka',
+    name: 'Wizytówka',
+    tagline: 'Jestem w internecie',
     price: 'od 1 500 zł',
     timeline: 'ok. 2 tygodnie',
     description:
@@ -13,77 +14,112 @@ const plans = [
       'Sekcje: usługi, o firmie, opinie, kontakt',
       'Responsywna na telefon i tablet',
       'Szybkie ładowanie i podstawowe SEO',
-      'Formularz kontaktowy',
-      '30 dni poprawek po wdrożeniu',
+      'Formularz kontaktowy + Google Maps',
+      'Pomoc z tekstami i zdjęciami',
+      'Szkolenie z obsługi (30 min)',
+      'Kopia zapasowa',
+      '2 rundy poprawek + 30 dni opieki',
     ],
     accent: {
-      glow: 'from-indigo-500/10 via-transparent to-transparent',
-      orb: 'bg-indigo-300/16',
-      line: 'via-indigo-400/60',
-      badge: 'bg-indigo-50 text-indigo-700 ring-indigo-200',
+      glow: 'from-indigo-500/8 via-transparent to-transparent',
+      orb: 'bg-indigo-300/20',
+      line: 'via-indigo-400/50',
+      checkBg: 'bg-indigo-600',
+      badge: 'bg-indigo-50 text-indigo-700',
     },
     featured: false,
   },
   {
     name: 'Strona Firmowa',
+    tagline: 'Buduję wiarygodność',
     price: 'od 2 500 zł',
     timeline: 'ok. 3–4 tygodnie',
     description:
-      'Rozbudowana strona z wieloma podstronami i systemem zarządzania treścią. Idealna dla firm, które chcą rosnąć.',
+      'Rozbudowana strona z wieloma podstronami, kontem e-mail na domenie i integracją z Google Analytics.',
     features: [
       'Do 6 podstron (usługi, blog, cennik…)',
-      'Panel CMS — edytujesz treści sam',
-      'Indywidualny projekt graficzny',
-      'Optymalizacja SEO on-page',
+      'Konto e-mail na domenie (ty@firma.pl)',
       'Integracja z Google Analytics',
-      'Hosting i domena skonfigurowane',
-      '30 dni poprawek po wdrożeniu',
+      'Optymalizacja SEO on-page',
+      'Blog / sekcja aktualności',
+      'Pomoc z tekstami i zdjęciami',
+      'Szkolenie z obsługi (30 min)',
+      'Kopia zapasowa',
+      '2 rundy poprawek + 30 dni opieki',
     ],
     accent: {
-      glow: 'from-sky-500/10 via-transparent to-transparent',
-      orb: 'bg-sky-300/16',
-      line: 'via-sky-400/60',
-      badge: 'bg-sky-50 text-sky-700 ring-sky-200',
+      glow: 'from-sky-500/8 via-transparent to-transparent',
+      orb: 'bg-sky-300/20',
+      line: 'via-sky-400/50',
+      checkBg: 'bg-sky-600',
+      badge: 'bg-sky-50 text-sky-700',
     },
     featured: true,
   },
   {
-    name: 'Sklep Internetowy',
-    price: 'od 6 000 zł',
-    timeline: 'ok. 6–8 tygodni',
+    name: 'Strona Pro',
+    tagline: 'Zarządzam treścią sam',
+    price: 'od 4 000 zł',
+    timeline: 'ok. 4–6 tygodni',
     description:
-      'Kompletna platforma e-commerce gotowa do sprzedaży. Od projektu po integrację z płatnościami i kurierami.',
+      'Wszystko z Firmowej, plus panel CMS i makieta UI zatwierdzona przed wdrożeniem.',
     features: [
-      'Nieograniczona liczba produktów',
-      'Integracja z Przelewy24 / Stripe',
-      'Integracja z kurierami (InPost, DPD)',
-      'Panel zarządzania zamówieniami',
-      'Optymalizacja SEO dla sklepu',
-      'Szkolenie z obsługi panelu',
-      '30 dni poprawek po wdrożeniu',
+      'Wszystko ze Strony Firmowej',
+      'Panel CMS — edytujesz treści bez programisty',
+      'Makieta UI przed wdrożeniem',
+      'Analityka konwersji (kliknięcia, formularze)',
+      'Priorytetowa opieka po wdrożeniu',
+      '2 rundy poprawek + 30 dni opieki',
     ],
     accent: {
-      glow: 'from-violet-500/10 via-transparent to-transparent',
-      orb: 'bg-violet-300/16',
-      line: 'via-violet-400/60',
-      badge: 'bg-violet-50 text-violet-700 ring-violet-200',
+      glow: 'from-violet-500/8 via-transparent to-transparent',
+      orb: 'bg-violet-300/20',
+      line: 'via-violet-400/50',
+      checkBg: 'bg-violet-600',
+      badge: 'bg-violet-50 text-violet-700',
     },
     featured: false,
   },
 ];
 
+const tableRows = [
+  { label: 'One-page (wszystko na jednej stronie)', values: [true, false, false] },
+  { label: 'Do 6 podstron', values: [false, true, true] },
+  { label: 'Indywidualny projekt graficzny', values: [true, true, true] },
+  { label: 'Responsywna (telefon, tablet)', values: [true, true, true] },
+  { label: 'Formularz kontaktowy', values: [true, true, true] },
+  { label: 'Google Maps', values: [true, true, true] },
+  { label: 'SSL + szybkie ładowanie', values: [true, true, true] },
+  { label: 'Podstawowe SEO', values: [true, true, true] },
+  { label: 'Pomoc z tekstami i zdjęciami', values: [true, true, true] },
+  { label: 'Szkolenie z obsługi (30 min)', values: [true, true, true] },
+  { label: 'Kopia zapasowa', values: [true, true, true] },
+  { label: 'Konto e-mail na domenie', values: [false, true, true] },
+  { label: 'Google Analytics', values: [false, true, true] },
+  { label: 'Blog / aktualności', values: [false, true, true] },
+  { label: 'Panel CMS', values: [false, false, true] },
+  { label: 'Makieta UI przed wdrożeniem', values: [false, false, true] },
+  { label: 'Analityka konwersji', values: [false, false, true] },
+  { label: '2 rundy poprawek w cenie', values: [true, true, true] },
+  { label: '30 dni opieki po wdrożeniu', values: [true, true, true] },
+];
+
+const checkColors = ['text-indigo-600', 'text-sky-600', 'text-violet-600'];
+const colHighlight = [false, true, false];
+
 export function Pricing() {
   return (
     <section
       id="cennik"
-      className="relative overflow-hidden bg-gradient-to-b from-white via-zinc-50/30 to-white py-24 sm:py-28"
+      className="relative overflow-hidden bg-gradient-to-b from-white via-zinc-50/40 to-white py-24 sm:py-32"
     >
-      {/* Subtle top separator */}
+      {/* Separator */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
 
       {/* Ambient blobs */}
-      <div className="absolute left-[-80px] top-[60px] h-[260px] w-[260px] rounded-full bg-indigo-200/10 blur-3xl" />
-      <div className="absolute right-[-60px] bottom-[40px] h-[240px] w-[240px] rounded-full bg-sky-200/10 blur-3xl" />
+      <div className="pointer-events-none absolute left-[-120px] top-[80px] h-[320px] w-[320px] rounded-full bg-indigo-200/12 blur-3xl" />
+      <div className="pointer-events-none absolute right-[-80px] top-[200px] h-[280px] w-[280px] rounded-full bg-sky-200/12 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[60px] left-1/2 h-[200px] w-[400px] -translate-x-1/2 rounded-full bg-violet-200/10 blur-3xl" />
 
       <Container>
         <div className="relative z-10">
@@ -93,19 +129,16 @@ export function Pricing() {
           />
 
           {/* Portfolio offer callout */}
-          <div className="mb-10 overflow-hidden rounded-2xl border border-indigo-200/60 bg-gradient-to-r from-indigo-50 via-white to-sky-50 p-6 shadow-sm">
-            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mb-12 overflow-hidden rounded-2xl border border-indigo-200/60 bg-gradient-to-r from-indigo-50/80 via-white to-sky-50/80 p-6 shadow-sm ring-1 ring-indigo-100/40">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <span className="mb-2 inline-block rounded-full bg-indigo-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-indigo-700">
                   Oferta dla pierwszych klientów
                 </span>
-                <h3 className="text-lg font-semibold tracking-tight text-zinc-900">
-                  Strona bez opłaty za pracę — płacisz tylko za domenę i hosting
-                </h3>
-                <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-zinc-500">
-                  Buduję portfolio, dlatego pierwsze <span className="font-semibold text-zinc-700">3 strony</span> tworzę bez wynagrodzenia.
-                  Płacisz wyłącznie za domenę i hosting — łącznie ok.{' '}
-                  <span className="font-semibold text-zinc-700">250 zł/rok</span>.
+                <p className="mt-1 text-sm leading-relaxed text-zinc-600">
+                  Buduję portfolio — pierwsze 3 strony tworzę{' '}
+                  <strong className="text-zinc-800">bez opłaty za pracę</strong>.
+                  Płacisz tylko za domenę i hosting (~250 zł/rok).
                   W zamian proszę o możliwość umieszczenia projektu w portfolio i krótką opinię.
                 </p>
               </div>
@@ -118,51 +151,49 @@ export function Pricing() {
             </div>
           </div>
 
+          {/* Pricing cards */}
           <div className="grid gap-6 sm:grid-cols-3">
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`group relative overflow-hidden rounded-[2rem] border bg-white/95 p-8 shadow-[0_20px_80px_rgba(15,23,42,0.06)] ring-1 ring-zinc-950/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_100px_rgba(15,23,42,0.10)] ${
+                className={`group relative overflow-hidden rounded-[2rem] border bg-white/95 p-8 shadow-[0_20px_80px_rgba(15,23,42,0.06)] ring-1 ring-zinc-950/5 transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_32px_100px_rgba(15,23,42,0.11)] ${
                   plan.featured
-                    ? 'border-zinc-300/80 shadow-[0_20px_80px_rgba(15,23,42,0.10)]'
-                    : 'border-zinc-200/80'
+                    ? 'border-zinc-300/80 shadow-[0_24px_80px_rgba(15,23,42,0.09)]'
+                    : 'border-zinc-200/70'
                 }`}
               >
                 {/* Glow overlay */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${plan.accent.glow} opacity-90`}
-                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${plan.accent.glow}`} />
                 {/* Top accent line */}
-                <div
-                  className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${plan.accent.line} to-transparent`}
-                />
+                <div className={`absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent ${plan.accent.line} to-transparent`} />
                 {/* Orb */}
                 <div
-                  className={`absolute right-0 top-0 h-28 w-28 rounded-full ${plan.accent.orb} blur-3xl transition duration-500 group-hover:scale-110`}
+                  className={`absolute right-0 top-0 h-32 w-32 rounded-full ${plan.accent.orb} blur-3xl transition duration-700 group-hover:scale-125`}
                 />
                 {/* Inner gradient */}
-                <div className="absolute inset-[1px] rounded-[calc(2rem-1px)] bg-gradient-to-b from-white via-white to-zinc-50/40" />
+                <div className="absolute inset-[1px] rounded-[calc(2rem-1px)] bg-gradient-to-b from-white via-white to-zinc-50/50" />
 
                 {/* Content */}
                 <div className="relative">
-                  {/* Popular badge */}
                   {plan.featured && (
                     <span className="mb-4 inline-block rounded-full bg-zinc-900 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white">
                       Najpopularniejszy
                     </span>
                   )}
 
-                  <h3 className="text-lg font-semibold tracking-tight text-zinc-900">
+                  <span className={`mb-3 inline-block rounded-full px-2.5 py-0.5 text-[11px] font-medium ${plan.accent.badge}`}>
+                    {plan.tagline}
+                  </span>
+
+                  <h3 className="text-xl font-bold tracking-tight text-zinc-900">
                     {plan.name}
                   </h3>
-
-                  <p className="mt-1 text-sm leading-relaxed text-zinc-500">
+                  <p className="mt-1.5 text-sm leading-relaxed text-zinc-500">
                     {plan.description}
                   </p>
 
-                  {/* Price */}
-                  <div className="mt-6 flex items-end gap-2">
-                    <span className="text-3xl font-bold tracking-tight text-zinc-900">
+                  <div className="mt-6 flex items-baseline gap-1">
+                    <span className="text-3xl font-extrabold tracking-tight text-zinc-900">
                       {plan.price}
                     </span>
                   </div>
@@ -170,14 +201,14 @@ export function Pricing() {
                     Czas realizacji: {plan.timeline}
                   </p>
 
-                  {/* Divider */}
-                  <div className="my-6 h-px bg-zinc-100" />
+                  <div className="my-6 h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
 
-                  {/* Features */}
-                  <ul className="flex flex-col gap-3">
+                  <ul className="flex flex-col gap-2.5">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-zinc-900 text-[9px] font-bold text-white">
+                        <span
+                          className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full ${plan.accent.checkBg} text-[9px] font-bold text-white shadow-sm`}
+                        >
                           ✓
                         </span>
                         <span className="text-sm leading-snug text-zinc-600">
@@ -187,32 +218,74 @@ export function Pricing() {
                     ))}
                   </ul>
 
-                  {/* CTA */}
                   <a
                     href="/#kontakt"
-                    className={`mt-8 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-colors ${
+                    className={`mt-8 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all duration-200 ${
                       plan.featured
-                        ? 'bg-zinc-900 text-white hover:bg-zinc-700'
+                        ? 'bg-zinc-900 text-white shadow-md hover:bg-zinc-700 hover:shadow-lg'
                         : 'bg-zinc-100 text-zinc-900 hover:bg-zinc-200'
                     }`}
                   >
                     Zapytaj o wycenę
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </a>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Comparison table */}
+          <div className="mt-20">
+            <h3 className="mb-8 text-center text-xl font-bold tracking-tight text-zinc-900">
+              Szczegółowe porównanie pakietów
+            </h3>
+            <div className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-[0_8px_40px_rgba(15,23,42,0.06)]">
+              {/* Header */}
+              <div className="grid grid-cols-4 border-b border-zinc-100">
+                <div className="p-4" />
+                {plans.map((plan, i) => (
+                  <div
+                    key={plan.name}
+                    className={`p-4 text-center ${colHighlight[i] ? 'bg-zinc-900' : 'bg-zinc-50/80'}`}
+                  >
+                    <span className={`text-sm font-bold ${colHighlight[i] ? 'text-white' : 'text-zinc-800'}`}>
+                      {plan.name}
+                    </span>
+                    <p className={`mt-0.5 text-xs ${colHighlight[i] ? 'text-zinc-300' : 'text-zinc-400'}`}>
+                      {plan.price}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Rows */}
+              {tableRows.map((row, rowIdx) => (
+                <div
+                  key={row.label}
+                  className={`grid grid-cols-4 border-b border-zinc-100 last:border-0 ${rowIdx % 2 === 0 ? 'bg-white' : 'bg-zinc-50/40'}`}
+                >
+                  <div className="flex items-center p-4 text-sm text-zinc-600">
+                    {row.label}
+                  </div>
+                  {row.values.map((val, colIdx) => (
+                    <div
+                      key={colIdx}
+                      className={`flex items-center justify-center p-4 ${colHighlight[colIdx] ? 'bg-zinc-900/[0.03]' : ''}`}
+                    >
+                      {val ? (
+                        <svg className={`h-5 w-5 ${checkColors[colIdx]}`} viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      ) : (
+                        <span className="h-[2px] w-4 rounded-full bg-zinc-200" />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Footer note */}
