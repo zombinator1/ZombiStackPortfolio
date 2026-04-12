@@ -68,7 +68,7 @@ const plans = [
 ];
 
 const tableRows = [
-  { label: 'Liczba podstron', values: ['1 (one-page)', 'do 6', 'do 6'] },
+  { label: 'Liczba podstron', values: ['1 (one-page)', 'wiele', 'wiele'] },
   { label: 'Konto e-mail na domenie', values: [false, true, true] },
   { label: 'Blog / aktualności', values: [false, true, true] },
   { label: 'Google Analytics', values: [false, true, true] },
