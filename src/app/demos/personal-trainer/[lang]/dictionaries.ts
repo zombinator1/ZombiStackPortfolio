@@ -136,13 +136,13 @@ const pl: Dict = {
     label: 'O marce',
     heading: 'Sportowe podejście. Technika. Dyscyplina. Wynik.',
     body1:
-      'Za tą marką stoi podejście zbudowane na doświadczeniu sportowym i wysokich wymaganiach wobec jakości treningu. Fundamentem pracy są technika, regularność i dobrze zaplanowany progres.',
+      'Trenuję sporty walki od dzieciństwa. Startuje w zawodach w sportach walki. Jestem dumną zdobywczynią kilku medali.',
     body2:
       'Inspiracja sportami walki przekłada się tu na coś więcej niż sam charakter zajęć — buduje koncentrację, sprawność, odporność i pewność siebie, która wychodzi daleko poza salę treningową.',
     features: [
-      'Trening oparty na technice i jakości ruchu',
-      'System pracy dopasowany do realnego celu',
-      'Podejście dla kobiet i mężczyzn',
+      'Absolwentka Warszawskiego AWF',
+      'Czarny pas w Judo',
+      'Wygrane zawody WP 2021',
       'Współpraca stacjonarna i online',
     ],
   },
