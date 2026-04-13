@@ -154,7 +154,7 @@ function Hero({ dict }: { dict: Dict }) {
 
           <h1 className="max-w-4xl [font-family:var(--font-display)] text-[4.4rem] uppercase leading-[0.9] tracking-[0.03em] text-white sm:text-[5.8rem] lg:text-[7.8rem]">
             {dict.hero.line1}
-            <span className="ml-3 text-[#f3b24f]">{dict.hero.accent}</span>
+            <span className="ml-3 text-[#f3b24f] [text-shadow:0_0_50px_rgba(243,178,79,0.55)]">{dict.hero.accent}</span>
             <span className="block">{dict.hero.line2}</span>
           </h1>
 
@@ -183,7 +183,7 @@ function Hero({ dict }: { dict: Dict }) {
         </div>
 
         <div className="grid gap-4 self-end lg:justify-self-end">
-          <div className="rounded-[2rem] border border-white/12 bg-white/8 p-6 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+          <div className="rounded-[2rem] border border-white/12 bg-white/8 p-6 shadow-[0_0_80px_rgba(243,178,79,0.12),0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl">
             <div className="mb-4 flex items-center justify-between">
               <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#f3b24f]">{dict.hero.profileLabel}</span>
               <span className="rounded-full border border-white/12 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
@@ -223,7 +223,8 @@ function Audience({ dict }: { dict: Dict }) {
             {dict.audience.heading}
           </h2>
         </div>
-        <div className="rounded-[2rem] border border-white/10 bg-[#111d2f]/90 p-8 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111d2f]/90 p-8 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
+          <div className="absolute inset-y-0 left-0 w-[3px] rounded-l-[2rem] bg-gradient-to-b from-transparent via-[#f3b24f]/50 to-transparent" />
           <p className="text-lg leading-9 text-white/80">{dict.audience.body}</p>
         </div>
       </div>
@@ -251,9 +252,9 @@ function AboutSection({ dict }: { dict: Dict }) {
 
           <div className="grid gap-4 sm:grid-cols-2">
             {dict.about.features.map((item) => (
-              <div key={item} className="rounded-[1.5rem] border border-[#09111d]/10 bg-white px-5 py-5 shadow-[0_12px_35px_rgba(9,17,29,0.08)]">
+              <div key={item} className="rounded-[1.5rem] border border-[#09111d]/10 bg-white px-5 py-5 shadow-[0_12px_35px_rgba(9,17,29,0.08)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(9,17,29,0.14)]">
                 <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#b62636]" />
+                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#b62636]" />
                   <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#09111d]">{item}</p>
                 </div>
               </div>
@@ -293,7 +294,7 @@ function OfferSection({ dict }: { dict: Dict }) {
             {dict.offer.items.map((item, index) => (
               <article
                 key={item.title}
-                className="group rounded-[1.8rem] border border-white/10 bg-[#101a2b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f3b24f]/40 hover:bg-[#121f33]"
+                className="group rounded-[1.8rem] border border-white/10 bg-[#101a2b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f3b24f]/40 hover:bg-[#121f33] hover:shadow-[0_24px_60px_rgba(0,0,0,0.4)]"
               >
                 <div className="mb-4 flex items-center justify-between">
                   <span className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#f3b24f]">0{index + 1}</span>
@@ -324,7 +325,7 @@ function ProcessSection({ dict }: { dict: Dict }) {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {dict.process.steps.map((item) => (
-            <article key={item.step} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur-sm">
+            <article key={item.step} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#b62636]/40 hover:shadow-[0_24px_60px_rgba(0,0,0,0.3)]">
               <p className="text-sm font-black tracking-[0.22em] text-[#b62636]">{item.step}</p>
               <h3 className="mt-4 text-2xl font-extrabold uppercase tracking-[0.05em] text-white">{item.title}</h3>
               <p className="mt-4 text-sm leading-8 text-white/68">{item.description}</p>
@@ -350,7 +351,8 @@ function WhyItWorksSection({ dict }: { dict: Dict }) {
 
         <div className="grid gap-4 sm:grid-cols-2">
           {dict.effects.items.map((item) => (
-            <article key={item.title} className="rounded-[1.8rem] border border-[#09111d]/10 bg-white p-6 shadow-[0_15px_40px_rgba(9,17,29,0.08)]">
+            <article key={item.title} className="rounded-[1.8rem] border border-[#09111d]/10 bg-white p-6 shadow-[0_15px_40px_rgba(9,17,29,0.08)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_rgba(9,17,29,0.13)]">
+              <div className="mb-4 h-1 w-10 rounded-full bg-[#b62636]" />
               <h3 className="text-xl font-extrabold uppercase tracking-[0.06em] text-[#09111d]">{item.title}</h3>
               <p className="mt-3 text-sm leading-7 text-[#4c5a6f]">{item.description}</p>
             </article>
@@ -375,9 +377,10 @@ function TestimonialsSection({ dict }: { dict: Dict }) {
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
             {dict.testimonials.quotes.map((quote, index) => (
-              <article key={quote} className="rounded-[2rem] border border-white/10 bg-[#101a2b] p-7 shadow-[0_14px_35px_rgba(0,0,0,0.22)]">
+              <article key={quote} className="rounded-[2rem] border border-white/10 bg-[#101a2b] p-7 shadow-[0_14px_35px_rgba(0,0,0,0.22)] transition duration-300 hover:border-[#f3b24f]/20 hover:bg-[#111f35]">
                 <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b62636]">0{index + 1}</p>
-                <p className="mt-5 text-lg leading-9 text-white/82">"{quote}"</p>
+                <p className="mt-2 font-black leading-none text-[#f3b24f]/20 text-5xl">"</p>
+                <p className="mt-1 text-lg leading-9 text-white/82">{quote}</p>
               </article>
             ))}
           </div>
@@ -413,7 +416,7 @@ function FaqSection({ dict }: { dict: Dict }) {
 
         <div className="grid gap-4">
           {dict.faq.items.map((item) => (
-            <article key={item.question} className="rounded-[1.7rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <article key={item.question} className="rounded-[1.7rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition duration-200 hover:border-[#f3b24f]/20 hover:bg-white/8">
               <h3 className="text-lg font-extrabold uppercase tracking-[0.05em] text-white">{item.question}</h3>
               <p className="mt-3 text-sm leading-7 text-white/68">{item.answer}</p>
             </article>
@@ -426,7 +429,8 @@ function FaqSection({ dict }: { dict: Dict }) {
 
 function FinalCta({ dict }: { dict: Dict }) {
   return (
-    <section id="kontakt" className="bg-[#09111d] py-24 sm:py-28">
+    <section id="kontakt" className="relative overflow-hidden bg-[#09111d] py-24 sm:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_top_right,rgba(243,178,79,0.06),transparent),radial-gradient(ellipse_60%_50%_at_bottom_left,rgba(182,38,54,0.06),transparent)]" />
       <div className="mx-auto grid max-w-7xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
         <div className="lg:pt-2">
           <p className="mb-5 text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">
