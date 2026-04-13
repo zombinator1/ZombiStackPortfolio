@@ -60,11 +60,18 @@ export type Dict = {
     label: string;
     heading: string;
     body: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
-    contactLabel: string;
-    highlightLabel: string;
-    highlightText: string;
+  };
+  form: {
+    labelGoal: string;
+    placeholderGoal: string;
+    labelName: string;
+    labelEmail: string;
+    labelPhone: string;
+    submit: string;
+    submitting: string;
+    successTitle: string;
+    successBody: string;
+    reassurances: string[];
   };
   footer: { name: string; disclaimer: string };
 };
@@ -89,7 +96,7 @@ const pl: Dict = {
     ctaPrimary: 'Umów konsultację',
     ctaSecondary: 'Zobacz ofertę',
     subtext:
-      'Trening indywidualny, przygotowanie sprawnościowe i sporty walki w jednym spójnym systemie pracy.',
+      'Trening indywidualny, przygotowanie sprawnościowe i sporty walki.',
     profileLabel: 'Profil pracy',
     location: 'Warszawa • Online',
   },
@@ -139,7 +146,7 @@ const pl: Dict = {
       {
         title: 'Trening sportów walki',
         description:
-          'Trening oparty na technice, kontroli ruchu, dynamice i charakterze sportów walki. Dla osób, które chcą rozwijać sprawność, refleks i pewność siebie.',
+          'Indywidualne treningi Judo, MMA i box\'u.',
       },
       {
         title: 'Opieka online',
@@ -222,12 +229,18 @@ const pl: Dict = {
     label: 'Finalne CTA',
     heading: 'Chcesz trenować mocniej, mądrzej i z realnym celem?',
     body: 'Napisz, jaki masz cel i sprawdź, jaka forma współpracy będzie dla Ciebie najlepsza. Zbuduj siłę, popraw sprawność i trenuj z podejściem, które daje realne efekty.',
-    ctaPrimary: 'Umów pierwszą konsultację',
-    ctaSecondary: 'Zadzwoń: 600 123 456',
-    contactLabel: 'Kontakt',
-    highlightLabel: 'Wyróżnik',
-    highlightText:
-      'Trening personalny premium z wyraźnym DNA sportów walki: technika, dyscyplina, sprawność i realny progres zamiast generycznego fitnessu.',
+  },
+  form: {
+    labelGoal: 'Opisz swój cel treningowy',
+    placeholderGoal: 'Np. Chcę poprawić sylwetkę i zwiększyć siłę. Trenuję 2x w tygodniu, chciałbym 3x. Wolę treningi wieczorowe.',
+    labelName: 'Imię i nazwisko',
+    labelEmail: 'Adres e-mail',
+    labelPhone: 'Numer telefonu (opcjonalnie)',
+    submit: 'Wyślij wiadomość',
+    submitting: 'Wysyłanie…',
+    successTitle: 'Wiadomość wysłana!',
+    successBody: 'Odezwę się najszybciej jak to możliwe.',
+    reassurances: ['Odpowiem w ciągu 24h', 'Pierwsza konsultacja bezpłatna', 'Bez zobowiązań'],
   },
   footer: {
     name: 'Karolina Wrona — demo wizytówki trenera personalnego',
@@ -255,7 +268,7 @@ const en: Dict = {
     ctaPrimary: 'Book a consultation',
     ctaSecondary: 'See the offer',
     subtext:
-      'Individual training, fitness preparation, and combat sports in one coherent system.',
+      'Individual training, fitness preparation, and combat sports.',
     profileLabel: 'Work profile',
     location: 'Warsaw • Online',
   },
@@ -385,12 +398,18 @@ const en: Dict = {
     label: 'Get started',
     heading: 'Want to train harder, smarter, and with a real goal?',
     body: 'Write about your goal and find out what form of collaboration suits you best. Build strength, improve fitness, and train with an approach that delivers real results.',
-    ctaPrimary: 'Book your first consultation',
-    ctaSecondary: 'Call: 600 123 456',
-    contactLabel: 'Contact',
-    highlightLabel: 'What sets us apart',
-    highlightText:
-      'Premium personal training with clear combat sports DNA: technique, discipline, fitness, and real progress instead of generic fitness.',
+  },
+  form: {
+    labelGoal: 'Describe your training goal',
+    placeholderGoal: 'E.g. I want to improve my physique and build strength. I currently train twice a week and would like to start 3 times. I prefer evening sessions.',
+    labelName: 'Full name',
+    labelEmail: 'Email address',
+    labelPhone: 'Phone number (optional)',
+    submit: 'Send message',
+    submitting: 'Sending…',
+    successTitle: 'Message sent!',
+    successBody: "I'll get back to you as soon as possible.",
+    reassurances: ['Reply within 24h', 'First consultation free', 'No commitments'],
   },
   footer: {
     name: 'Karolina Wrona — personal trainer demo page',
@@ -418,7 +437,7 @@ const es: Dict = {
     ctaPrimary: 'Reservar consulta',
     ctaSecondary: 'Ver la oferta',
     subtext:
-      'Entrenamiento individual, preparación física y artes marciales en un sistema de trabajo coherente.',
+      'Entrenamiento individual, preparación física y artes marciales.',
     profileLabel: 'Perfil de trabajo',
     location: 'Varsovia • Online',
   },
@@ -547,12 +566,18 @@ const es: Dict = {
     label: 'Comenzar',
     heading: '¿Quieres entrenar más duro, más inteligente y con un objetivo real?',
     body: 'Escribe sobre tu objetivo y descubre qué forma de colaboración es mejor para ti. Construye fuerza, mejora tu condición y entrena con un enfoque que da resultados reales.',
-    ctaPrimary: 'Reserva tu primera consulta',
-    ctaSecondary: 'Llamar: 600 123 456',
-    contactLabel: 'Contacto',
-    highlightLabel: 'Lo que nos diferencia',
-    highlightText:
-      'Entrenamiento personal premium con claro ADN de artes marciales: técnica, disciplina, aptitud y progreso real en lugar de fitness genérico.',
+  },
+  form: {
+    labelGoal: 'Describe tu objetivo de entrenamiento',
+    placeholderGoal: 'Ej. Quiero mejorar mi físico y aumentar la fuerza. Actualmente entreno 2 veces por semana y me gustaría entrenar 3 veces. Prefiero sesiones por las tardes.',
+    labelName: 'Nombre completo',
+    labelEmail: 'Correo electrónico',
+    labelPhone: 'Número de teléfono (opcional)',
+    submit: 'Enviar mensaje',
+    submitting: 'Enviando…',
+    successTitle: '¡Mensaje enviado!',
+    successBody: 'Me pondré en contacto contigo lo antes posible.',
+    reassurances: ['Respondo en 24h', 'Primera consulta gratuita', 'Sin compromisos'],
   },
   footer: {
     name: 'Karolina Wrona — demo de página de entrenador personal',

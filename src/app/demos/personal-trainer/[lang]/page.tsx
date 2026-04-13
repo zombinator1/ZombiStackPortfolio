@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Bebas_Neue, Manrope } from 'next/font/google';
 import { getDictionary, hasLocale, locales, type Dict, type Locale } from './dictionaries';
+import { TrainerContactForm } from './contact-form';
 
 const displayFont = Bebas_Neue({
   subsets: ['latin'],
@@ -425,45 +426,43 @@ function FaqSection({ dict }: { dict: Dict }) {
 
 function FinalCta({ dict }: { dict: Dict }) {
   return (
-    <section id="kontakt" className="bg-[#f2efe8] py-20 text-[#09111d] sm:py-24">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-        <div>
-          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#b62636]">{dict.cta.label}</p>
-          <h2 className="mt-4 max-w-3xl [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] sm:text-6xl">
+    <section id="kontakt" className="bg-[#09111d] py-24 sm:py-28">
+      <div className="mx-auto grid max-w-7xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+        <div className="lg:pt-2">
+          <p className="mb-5 text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">
+            {dict.cta.label}
+          </p>
+          <h2 className="[font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] text-white sm:text-6xl">
             {dict.cta.heading}
           </h2>
-          <p className="mt-6 max-w-2xl text-lg leading-9 text-[#263246]">{dict.cta.body}</p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="mailto:kontakt@karolinawrona-demo.pl"
-              className="inline-flex items-center justify-center rounded-full bg-[#09111d] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:bg-[#13213a]"
-            >
-              {dict.cta.ctaPrimary}
-            </a>
-            <a
-              href="tel:+48600123456"
-              className="inline-flex items-center justify-center rounded-full border border-[#09111d]/12 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-[#09111d] transition hover:-translate-y-0.5 hover:border-[#09111d]/25"
-            >
-              {dict.cta.ctaSecondary}
-            </a>
-          </div>
+          <p className="mt-6 max-w-xl text-base leading-8 text-white/65">
+            {dict.cta.body}
+          </p>
+          <ul className="mt-8 flex flex-col gap-3.5">
+            {dict.form.reassurances.map((item) => (
+              <li key={item} className="flex items-center gap-3 text-sm text-white/65">
+                <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1e2f45] to-[#b62636]/70 text-[10px] font-bold text-white shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+                  ✓
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className="rounded-[2rem] border border-[#09111d]/10 bg-white p-8 shadow-[0_18px_50px_rgba(9,17,29,0.08)]">
-          <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#b62636]">{dict.cta.contactLabel}</p>
-            <div className="mt-4 space-y-3 text-sm leading-7 text-[#263246]">
-              <p>kontakt@karolinawrona-demo.pl</p>
-              <p>+48 600 123 456</p>
-              <p>Warszawa + współpraca online</p>
-            </div>
-          </div>
-
-          <div className="mt-8 rounded-[1.5rem] bg-[#09111d] p-6 text-white">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">{dict.cta.highlightLabel}</p>
-            <p className="mt-3 text-sm leading-7 text-white/74">{dict.cta.highlightText}</p>
-          </div>
-        </div>
+        <TrainerContactForm
+          labels={{
+            labelGoal: dict.form.labelGoal,
+            placeholderGoal: dict.form.placeholderGoal,
+            labelName: dict.form.labelName,
+            labelEmail: dict.form.labelEmail,
+            labelPhone: dict.form.labelPhone,
+            submit: dict.form.submit,
+            submitting: dict.form.submitting,
+            successTitle: dict.form.successTitle,
+            successBody: dict.form.successBody,
+          }}
+        />
       </div>
     </section>
   );
