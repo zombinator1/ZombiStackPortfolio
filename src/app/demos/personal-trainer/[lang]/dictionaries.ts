@@ -361,7 +361,7 @@ const en: Dict = {
     cta: 'Book a consultation',
   },
   hero: {
-    tags: ['Personal training', 'Fitness testing prep', 'Combat sports training'],
+    tags: ['Personal training', 'Physical fitness test preparation', 'Combat sports training'],
     line1: 'Strength,',
     accent: 'fitness',
     line2: 'and self-confidence.',
@@ -379,21 +379,21 @@ const en: Dict = {
     { value: '100%', label: 'focus on your goal' },
   ],
   audience: {
-    label: 'Who it\'s for',
+    label: 'Who it is for',
     heading: 'Training with purpose, not by accident.',
     body: 'This collaboration is for you if you want to improve your physique, build strength, develop better fitness, and feel greater confidence in your body. If you\'re done with chaotic plans, random exercises, and training without direction — here you get a clear path, structure, and real progress.',
   },
   about: {
-    label: 'About',
+    label: 'About the brand',
     heading: 'Athletic approach. Technique. Discipline. Results.',
     body1:
-      'This brand is built on athletic experience and high standards for training quality. The foundation of the work is technique, consistency, and well-planned progression.',
+      'I have trained combat sports since childhood. I compete in combat sports events. I am a proud winner of several medals.',
     body2:
-      'The influence of combat sports translates into more than just the style of sessions — it builds focus, fitness, resilience, and confidence that extends far beyond the training floor.',
+      'The inspiration from combat sports translates here into something more than just the character of the sessions — it builds focus, fitness, resilience, and self-confidence that goes far beyond the training floor.',
     features: [
-      'Training based on technique and movement quality',
-      'A system tailored to your real goal',
-      'Approach for women and men',
+      'Graduate of the University of Physical Education in Warsaw',
+      'Black belt in Judo',
+      'Winner of the WP 2021 competition',
       'In-person and online collaboration',
     ],
   },
@@ -401,7 +401,7 @@ const en: Dict = {
     label: 'Offer',
     heading: 'Tailored to your goal, not to a ready-made template.',
     description:
-      'Strong athletic character doesn\'t mean chaos. Every form of collaboration has its own goal, scope, and concrete result.',
+      '',
     imageLabel: 'Training approach',
     imageBody:
       'Technique, movement control, progression, and full adaptation of the plan to your level and goal. There is no room for random effort here.',
@@ -419,7 +419,7 @@ const en: Dict = {
       {
         title: 'Combat sports training',
         description:
-          'Training based on technique, movement control, dynamics, and the character of combat sports. For those who want to develop fitness, reflexes, and self-confidence.',
+          'Individual Judo, MMA, and boxing training.',
       },
       {
         title: 'Online coaching',
@@ -432,12 +432,12 @@ const en: Dict = {
     label: 'Pricing',
     heading: 'A clear way to work together. No guesswork.',
     body:
-      'You can start with a single session or go straight into a package if you want steady progress. The best value comes from consistent 1:1 work tailored to your goal, fitness level, and weekly rhythm.',
+      'You can start with a single session or go straight into a package if you want steady progress.',
     positioning:
       'This pricing is meant to signal professionalism, specialization, and serious 1:1 coaching — not a cheap, generic fitness offer.',
     factors: ['Current level', 'Training goal', 'Session frequency'],
     planLabel: 'Package',
-    featuredBadge: 'Most chosen',
+    featuredBadge: 'Best value',
     cta: 'Choose package',
     plans: [
       {
@@ -468,10 +468,7 @@ const en: Dict = {
     ],
     extrasLabel: 'Additional options',
     extras: [
-      { label: 'Initial consultation', value: '149 PLN or free with a package' },
       { label: 'Online coaching', value: 'from 249 PLN / month' },
-      { label: 'Fitness test preparation', value: 'individual quote' },
-      { label: 'Combat sports training', value: 'as 1:1 sessions or a specialist module' },
     ],
     notesLabel: 'Good to know',
     notes: [
@@ -567,7 +564,7 @@ const en: Dict = {
     ],
   },
   cta: {
-    label: 'Get started',
+    label: 'Final CTA',
     heading: 'Want to train harder, smarter, and with a real goal?',
     body: 'Write about your goal and find out what form of collaboration suits you best. Build strength, improve fitness, and train with an approach that delivers real results.',
   },
@@ -625,15 +622,15 @@ const es: Dict = {
   },
   about: {
     label: 'Sobre la marca',
-    heading: 'Enfoque atlético. Técnica. Disciplina. Resultado.',
+    heading: 'Enfoque deportivo. Técnica. Disciplina. Resultado.',
     body1:
-      'Esta marca se basa en la experiencia deportiva y altos estándares de calidad de entrenamiento. El fundamento del trabajo es la técnica, la regularidad y una progresión bien planificada.',
+      'Entreno deportes de combate desde la infancia. Compito en torneos de deportes de combate. Soy una orgullosa ganadora de varias medallas.',
     body2:
-      'La influencia de las artes marciales se traduce en más que el carácter de las sesiones — construye concentración, aptitud, resistencia y confianza que va mucho más allá del suelo de entrenamiento.',
+      'La inspiración en los deportes de combate se traduce aquí en algo más que el carácter de las sesiones: construye concentración, condición física, resistencia y confianza en uno mismo, que va mucho más allá de la sala de entrenamiento.',
     features: [
-      'Entrenamiento basado en técnica y calidad del movimiento',
-      'Sistema adaptado a tu objetivo real',
-      'Enfoque para mujeres y hombres',
+      'Graduada de la Universidad de Educación Física de Varsovia',
+      'Cinturón negro de Judo',
+      'Ganadora de la competición WP 2021',
       'Colaboración presencial y online',
     ],
   },
@@ -641,7 +638,7 @@ const es: Dict = {
     label: 'Oferta',
     heading: 'Adaptada a tu objetivo, no a una plantilla predefinida.',
     description:
-      'El fuerte carácter atlético no significa caos. Cada forma de colaboración tiene su objetivo, alcance y resultado concreto.',
+      '',
     imageLabel: 'Enfoque de entrenamiento',
     imageBody:
       'Técnica, control del movimiento, progresión y total adaptación del plan a tu nivel y objetivo. Aquí no hay lugar para el esfuerzo aleatorio.',
@@ -659,7 +656,7 @@ const es: Dict = {
       {
         title: 'Entrenamiento de artes marciales',
         description:
-          'Entrenamiento basado en técnica, control del movimiento, dinámica y carácter de las artes marciales. Para quienes quieren desarrollar aptitud, reflejos y confianza.',
+          'Entrenamientos individuales de Judo, MMA y boxeo.',
       },
       {
         title: 'Coaching online',
@@ -672,12 +669,12 @@ const es: Dict = {
     label: 'Precios',
     heading: 'Modelo de trabajo claro. Sin adivinar.',
     body:
-      'Puedes empezar con una sola sesión o elegir directamente un paquete si quieres progreso constante. El mayor valor está en el trabajo 1:1 regular, ajustado a tu objetivo, nivel físico y ritmo de vida.',
+      'Puedes empezar con una sola sesión o elegir directamente un paquete si quieres progreso constante.',
     positioning:
       'Este precio debe comunicar profesionalismo, especialización y trabajo 1:1 serio, no una oferta barata y genérica de fitness.',
     factors: ['Nivel actual', 'Objetivo de trabajo', 'Frecuencia de sesiones'],
     planLabel: 'Paquete',
-    featuredBadge: 'Más elegido',
+    featuredBadge: 'Más rentable',
     cta: 'Elegir paquete',
     plans: [
       {
@@ -708,10 +705,7 @@ const es: Dict = {
     ],
     extrasLabel: 'Opciones adicionales',
     extras: [
-      { label: 'Consulta inicial', value: '149 PLN o gratis con paquete' },
       { label: 'Coaching online', value: 'desde 249 PLN / mes' },
-      { label: 'Preparación para pruebas físicas', value: 'presupuesto individual' },
-      { label: 'Entrenamiento de artes marciales', value: 'en formato 1:1 o como módulo especializado' },
     ],
     notesLabel: 'Información importante',
     notes: [
@@ -806,7 +800,7 @@ const es: Dict = {
     ],
   },
   cta: {
-    label: 'Comenzar',
+    label: 'CTA final',
     heading: '¿Quieres entrenar más duro, más inteligente y con un objetivo real?',
     body: 'Escribe sobre tu objetivo y descubre qué forma de colaboración es mejor para ti. Construye fuerza, mejora tu condición y entrena con un enfoque que da resultados reales.',
   },
