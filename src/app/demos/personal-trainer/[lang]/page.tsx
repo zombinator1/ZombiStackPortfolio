@@ -90,7 +90,7 @@ function Header({ dict, lang }: { dict: Dict; lang: Locale }) {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
         <a href="#hero" className="flex min-w-0 flex-col">
           <span className="text-[0.7rem] uppercase tracking-[0.32em] text-[#c44a7b]">{dict.header.subtitle}</span>
-          <span className="text-lg font-extrabold tracking-[0.08em] text-white">Karolina Wrona</span>
+          <span className="text-lg font-extrabold tracking-[0.08em] text-white">Anna Maria</span>
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
