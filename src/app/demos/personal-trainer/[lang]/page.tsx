@@ -437,11 +437,38 @@ function TestimonialsSection({ dict }: { dict: Dict }) {
 
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
-            {dict.testimonials.quotes.map((quote, index) => (
-              <article key={quote} className="rounded-[2rem] border border-white/10 bg-[#151018] p-7 shadow-[0_14px_35px_rgba(0,0,0,0.22)] transition duration-300 hover:border-[#c44a7b]/20 hover:bg-[#1a1320]">
-                <p className="text-sm font-black uppercase tracking-[0.22em] text-[#8d2c57]">0{index + 1}</p>
-                <p className="mt-2 text-5xl font-black leading-none text-[#c44a7b]/20">&quot;</p>
-                <p className="mt-1 text-lg leading-9 text-white/82">{quote}</p>
+            {dict.testimonials.items.map((item, index) => (
+              <article key={item.quote} className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,#17111b_0%,#120d15_100%)] p-7 shadow-[0_14px_35px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-0.5 hover:border-[#c44a7b]/28 hover:bg-[#1a1320] hover:shadow-[0_24px_55px_rgba(0,0,0,0.28)]">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c44a7b]/60 to-transparent opacity-80" />
+                <div className="flex items-start justify-between gap-5">
+                  <div>
+                    <div className="flex items-center gap-2 text-[#f1c5d6]">
+                      {Array.from({ length: 5 }).map((_, starIndex) => (
+                        <span key={starIndex} className="text-sm leading-none">★</span>
+                      ))}
+                    </div>
+                    <p className="mt-4 text-sm font-black uppercase tracking-[0.22em] text-[#8d2c57]">0{index + 1}</p>
+                  </div>
+                  <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white/68">
+                    {item.focus}
+                  </span>
+                </div>
+
+                <p className="mt-5 text-5xl font-black leading-none text-[#c44a7b]/20">&quot;</p>
+                <p className="mt-1 text-lg leading-9 text-white/84">{item.quote}</p>
+
+                <div className="mt-6 rounded-[1.4rem] border border-white/8 bg-black/20 px-4 py-4">
+                  <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-white">{item.name}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.14em] text-white/46">{item.detail}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="rounded-full bg-[#c44a7b]/16 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[#f1c5d6]">
+                      {item.outcome}
+                    </span>
+                    <span className="rounded-full border border-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-white/60">
+                      {dict.testimonials.verificationLabel}
+                    </span>
+                  </div>
+                </div>
               </article>
             ))}
           </div>

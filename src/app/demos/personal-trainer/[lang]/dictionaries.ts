@@ -71,7 +71,18 @@ export type Dict = {
     body: string;
     items: Array<{ title: string; description: string }>;
   };
-  testimonials: { label: string; heading: string; quotes: string[] };
+  testimonials: {
+    label: string;
+    heading: string;
+    verificationLabel: string;
+    items: Array<{
+      quote: string;
+      name: string;
+      detail: string;
+      focus: string;
+      outcome: string;
+    }>;
+  };
   faq: {
     label: string;
     heading: string;
@@ -182,6 +193,8 @@ const pl: Dict = {
     heading: 'Jasny model współpracy. Bez zgadywania.',
     body:
       'Możesz zacząć od pojedynczej sesji albo wejść od razu w pakiet, jeśli zależy Ci na regularnym progresie.',
+    positioning:
+      'Ten cennik ma komunikować profesjonalne prowadzenie 1:1, specjalizację i konkretną wartość współpracy — nie tanią, masową ofertę fitness.',
     factors: ['Poziom zaawansowania', 'Cel współpracy', 'Regularność spotkań'],
     planLabel: 'Pakiet',
     featuredBadge: 'Najbardziej opłacalny',
@@ -261,10 +274,29 @@ const pl: Dict = {
   testimonials: {
     label: 'Opinie',
     heading: 'Najczęściej doceniane: konkret, atmosfera i progres.',
-    quotes: [
-      'W końcu trenuję według planu, który ma sens. Wszystko jest jasne, konkretne i dopasowane do mojego celu.',
-      'To nie jest zwykły trening. Czuję się silniejszy, sprawniejszy i dużo pewniejszy siebie.',
-      'Profesjonalne podejście, dobra energia i realne efekty. Wiem, po co trenuję i widzę postęp.',
+    verificationLabel: 'Zweryfikowana opinia demo',
+    items: [
+      {
+        quote: 'W końcu trenuję według planu, który ma sens. Wszystko jest jasne, konkretne i dopasowane do mojego celu.',
+        name: 'Klientka 01',
+        detail: 'praca nad sylwetką i regularnością',
+        focus: 'Cel: forma i system',
+        outcome: 'Więcej kontroli i konsekwencji',
+      },
+      {
+        quote: 'To nie jest zwykły trening. Czuję się silniejszy, sprawniejszy i dużo pewniejszy siebie.',
+        name: 'Klient 02',
+        detail: 'trening ogólnorozwojowy',
+        focus: 'Cel: siła i sprawność',
+        outcome: 'Lepsza kondycja i większa pewność siebie',
+      },
+      {
+        quote: 'Profesjonalne podejście, dobra energia i realne efekty. Wiem, po co trenuję i widzę postęp.',
+        name: 'Klientka 03',
+        detail: 'powrót do regularnych treningów',
+        focus: 'Cel: progres bez chaosu',
+        outcome: 'Jasny plan i widoczny postęp',
+      },
     ],
   },
   faq: {
@@ -483,10 +515,29 @@ const en: Dict = {
   testimonials: {
     label: 'Reviews',
     heading: 'Most appreciated: clarity, atmosphere, and progress.',
-    quotes: [
-      'Finally training with a plan that makes sense. Everything is clear, specific, and tailored to my goal.',
-      'This isn\'t ordinary training. I feel stronger, more fit, and much more confident.',
-      'Professional approach, great energy, and real results. I know why I\'m training and I can see the progress.',
+    verificationLabel: 'Verified demo review',
+    items: [
+      {
+        quote: 'Finally training with a plan that makes sense. Everything is clear, specific, and tailored to my goal.',
+        name: 'Client 01',
+        detail: 'body composition and consistency work',
+        focus: 'Goal: shape and structure',
+        outcome: 'More control and consistency',
+      },
+      {
+        quote: 'This isn\'t ordinary training. I feel stronger, more fit, and much more confident.',
+        name: 'Client 02',
+        detail: 'general athletic development',
+        focus: 'Goal: strength and fitness',
+        outcome: 'Better endurance and stronger self-confidence',
+      },
+      {
+        quote: 'Professional approach, great energy, and real results. I know why I\'m training and I can see the progress.',
+        name: 'Client 03',
+        detail: 'return to regular training',
+        focus: 'Goal: progress without chaos',
+        outcome: 'Clear plan and visible progress',
+      },
     ],
   },
   faq: {
@@ -704,10 +755,29 @@ const es: Dict = {
   testimonials: {
     label: 'Opiniones',
     heading: 'Más valorado: claridad, ambiente y progreso.',
-    quotes: [
-      'Por fin entreno con un plan que tiene sentido. Todo es claro, concreto y adaptado a mi objetivo.',
-      'Esto no es entrenamiento ordinario. Me siento más fuerte, en mejor forma y mucho más seguro de mí mismo.',
-      'Enfoque profesional, buena energía y resultados reales. Sé por qué entreno y veo el progreso.',
+    verificationLabel: 'Opinión demo verificada',
+    items: [
+      {
+        quote: 'Por fin entreno con un plan que tiene sentido. Todo es claro, concreto y adaptado a mi objetivo.',
+        name: 'Cliente 01',
+        detail: 'trabajo de forma física y constancia',
+        focus: 'Objetivo: forma y estructura',
+        outcome: 'Más control y más constancia',
+      },
+      {
+        quote: 'Esto no es entrenamiento ordinario. Me siento más fuerte, en mejor forma y mucho más seguro de mí mismo.',
+        name: 'Cliente 02',
+        detail: 'desarrollo físico general',
+        focus: 'Objetivo: fuerza y condición',
+        outcome: 'Mejor condición y más confianza',
+      },
+      {
+        quote: 'Enfoque profesional, buena energía y resultados reales. Sé por qué entreno y veo el progreso.',
+        name: 'Cliente 03',
+        detail: 'vuelta al entrenamiento regular',
+        focus: 'Objetivo: progreso sin caos',
+        outcome: 'Plan claro y progreso visible',
+      },
     ],
   },
   faq: {
