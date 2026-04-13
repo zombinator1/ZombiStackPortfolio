@@ -11,30 +11,27 @@ import { BackgroundDecor } from '@/components/background-decor';
 
 const demos = [
   {
-    href: '/demos/electrician',
-    name: 'Elektryk — strona usługowa',
-    category: 'Usługi lokalne',
-    description: 'Hero z dużym CTA, sekcja usług, realizacje ze zdjęciami, opinie Google i formularz kontaktowy.',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
-    accent: 'Amber · Dark',
-    accentClass: 'bg-amber-400 text-zinc-900',
+    href: '/demos/personal-trainer',
+    name: 'Wizytówka - Trenerka personalna',
+    description: 'Strona z przejrzystym przekazem oferty FAQ i finałowa sekcja kontaktowa CTA pod sprzedaż konsultacji.',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-hero-combat-athletic-mF4o3dvFfSLZG9GPf7Erp2.webp',
+    accent: 'Wizytówka',
+    accentClass: 'bg-rose-600 text-white',
   },
   {
-    href: '/demos/personal-trainer',
-    name: 'Trener personalny — sportowy premium',
-    category: 'Fitness & Performance',
-    description: 'Mocny hero, oferta z wyraźnym DNA sportów walki, sekcja efektów, FAQ i finałowe CTA pod sprzedaż konsultacji.',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-hero-combat-athletic-mF4o3dvFfSLZG9GPf7Erp2.webp',
-    accent: 'Combat · Premium',
-    accentClass: 'bg-rose-600 text-white',
+    href: '/demos/electrician',
+    name: 'Elektryk — strona usługowa',
+    description: 'Hero z dużym CTA, sekcja usług, realizacje ze zdjęciami, opinie Google i formularz kontaktowy.',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+    accent: 'Strona Firmowa',
+    accentClass: 'bg-amber-400 text-zinc-900',
   },
   {
     href: '/demos/photograph',
     name: 'Fotografka — Anna Kowalska',
-    category: 'Fotografia',
     description: 'Strona dla uzytkownika który potrzebuje zarządzać zawartością. Do takiej strony podpinam system do samodzielnego zarządzania contentem (CMS).',
     image: 'https://images.unsplash.com/photo-1549872063-e752dd3c88f2?auto=format&fit=crop&w=800&q=80',
-    accent: 'Amber · Light',
+    accent: 'Strona Firmowa CMS',
     accentClass: 'bg-amber-600 text-white',
   },
 ];
@@ -101,9 +98,6 @@ function DemoCard({ demo }: { demo: typeof demos[number] }) {
       <div className="relative flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-3">
           <h3 className="text-base font-semibold tracking-tight text-zinc-900">{demo.name}</h3>
-          <span className="shrink-0 rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-0.5 text-xs font-medium text-zinc-600">
-            {demo.category}
-          </span>
         </div>
         <p className="mt-2 text-sm leading-relaxed text-zinc-500">{demo.description}</p>
         <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-zinc-900 transition group-hover:gap-2.5">
