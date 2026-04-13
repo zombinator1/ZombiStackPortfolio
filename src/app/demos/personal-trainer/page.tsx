@@ -1,74 +1,208 @@
+/*
+ * Design note for this file:
+ * Neo-constructivist athletic modernism.
+ * Ink navy, chalk white, burnt red and warm gold accents.
+ * Strong editorial typography, asymmetry, technical panels, premium sports atmosphere.
+ * Every section should reinforce sportowy profesjonalizm, mierzalny progres i DNA sportów walki.
+ */
 import Link from 'next/link';
-import Image from 'next/image';
+import { Bebas_Neue, Manrope } from 'next/font/google';
+
+const displayFont = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-display',
+});
+
+const bodyFont = Manrope({
+  subsets: ['latin'],
+  variable: '--font-body',
+});
+
+const heroImage =
+  'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-hero-combat-athletic-mF4o3dvFfSLZG9GPf7Erp2.webp';
+const serviceImage =
+  'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-service-strength-session-hAKHmUmkBQyLcrkN6RAfwj.webp';
+const portraitImage =
+  'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-language-contact-portrait-abSzVKFqhJYBzL83fXJ4Uy.webp';
+const abstractImage =
+  'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-abstract-performance-grid-iaQfrUD7bKpJfjruAJvGXB.webp';
+
+const stats = [
+  { value: '10+', label: 'lat treningu i startów' },
+  { value: '3', label: 'języki współpracy' },
+  { value: '1:1', label: 'indywidualne prowadzenie' },
+  { value: '100%', label: 'skupienia na celu' },
+];
+
+const offer = [
+  {
+    title: 'Trening personalny',
+    description:
+      'Budowanie siły, poprawa sylwetki i regularny trening dopasowany do Twojego poziomu, celu i tempa życia.',
+  },
+  {
+    title: 'Przygotowanie do testów sprawności fizycznej na studia i w wojsku',
+    description:
+      'Ukierunkowany trening dla osób, które chcą dobrze przygotować się do testów sprawnościowych na studia, do służby lub do wymagań wojskowych.',
+  },
+  {
+    title: 'Trening sportów walki',
+    description:
+      'Trening oparty na technice, kontroli ruchu, dynamice i charakterze sportów walki. Dla osób, które chcą rozwijać sprawność, refleks i pewność siebie.',
+  },
+  {
+    title: 'Opieka online',
+    description:
+      'Plan treningowy, prowadzenie i regularne wsparcie dla osób, które chcą trenować skutecznie także poza spotkaniami stacjonarnymi.',
+  },
+];
+
+const processSteps = [
+  {
+    step: '01',
+    title: 'Konsultacja i cel',
+    description:
+      'Zaczynamy od rozmowy o Twoim celu, poziomie, ograniczeniach i kierunku pracy.',
+  },
+  {
+    step: '02',
+    title: 'Plan działania',
+    description:
+      'Dobieram formę współpracy i system treningowy dopasowany do Twoich potrzeb.',
+  },
+  {
+    step: '03',
+    title: 'Realny progres',
+    description:
+      'Trenujesz konkretnie, z jasnym planem i naciskiem na technikę, dyscyplinę oraz wynik.',
+  },
+];
+
+const effects = [
+  {
+    title: 'Więcej siły',
+    description: 'Mocniejsze ciało, które lepiej radzi sobie w treningu i na co dzień.',
+  },
+  {
+    title: 'Lepsza sylwetka',
+    description: 'Efekt regularnej, dobrze zaplanowanej pracy.',
+  },
+  {
+    title: 'Większa sprawność',
+    description: 'Lepsza kondycja, dynamika, koordynacja i kontrola ruchu.',
+  },
+  {
+    title: 'Pewność siebie',
+    description: 'Większe poczucie kontroli nad ciałem i własnym progresem.',
+  },
+];
+
+const testimonials = [
+  'W końcu trenuję według planu, który ma sens. Wszystko jest jasne, konkretne i dopasowane do mojego celu.',
+  'To nie jest zwykły trening. Czuję się silniejszy, sprawniejszy i dużo pewniejszy siebie.',
+  'Profesjonalne podejście, dobra energia i realne efekty. Wiem, po co trenuję i widzę postęp.',
+];
+
+const faqs = [
+  {
+    question: 'Czy muszę mieć doświadczenie treningowe?',
+    answer: 'Nie. Współpraca może zaczynać się od poziomu początkującego.',
+  },
+  {
+    question: 'Czy to oferta tylko dla osób trenujących sporty walki?',
+    answer:
+      'Nie. Sporty walki są ważnym elementem podejścia, ale oferta jest skierowana do wszystkich, którzy chcą być silniejsi, sprawniejsi i pewniejsi siebie.',
+  },
+  {
+    question: 'Czy mogę trenować z celem sylwetkowym?',
+    answer:
+      'Tak. Poprawa sylwetki jest jednym z naturalnych efektów dobrze poprowadzonego treningu.',
+  },
+  {
+    question: 'Czy jest możliwość współpracy online?',
+    answer: 'Tak. Możesz pracować także zdalnie, w oparciu o plan, prowadzenie i regularne wsparcie.',
+  },
+  {
+    question: 'W jakich językach może odbywać się współpraca?',
+    answer: 'W języku polskim, angielskim i hiszpańskim.',
+  },
+];
 
 export default function PersonalTrainerDemo() {
   return (
-    <div className="font-sans antialiased">
+    <div
+      className={`${displayFont.variable} ${bodyFont.variable} bg-[#09111d] text-white [font-family:var(--font-body)]`}
+    >
       <DemoBanner />
-      <Nav />
-      <Hero />
-      <TrustStrip />
-      <Philosophy />
-      <Offer />
-      <Pricing />
-      <Testimonials />
-      <CtaSection />
+      <Header />
+      <main>
+        <Hero />
+        <Audience />
+        <AboutSection />
+        <OfferSection />
+        <ProcessSection />
+        <WhyItWorksSection />
+        <TestimonialsSection />
+        <FaqSection />
+        <FinalCta />
+      </main>
       <Footer />
     </div>
   );
 }
 
-/* ─── Demo Banner ─────────────────────────────────────────────────────────── */
-
 function DemoBanner() {
   return (
-    <div className="flex items-center justify-between gap-4 bg-stone-900 px-4 py-2.5 sm:px-6">
-      <p className="text-xs text-stone-400">
-        <span className="font-semibold text-stone-200">Tryb demo</span> — treści są fikcyjne. Przykład jak może wyglądać Twoja strona.
-      </p>
-      <div className="flex shrink-0 items-center gap-2">
-        <Link
-          href="/#demo"
-          className="rounded-full border border-stone-700 px-3 py-1 text-xs font-medium text-stone-400 transition hover:border-stone-500 hover:text-stone-200"
-        >
-          ← Powrót
-        </Link>
-        <Link
-          href="/#kontakt"
-          className="rounded-full bg-rose-400 px-3 py-1 text-xs font-bold text-white transition hover:bg-rose-300"
-        >
-          Chcę taką stronę →
-        </Link>
+    <div className="border-b border-white/10 bg-[#050a12] px-4 py-3 text-[11px] uppercase tracking-[0.24em] text-white/60 sm:px-6">
+      <div className="mx-auto flex max-w-7xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>Demo sprzedażowe • wszystkie dane i treści są fikcyjne</p>
+        <div className="flex items-center gap-3 text-white/80">
+          <Link href="/#demo" className="transition hover:text-[#f3b24f]">
+            Wróć do oferty
+          </Link>
+          <span className="h-1 w-1 rounded-full bg-white/30" />
+          <Link href="/#kontakt" className="transition hover:text-[#f3b24f]">
+            Chcę takie demo
+          </Link>
+        </div>
       </div>
     </div>
   );
 }
 
-/* ─── Nav ─────────────────────────────────────────────────────────────────── */
+function Header() {
+  const navItems = [
+    ['Oferta', '#oferta'],
+    ['Proces', '#proces'],
+    ['Efekty', '#efekty'],
+    ['FAQ', '#faq'],
+    ['Kontakt', '#kontakt'],
+  ];
 
-function Nav() {
   return (
-    <header className="sticky top-0 z-40 border-b border-stone-100 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
-        <a href="#hero">
-          <span className="text-base font-bold tracking-tight text-stone-900">Marta Kowalska</span>
-          <span className="ml-2 hidden text-xs font-medium text-stone-400 sm:inline">Personal Trainer</span>
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#09111d]/88 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#hero" className="flex min-w-0 flex-col">
+          <span className="text-[0.7rem] uppercase tracking-[0.32em] text-[#f3b24f]">Trener personalny</span>
+          <span className="text-lg font-extrabold tracking-[0.08em] text-white">Karolina Wrona</span>
         </a>
-        <nav className="hidden items-center gap-7 md:flex">
-          {[
-            ['O mnie', '#o-mnie'],
-            ['Trening', '#trening'],
-            ['Cennik', '#cennik'],
-            ['Opinie', '#opinie'],
-          ].map(([label, href]) => (
-            <a key={href} href={href} className="text-sm text-stone-500 transition hover:text-stone-900">
+
+        <nav className="hidden items-center gap-6 lg:flex">
+          {navItems.map(([label, href]) => (
+            <a
+              key={href}
+              href={href}
+              className="text-sm font-semibold tracking-[0.06em] text-white/74 transition hover:text-white"
+            >
               {label}
             </a>
           ))}
         </nav>
+
         <a
           href="#kontakt"
-          className="rounded-full bg-rose-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_4px_20px_rgba(244,63,94,0.25)] transition hover:-translate-y-0.5 hover:bg-rose-400"
+          className="inline-flex items-center rounded-full border border-[#f3b24f]/60 bg-[#f3b24f] px-5 py-3 text-xs font-extrabold uppercase tracking-[0.18em] text-[#09111d] transition hover:-translate-y-0.5 hover:bg-[#ffbf5f]"
         >
           Umów konsultację
         </a>
@@ -77,512 +211,388 @@ function Nav() {
   );
 }
 
-/* ─── Hero ────────────────────────────────────────────────────────────────── */
-
 function Hero() {
   return (
-    <section id="hero" className="relative min-h-[90vh] overflow-hidden bg-stone-950">
-      <Image
-        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80"
-        alt="Marta Kowalska — trenerka personalna"
-        fill
-        className="object-cover object-top opacity-40"
-        priority
-        unoptimized
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-stone-950/70 to-stone-950/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />
+    <section id="hero" className="relative isolate overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={heroImage} alt="Trenerka sportów walki w dynamicznej pozie" className="h-full w-full object-cover object-center" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,17,29,0.96)_0%,rgba(9,17,29,0.92)_38%,rgba(9,17,29,0.58)_66%,rgba(9,17,29,0.76)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(182,38,54,0.35),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(243,178,79,0.18),transparent_30%)]" />
+      </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[90vh] max-w-6xl flex-col justify-center px-6 pb-24 pt-10 sm:px-8">
-        <div className="max-w-2xl">
-          <div className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-rose-300/20 bg-rose-400/10 px-4 py-2 text-sm font-medium text-rose-300">
-            <span className="h-1.5 w-1.5 rounded-full bg-rose-400" />
-            Certyfikowana trenerka personalna · Warszawa
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-[linear-gradient(to_top,rgba(9,17,29,1),rgba(9,17,29,0))]" />
+
+      <div className="relative mx-auto grid min-h-[calc(100vh-78px)] max-w-7xl items-end gap-14 px-4 pb-16 pt-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:pb-20 lg:pt-20">
+        <div className="max-w-3xl">
+          <div className="mb-8 flex flex-wrap items-center gap-3 text-[11px] font-extrabold uppercase tracking-[0.22em] text-white/70">
+            {['Trening personalny', 'Przygotowanie sprawnościowe', 'Trening sportów walki'].map((item) => (
+              <span key={item} className="rounded-full border border-white/12 bg-white/6 px-4 py-2 backdrop-blur">
+                {item}
+              </span>
+            ))}
           </div>
 
-          <h1 className="text-5xl font-bold leading-[1.07] tracking-[-0.03em] text-white sm:text-6xl lg:text-7xl">
-            Trening, który zmienia
-            <span className="block bg-gradient-to-r from-rose-300 to-rose-400 bg-clip-text text-transparent">
-              więcej niż sylwetkę
-            </span>
+          <h1 className="max-w-4xl [font-family:var(--font-display)] text-[4.4rem] uppercase leading-[0.9] tracking-[0.03em] text-white sm:text-[5.8rem] lg:text-[7.8rem]">
+            Siła,
+            <span className="ml-3 text-[#f3b24f]">sprawność</span>
+            <span className="block">i pewność siebie.</span>
           </h1>
 
-          <p className="mt-6 max-w-lg text-lg leading-8 text-stone-300">
-            Jestem Marta — pomagam kobietom osiągnąć trwałe rezultaty bez skrajnych diet i wyczerpujących planów. Skutecznie, mądrze i z przyjemnością.
+          <p className="mt-6 max-w-2xl text-base leading-8 text-white/78 sm:text-lg">
+            Pomagam kobietom i mężczyznom budować mocniejsze ciało, lepszą kondycję i większą kontrolę nad własną formą. Trenuj konkretnie, rozwijaj realną sprawność i pracuj z podejściem opartym na dyscyplinie, technice i progresie.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href="#kontakt"
-              className="inline-flex items-center justify-center rounded-full bg-rose-500 px-8 py-4 text-base font-bold text-white shadow-[0_0_40px_rgba(244,63,94,0.4)] transition hover:-translate-y-0.5 hover:bg-rose-400"
+              className="inline-flex items-center justify-center rounded-full bg-[#f3b24f] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-[#09111d] transition hover:-translate-y-0.5 hover:bg-[#ffbf5f]"
             >
-              Bezpłatna konsultacja →
+              Umów konsultację
             </a>
             <a
-              href="#cennik"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+              href="#oferta"
+              className="inline-flex items-center justify-center rounded-full border border-white/16 bg-white/6 px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:bg-white/10"
             >
-              Zobacz cennik
+              Zobacz ofertę
+            </a>
+          </div>
+
+          <p className="mt-6 max-w-xl text-sm leading-7 text-white/62">
+            Trening indywidualny, przygotowanie sprawnościowe i sporty walki w jednym spójnym systemie pracy. Współpraca dostępna w języku polskim, angielskim i hiszpańskim.
+          </p>
+        </div>
+
+        <div className="grid gap-4 self-end lg:justify-self-end">
+          <div className="rounded-[2rem] border border-white/12 bg-white/8 p-6 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+            <div className="mb-4 flex items-center justify-between">
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#f3b24f]">Profil pracy</span>
+              <span className="rounded-full border border-white/12 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
+                Warszawa • Online
+              </span>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              {stats.map((item) => (
+                <div key={item.label} className="border-t border-white/10 pt-4 first:border-t-0 first:pt-0">
+                  <div className="text-3xl font-black text-white">{item.value}</div>
+                  <div className="mt-1 text-sm uppercase tracking-[0.16em] text-white/55">{item.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Audience() {
+  return (
+    <section className="relative overflow-hidden border-t border-white/8 bg-[#0c1625] py-20 sm:py-24">
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `url(${abstractImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div>
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">Dla kogo</p>
+          <h2 className="mt-4 [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] text-white sm:text-6xl">
+            Trening konkretny, nie przypadkowy.
+          </h2>
+        </div>
+        <div className="rounded-[2rem] border border-white/10 bg-[#111d2f]/90 p-8 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
+          <p className="text-lg leading-9 text-white/80">
+            Ta współpraca jest dla Ciebie, jeśli chcesz poprawić sylwetkę, zwiększyć siłę, zbudować lepszą kondycję i poczuć większą pewność siebie w swoim ciele. Jeśli masz dość chaotycznych planów, przypadkowych ćwiczeń i treningu bez celu, tutaj dostajesz jasny kierunek, strukturę i realny progres.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AboutSection() {
+  return (
+    <section className="bg-[#f2efe8] py-20 text-[#09111d] sm:py-24">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#d7d0c4]">
+          <img src={portraitImage} alt="Fikcyjna trenerka personalna z doświadczeniem sportowym" className="h-full w-full object-cover object-center" />
+          <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(to_top,rgba(9,17,29,0.95),rgba(9,17,29,0.15))] p-6 text-white">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#f3b24f]">Języki współpracy</p>
+            <p className="mt-2 text-sm leading-7 text-white/80">Polski • English • Español</p>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-between gap-8">
+          <div>
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#b62636]">O marce</p>
+            <h2 className="mt-4 max-w-3xl [font-family:var(--font-display)] text-5xl uppercase leading-[0.94] tracking-[0.04em] sm:text-6xl">
+              Sportowe podejście. Technika. Dyscyplina. Wynik.
+            </h2>
+            <p className="mt-6 max-w-3xl text-lg leading-9 text-[#263246]">
+              Za tą marką stoi podejście zbudowane na doświadczeniu sportowym i wysokich wymaganiach wobec jakości treningu. Fundamentem pracy są technika, regularność i dobrze zaplanowany progres.
+            </p>
+            <p className="mt-4 max-w-3xl text-lg leading-9 text-[#263246]">
+              Inspiracja sportami walki przekłada się tu na coś więcej niż sam charakter zajęć — buduje koncentrację, sprawność, odporność i pewność siebie, która wychodzi daleko poza salę treningową.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              'Trening oparty na technice i jakości ruchu',
+              'System pracy dopasowany do realnego celu',
+              'Podejście dla kobiet i mężczyzn',
+              'Współpraca stacjonarna i online',
+            ].map((item) => (
+              <div key={item} className="rounded-[1.5rem] border border-[#09111d]/10 bg-white px-5 py-5 shadow-[0_12px_35px_rgba(9,17,29,0.08)]">
+                <div className="flex items-start gap-3">
+                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#b62636]" />
+                  <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#09111d]">{item}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function OfferSection() {
+  return (
+    <section id="oferta" className="bg-[#09111d] py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">Oferta</p>
+            <h2 className="mt-4 [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] text-white sm:text-6xl">
+              Oferta dopasowana do celu, nie do gotowego szablonu.
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-7 text-white/62">
+            Mocny sportowy charakter nie oznacza chaosu. Każda forma współpracy ma swój cel, zakres i konkretny rezultat.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111d2f]">
+            <img src={serviceImage} alt="Prowadzenie treningu personalnego z naciskiem na technikę" className="h-full min-h-[320px] w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,17,29,0.12),rgba(9,17,29,0.72))]" />
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">Podejście treningowe</p>
+              <p className="mt-3 max-w-lg text-base leading-8 text-white/82">
+                Technika, kontrola ruchu, progres i pełne dopasowanie planu do poziomu oraz celu. Tu nie ma miejsca na przypadkowy wysiłek.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4">
+            {offer.map((item, index) => (
+              <article
+                key={item.title}
+                className="group rounded-[1.8rem] border border-white/10 bg-[#101a2b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f3b24f]/40 hover:bg-[#121f33]"
+              >
+                <div className="mb-4 flex items-center justify-between">
+                  <span className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#f3b24f]">0{index + 1}</span>
+                  <span className="h-px w-14 bg-white/10 transition group-hover:bg-[#f3b24f]/40" />
+                </div>
+                <h3 className="max-w-xl text-xl font-extrabold uppercase tracking-[0.06em] text-white">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-white/64">{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProcessSection() {
+  return (
+    <section id="proces" className="relative overflow-hidden bg-[#0d1727] py-20 sm:py-24">
+      <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/8 lg:block" />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">Jak wygląda współpraca</p>
+          <h2 className="mt-4 [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] text-white sm:text-6xl">
+            Prosty proces. Jasny cel. Realny progres.
+          </h2>
+        </div>
+
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {processSteps.map((item) => (
+            <article key={item.step} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur-sm">
+              <p className="text-sm font-black tracking-[0.22em] text-[#b62636]">{item.step}</p>
+              <h3 className="mt-4 text-2xl font-extrabold uppercase tracking-[0.05em] text-white">{item.title}</h3>
+              <p className="mt-4 text-sm leading-8 text-white/68">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhyItWorksSection() {
+  return (
+    <section id="efekty" className="bg-[#f2efe8] py-20 text-[#09111d] sm:py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
+        <div>
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#b62636]">Dlaczego to działa</p>
+          <h2 className="mt-4 [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] sm:text-6xl">
+            Tu liczy się jakość pracy, nie moda.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-9 text-[#263246]">
+            To podejście nie opiera się na chwilowej motywacji. Liczą się system, technika i konsekwencja. Właśnie dlatego trening daje nie tylko zmęczenie po zajęciach, ale realne efekty: mocniejsze ciało, lepszą sprawność, większą kontrolę ruchu i większą pewność siebie.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          {effects.map((item) => (
+            <article key={item.title} className="rounded-[1.8rem] border border-[#09111d]/10 bg-white p-6 shadow-[0_15px_40px_rgba(9,17,29,0.08)]">
+              <h3 className="text-xl font-extrabold uppercase tracking-[0.06em] text-[#09111d]">{item.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[#4c5a6f]">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TestimonialsSection() {
+  return (
+    <section className="bg-[#09111d] py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 max-w-3xl">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">Opinie</p>
+          <h2 className="mt-4 [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] text-white sm:text-6xl">
+            Najczęściej doceniane: konkret, atmosfera i progres.
+          </h2>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
+            {testimonials.map((quote, index) => (
+              <article key={quote} className="rounded-[2rem] border border-white/10 bg-[#101a2b] p-7 shadow-[0_14px_35px_rgba(0,0,0,0.22)]">
+                <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b62636]">0{index + 1}</p>
+                <p className="mt-5 text-lg leading-9 text-white/82">“{quote}”</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#111d2f]">
+            <img src={portraitImage} alt="Profesjonalny portret fikcyjnej trenerki" className="h-full min-h-[520px] w-full object-cover object-top" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FaqSection() {
+  return (
+    <section id="faq" className="relative overflow-hidden bg-[#0d1727] py-20 sm:py-24">
+      <div
+        className="absolute inset-0 opacity-15"
+        style={{
+          backgroundImage: `url(${abstractImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+        <div>
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">FAQ</p>
+          <h2 className="mt-4 [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] text-white sm:text-6xl">
+            Najczęstsze pytania
+          </h2>
+          <p className="mt-5 max-w-md text-sm leading-8 text-white/64">
+            Strona ma sprzedawać konkret i profesjonalizm, więc odpowiedzi są krótkie, jasne i bez marketingowego dymu.
+          </p>
+        </div>
+
+        <div className="grid gap-4">
+          {faqs.map((item) => (
+            <article key={item.question} className="rounded-[1.7rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+              <h3 className="text-lg font-extrabold uppercase tracking-[0.05em] text-white">{item.question}</h3>
+              <p className="mt-3 text-sm leading-7 text-white/68">{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FinalCta() {
+  return (
+    <section id="kontakt" className="bg-[#f2efe8] py-20 text-[#09111d] sm:py-24">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+        <div>
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#b62636]">Finalne CTA</p>
+          <h2 className="mt-4 max-w-3xl [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] sm:text-6xl">
+            Chcesz trenować mocniej, mądrzej i z realnym celem?
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-9 text-[#263246]">
+            Napisz, jaki masz cel i sprawdź, jaka forma współpracy będzie dla Ciebie najlepsza. Zbuduj siłę, popraw sprawność i trenuj z podejściem, które daje realne efekty.
+          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="mailto:kontakt@karolinawrona-demo.pl"
+              className="inline-flex items-center justify-center rounded-full bg-[#09111d] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:bg-[#13213a]"
+            >
+              Umów pierwszą konsultację
+            </a>
+            <a
+              href="tel:+48600123456"
+              className="inline-flex items-center justify-center rounded-full border border-[#09111d]/12 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-[#09111d] transition hover:-translate-y-0.5 hover:border-[#09111d]/25"
+            >
+              Zadzwoń: 600 123 456
             </a>
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
 
-/* ─── Trust Strip ─────────────────────────────────────────────────────────── */
-
-function TrustStrip() {
-  return (
-    <section className="border-b border-stone-100 bg-white py-10">
-      <div className="mx-auto max-w-4xl px-6 sm:px-8">
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-          {[
-            { value: '8 lat', label: 'doświadczenia' },
-            { value: '300+', label: 'podopiecznych' },
-            { value: '4.9★', label: 'średnia opinii' },
-            { value: '2×', label: 'certyfikowana' },
-          ].map((item) => (
-            <div key={item.label} className="text-center">
-              <div className="text-2xl font-bold text-stone-900 sm:text-3xl">{item.value}</div>
-              <div className="mt-0.5 text-sm text-stone-400">{item.label}</div>
+        <div className="rounded-[2rem] border border-[#09111d]/10 bg-white p-8 shadow-[0_18px_50px_rgba(9,17,29,0.08)]">
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div>
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#b62636]">Kontakt</p>
+              <div className="mt-4 space-y-3 text-sm leading-7 text-[#263246]">
+                <p>kontakt@karolinawrona-demo.pl</p>
+                <p>+48 600 123 456</p>
+                <p>Warszawa + współpraca online</p>
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Philosophy ──────────────────────────────────────────────────────────── */
-
-function Philosophy() {
-  return (
-    <section id="o-mnie" className="bg-stone-50 py-28">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-
-          {/* Photo */}
-          <div className="relative mx-auto w-full max-w-md lg:mx-0">
-            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-rose-200/40 to-stone-200/40 blur-2xl" />
-            <div className="relative overflow-hidden rounded-3xl">
-              <Image
-                src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=800&q=80"
-                alt="Marta Kowalska"
-                width={600}
-                height={700}
-                className="h-[480px] w-full object-cover"
-                unoptimized
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 rounded-2xl bg-white p-5 shadow-xl">
-              <div className="text-xs font-semibold uppercase tracking-widest text-rose-400">Certyfikaty</div>
-              <div className="mt-1 text-sm font-medium text-stone-700">NASM · FPI · Dietetyka</div>
+            <div>
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#b62636]">Języki</p>
+              <div className="mt-4 space-y-3 text-sm leading-7 text-[#263246]">
+                <p>Polski</p>
+                <p>English</p>
+                <p>Español</p>
+              </div>
             </div>
           </div>
 
-          {/* Text */}
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-rose-400">Moje podejście</p>
-            <h2 className="text-4xl font-bold leading-tight tracking-[-0.02em] text-stone-900 sm:text-5xl">
-              Efekty, które zostają na lata — nie na miesiąc
-            </h2>
-            <p className="mt-5 text-base leading-8 text-stone-500">
-              Wiem, że większość kobiet próbowała już wielu metod. Diety cud, morderczy cardio, plany z internetu. I większość się zatrzymała, bo brakowało spersonalizowanego podejścia i prawdziwego wsparcia.
+          <div className="mt-8 rounded-[1.5rem] bg-[#09111d] p-6 text-white">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#f3b24f]">Wyróżnik</p>
+            <p className="mt-3 text-sm leading-7 text-white/74">
+              Trening personalny premium z wyraźnym DNA sportów walki: technika, dyscyplina, sprawność i realny progres zamiast generycznego fitnessu.
             </p>
-            <p className="mt-4 text-base leading-8 text-stone-500">
-              Moja praca opiera się na trzech filarach: treningu dopasowanym do Twojego ciała, edukacji żywieniowej bez wyrzeczeń i konsekwentnej motywacji — bez oceniania.
-            </p>
-            <div className="mt-8 flex flex-col gap-4">
-              {[
-                'Plan treningowy dopasowany do Twojego trybu życia',
-                'Wsparcie dietetyczne bez skrajnych ograniczeń',
-                'Stały kontakt między sesjami przez WhatsApp',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100">
-                    <svg className="h-3 w-3 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </div>
-                  <span className="text-sm leading-relaxed text-stone-600">{item}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-/* ─── Offer ───────────────────────────────────────────────────────────────── */
-
-const offerItems = [
-  {
-    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80',
-    title: 'Trening personalny (1:1)',
-    description: 'Pełna uwaga skupiona na Tobie. Prawidłowa technika, bieżące korekty i plan dostosowywany co 4 tygodnie. Idealne dla osób, które chcą szybkich i pewnych wyników.',
-    tag: 'Najpopularniejszy',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
-    title: 'Coaching online',
-    description: 'Trening i wsparcie dietetyczne bez wychodzenia z domu. Cotygodniowe check-iny, plan na miesiąc z góry i nieograniczony kontakt przez aplikację.',
-    tag: 'Elastyczny',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?auto=format&fit=crop&w=800&q=80',
-    title: 'Trening w parach / duo',
-    description: 'Przyjdź z przyjaciółką i trenujcie razem. Tańsza opcja, ta sama jakość i świetna motywacja wzajemna. Dostępne terminy wieczorne.',
-    tag: 'Duo',
-  },
-];
-
-function Offer() {
-  return (
-    <section id="trening" className="bg-white py-28">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-rose-400">Oferta</p>
-          <h2 className="text-4xl font-bold tracking-[-0.02em] text-stone-900 sm:text-5xl">Jak możemy współpracować</h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-stone-500">
-            Wybieram formę pracy razem z Tobą — dopasowuję ją do Twojego stylu życia, nie odwrotnie.
-          </p>
-        </div>
-
-        <div className="grid gap-8 lg:grid-cols-3">
-          {offerItems.map((item) => (
-            <div key={item.title} className="group flex flex-col overflow-hidden rounded-3xl border border-stone-100 bg-stone-50 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="relative h-60 overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition duration-500 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
-                <div className="absolute left-4 top-4 rounded-full bg-rose-500 px-3 py-1 text-xs font-bold text-white">
-                  {item.tag}
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col p-7">
-                <h3 className="mb-3 text-xl font-bold text-stone-900">{item.title}</h3>
-                <p className="flex-1 text-sm leading-7 text-stone-500">{item.description}</p>
-                <a href="#cennik" className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-rose-500 transition hover:gap-3">
-                  Zobacz cennik
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Pricing ─────────────────────────────────────────────────────────────── */
-
-const plans = [
-  {
-    name: 'Start',
-    price: '600',
-    unit: '4 treningi',
-    perSession: '150 zł / trening',
-    description: 'Idealne na poznanie się i sprawdzenie czy ta forma treningów jest dla Ciebie.',
-    features: [
-      'Plan treningowy na cały miesiąc',
-      '4 sesje treningowe (60 min)',
-      'Ocena postawy i ruchomości',
-      'Wstępne wskazówki żywieniowe',
-      'Kontakt mailowy',
-    ],
-    cta: 'Zacznij od startu',
-    highlight: false,
-  },
-  {
-    name: 'Transform',
-    price: '1 080',
-    unit: '8 treningów',
-    perSession: '135 zł / trening',
-    description: 'Najczęściej wybierany pakiet — wystarczający czas, żeby zobaczyć realne efekty.',
-    features: [
-      'Plan treningowy + aktualizacja co 4 tyg.',
-      '8 sesji treningowych (60 min)',
-      'Indywidualny plan żywieniowy',
-      'Analiza składu ciała',
-      'Kontakt WhatsApp w tygodniu',
-      'Cotygodniowy check-in online',
-    ],
-    cta: 'Wybieram Transform',
-    highlight: true,
-  },
-  {
-    name: 'Elite',
-    price: '1 440',
-    unit: '12 treningów',
-    perSession: '120 zł / trening',
-    description: 'Dla osób zmotywowanych i nastawionych na maksymalne rezultaty.',
-    features: [
-      'Plan treningowy + aktualizacja co 3 tyg.',
-      '12 sesji treningowych (75 min)',
-      'Pełny plan żywieniowy + jadłospis',
-      'Analiza składu ciała 2×',
-      'Kontakt WhatsApp 7 dni w tygodniu',
-      'Cotygodniowy check-in online',
-      'Nieograniczone konsultacje mailowe',
-    ],
-    cta: 'Wybieram Elite',
-    highlight: false,
-  },
-];
-
-function Pricing() {
-  return (
-    <section id="cennik" className="bg-stone-50 py-28">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-rose-400">Cennik</p>
-          <h2 className="text-4xl font-bold tracking-[-0.02em] text-stone-900 sm:text-5xl">Pakiety treningowe</h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-stone-500">
-            Każdy pakiet zaczyna się od bezpłatnej konsultacji — zero zobowiązań.
-          </p>
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-3">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`relative flex flex-col rounded-3xl p-8 ${
-                plan.highlight
-                  ? 'bg-stone-900 text-white shadow-[0_24px_80px_rgba(0,0,0,0.25)]'
-                  : 'border border-stone-200 bg-white'
-              }`}
-            >
-              {plan.highlight && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <div className="rounded-full bg-rose-500 px-4 py-1 text-xs font-bold text-white shadow-lg">
-                    Najczęściej wybierany
-                  </div>
-                </div>
-              )}
-
-              <div className="mb-6">
-                <div className={`mb-1 text-sm font-semibold uppercase tracking-widest ${plan.highlight ? 'text-rose-400' : 'text-rose-500'}`}>
-                  {plan.name}
-                </div>
-                <div className="flex items-end gap-1.5">
-                  <span className={`text-4xl font-bold ${plan.highlight ? 'text-white' : 'text-stone-900'}`}>{plan.price}</span>
-                  <span className={`mb-1 text-sm font-medium ${plan.highlight ? 'text-stone-400' : 'text-stone-400'}`}>zł</span>
-                  <span className={`mb-1 text-sm ${plan.highlight ? 'text-stone-400' : 'text-stone-400'}`}>/ {plan.unit}</span>
-                </div>
-                <div className={`mt-1 text-xs ${plan.highlight ? 'text-stone-500' : 'text-stone-400'}`}>{plan.perSession}</div>
-                <p className={`mt-3 text-sm leading-relaxed ${plan.highlight ? 'text-stone-400' : 'text-stone-500'}`}>
-                  {plan.description}
-                </p>
-              </div>
-
-              <ul className="flex-1 space-y-3">
-                {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3">
-                    <div className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${plan.highlight ? 'bg-rose-500/20' : 'bg-rose-50'}`}>
-                      <svg className="h-3 w-3 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                      </svg>
-                    </div>
-                    <span className={`text-sm leading-relaxed ${plan.highlight ? 'text-stone-300' : 'text-stone-600'}`}>{f}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href="#kontakt"
-                className={`mt-8 block w-full rounded-full py-3.5 text-center text-sm font-bold transition hover:-translate-y-0.5 ${
-                  plan.highlight
-                    ? 'bg-rose-500 text-white shadow-[0_8px_30px_rgba(244,63,94,0.4)] hover:bg-rose-400'
-                    : 'border border-stone-200 bg-stone-50 text-stone-900 hover:border-stone-300 hover:bg-stone-100'
-                }`}
-              >
-                {plan.cta}
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <p className="mt-8 text-center text-sm text-stone-400">
-          Wolisz trening online? Coaching miesięczny od 499 zł.{' '}
-          <a href="#kontakt" className="font-medium text-rose-400 hover:text-rose-500">Zapytaj o szczegóły.</a>
-        </p>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Testimonials ────────────────────────────────────────────────────────── */
-
-const reviews = [
-  {
-    initials: 'KW',
-    name: 'Kasia Wiśniewska',
-    context: 'Pakiet Transform, 6 miesięcy',
-    rating: 5,
-    text: 'Zaczęłam pracę z Martą po 3 miesiącach bezskutecznego trenowania na siłowni. W ciągu 4 miesięcy schudłam 11 kg i — co ważniejsze — nauczyłam się jeść i trenować dla siebie, nie dla wagi.',
-    color: 'bg-rose-100 text-rose-600',
-  },
-  {
-    initials: 'AN',
-    name: 'Ania Nowak',
-    context: 'Coaching online, 3 miesiące',
-    rating: 5,
-    text: 'Miałam dużo obaw, bo mieszkam poza Warszawą i nie mogłam trenować stacjonarnie. Okazało się, że coaching online z Martą działa świetnie. Cotygodniowe check-iny trzymają mnie w ryzach.',
-    color: 'bg-stone-100 text-stone-600',
-  },
-  {
-    initials: 'MJ',
-    name: 'Magda Jabłońska',
-    context: 'Trening personalny 1:1',
-    rating: 5,
-    text: 'Po ciąży bałam się wrócić na siłownię. Marta podeszła do mnie z cierpliwością i pełnym profesjonalizmem. Dziś czuję się lepiej niż przed ciążą. Serdecznie polecam każdej mamie.',
-    color: 'bg-amber-100 text-amber-700',
-  },
-];
-
-function Testimonials() {
-  return (
-    <section id="opinie" className="bg-white py-28">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-rose-400">Efekty</p>
-          <h2 className="text-4xl font-bold tracking-[-0.02em] text-stone-900 sm:text-5xl">Co mówią podopieczne</h2>
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-3">
-          {reviews.map((r, i) => (
-            <div key={i} className="flex flex-col rounded-3xl border border-stone-100 bg-stone-50 p-7">
-              <div className="flex gap-0.5">
-                {Array.from({ length: 5 }).map((_, s) => (
-                  <svg key={s} className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="mt-4 flex-1 text-sm leading-7 text-stone-600">&ldquo;{r.text}&rdquo;</p>
-              <div className="mt-6 flex items-center gap-3 border-t border-stone-100 pt-5">
-                <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${r.color}`}>
-                  {r.initials}
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-stone-900">{r.name}</div>
-                  <div className="text-xs text-stone-400">{r.context}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── CTA / Contact ───────────────────────────────────────────────────────── */
-
-function CtaSection() {
-  return (
-    <section id="kontakt" className="relative overflow-hidden bg-stone-900 py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(244,63,94,0.12),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(244,63,94,0.07),transparent_60%)]" />
-
-      <div className="relative mx-auto max-w-6xl px-6 sm:px-8">
-        <div className="grid items-start gap-14 lg:grid-cols-2">
-
-          {/* Left */}
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-rose-400">Zacznijmy</p>
-            <h2 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-              Pierwsza konsultacja jest bezpłatna
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-stone-400">
-              Porozmawiamy o Twoich celach, stylu życia i nawykach. Bez zobowiązań — po prostu sprawdzimy, czy dobrze się dogadamy.
-            </p>
-            <div className="mt-8 flex flex-col gap-4">
-              {[
-                { icon: '📍', label: 'Lokalizacja', value: 'Siłownia Wola, Warszawa (metro Rondo ONZ)' },
-                { icon: '📱', label: 'Telefon', value: '+48 501 234 567' },
-                { icon: '✉️', label: 'E-mail', value: 'marta@trenujzwolodystyka.pl' },
-              ].map((c) => (
-                <div key={c.label} className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-800 text-lg ring-1 ring-stone-700">
-                    {c.icon}
-                  </div>
-                  <div>
-                    <div className="text-xs text-stone-500">{c.label}</div>
-                    <div className="text-sm font-medium text-stone-300">{c.value}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Form */}
-          <div className="rounded-3xl border border-stone-800 bg-stone-900/80 p-8 ring-1 ring-white/5 backdrop-blur">
-            <p className="mb-6 text-base font-semibold text-white">Napisz do mnie</p>
-            <div className="flex flex-col gap-4">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <ContactField label="Imię" placeholder="Kasia" type="text" />
-                <ContactField label="Telefon" placeholder="+48 500 000 000" type="tel" />
-              </div>
-              <ContactField label="Cel treningowy" placeholder="np. Schudnięcie, wzmocnienie, powrót po ciąży..." type="text" />
-              <div>
-                <label className="mb-1.5 block text-xs font-medium text-stone-400">Wiadomość (opcjonalnie)</label>
-                <textarea
-                  rows={3}
-                  placeholder="Napisz cokolwiek — kiedy możesz, jaki masz tryb życia..."
-                  className="w-full resize-none rounded-2xl border border-stone-700 bg-stone-800 px-4 py-3 text-sm text-white outline-none placeholder:text-stone-600 focus:border-rose-400/50 focus:ring-1 focus:ring-rose-400/20"
-                />
-              </div>
-              <button className="w-full rounded-full bg-rose-500 py-4 text-sm font-bold text-white shadow-[0_8px_30px_rgba(244,63,94,0.4)] transition hover:-translate-y-0.5 hover:bg-rose-400">
-                Wyślij — odezwę się w ciągu 24h
-              </button>
-              <p className="text-center text-xs text-stone-600">Zero spamu. Tylko jeden kontakt ode mnie.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ContactField({ label, placeholder, type }: { label: string; placeholder: string; type: string }) {
-  return (
-    <div>
-      <label className="mb-1.5 block text-xs font-medium text-stone-400">{label}</label>
-      <input
-        type={type}
-        placeholder={placeholder}
-        className="w-full rounded-2xl border border-stone-700 bg-stone-800 px-4 py-3 text-sm text-white outline-none placeholder:text-stone-600 focus:border-rose-400/50 focus:ring-1 focus:ring-rose-400/20"
-      />
-    </div>
-  );
-}
-
-/* ─── Footer ──────────────────────────────────────────────────────────────── */
 
 function Footer() {
   return (
-    <footer className="border-t border-stone-800 bg-stone-950 py-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 sm:flex-row sm:px-8">
-        <div>
-          <span className="text-sm font-semibold text-stone-300">Marta Kowalska</span>
-          <span className="ml-2 text-xs text-stone-600">Personal Trainer · Warszawa</span>
-        </div>
-        <p className="text-xs text-stone-700">© 2025 Marta Kowalska. Wszelkie prawa zastrzeżone.</p>
+    <footer className="border-t border-white/8 bg-[#09111d] px-4 py-8 text-sm text-white/46 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p>Karolina Wrona — demo wizytówki trenera personalnego</p>
+        <p>Wszystkie dane kontaktowe i treści na tej stronie są fikcyjne.</p>
       </div>
     </footer>
   );

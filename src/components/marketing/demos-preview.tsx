@@ -1,4 +1,9 @@
 import Link from 'next/link';
+/*
+ * Design note for this file:
+ * Demo cards should communicate crafted premium positioning, not generic placeholders.
+ * The personal trainer card needs to feel performance-led, credible and sales-oriented.
+ */
 import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -16,12 +21,12 @@ const demos = [
   },
   {
     href: '/demos/personal-trainer',
-    name: 'Trenerka personalna',
-    category: 'Fitness & Zdrowie',
-    description: 'Sekcja o trenerze, rodzaje treningu, cennik z 3 pakietami, opinie i formularz kontaktowy.',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
-    accent: 'Rose · Premium',
-    accentClass: 'bg-rose-500 text-white',
+    name: 'Trener personalny — sportowy premium',
+    category: 'Fitness & Performance',
+    description: 'Mocny hero, oferta z wyraźnym DNA sportów walki, sekcja efektów, FAQ i finałowe CTA pod sprzedaż konsultacji.',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-hero-combat-athletic-mF4o3dvFfSLZG9GPf7Erp2.webp',
+    accent: 'Combat · Premium',
+    accentClass: 'bg-rose-600 text-white',
   },
   {
     href: '/demos/photograph',

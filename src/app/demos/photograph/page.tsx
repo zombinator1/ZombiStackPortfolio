@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 /* Icons */
 const Icons = {
@@ -56,7 +57,7 @@ function HeroSection() {
           Profesjonalna fotografia ślubna, portretowa i rodzinna. Z pasją tworzę wspomnienia, które pozostaną na zawsze.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
+          <Link
             href="/demos/photograph/portfolio"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-zinc-900 transition hover:bg-amber-400"
           >
@@ -64,7 +65,7 @@ function HeroSection() {
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
-          </a>
+          </Link>
           <a
             href="#kontakt"
             className="inline-flex items-center gap-2 rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-zinc-900"
@@ -120,7 +121,7 @@ function StatsSection() {
           {stats.map(({ Icon, value, label }) => (
             <div key={label} className="text-center">
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-amber-700/10">
-                <Icon className="h-6 w-6 text-amber-700" />
+                <span className="text-amber-700"><Icon /></span>
               </div>
               <div className="mb-1 font-serif text-3xl font-bold text-zinc-900">{value}</div>
               <div className="text-sm text-zinc-600">{label}</div>
@@ -275,18 +276,18 @@ function ServicesSection() {
               <div className="mb-4 text-2xl font-bold text-amber-700">{s.price}</div>
               <div className="mb-6 space-y-1.5 text-sm text-zinc-500">
                 <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4" />
+                  <span className="text-current"><Clock /></span>
                   {s.duration}
                 </div>
                 <div className="flex items-center gap-2">
-                  <Camera className="h-4 w-4" />
+                  <span className="text-current"><Camera /></span>
                   {s.images}
                 </div>
               </div>
               <ul className="mb-8 space-y-2.5">
                 {s.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm text-zinc-700">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" />
+                    <span className="mt-0.5 shrink-0 text-amber-700"><Check /></span>
                     {f}
                   </li>
                 ))}
@@ -334,10 +335,10 @@ function TestimonialsSection() {
             <div key={author} className="rounded-xl bg-zinc-50 p-8">
               <div className="mb-4 flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                  <span key={i} className="text-amber-400"><Star /></span>
                 ))}
               </div>
-              <p className="mb-6 italic leading-relaxed text-zinc-700">"{quote}"</p>
+              <p className="mb-6 italic leading-relaxed text-zinc-700">&ldquo;{quote}&rdquo;</p>
               <div className="font-semibold text-zinc-900">{author}</div>
               <div className="text-sm text-zinc-500">{role}</div>
             </div>
@@ -388,10 +389,10 @@ function ContactSection() {
               <p className="mb-4 font-semibold text-zinc-900">Obserwuj mnie</p>
               <div className="flex gap-3">
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full bg-zinc-900 px-5 py-2.5 text-sm text-white transition hover:bg-amber-700">
-                  <Instagram className="h-4 w-4" /> Instagram
+                  <span className="text-current"><Instagram /></span> Instagram
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full border-2 border-zinc-900 px-5 py-2.5 text-sm text-zinc-900 transition hover:bg-zinc-900 hover:text-white">
-                  <Facebook className="h-4 w-4" /> Facebook
+                  <span className="text-current"><Facebook /></span> Facebook
                 </a>
               </div>
             </div>
@@ -403,7 +404,7 @@ function ContactSection() {
             {submitted ? (
               <div className="py-12 text-center">
                 <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-                  <Send className="h-8 w-8 text-green-600" />
+                  <span className="text-green-600"><Send /></span>
                 </div>
                 <h3 className="mb-2 text-xl font-semibold text-zinc-900">Wiadomość wysłana!</h3>
                 <p className="text-zinc-600">Dziękuję za kontakt. Odpowiem najszybciej jak to możliwe.</p>
@@ -429,7 +430,7 @@ function ContactSection() {
                   <textarea id="message" name="message" required rows={4} value={formData.message} onChange={handleChange} placeholder="Opowiedz mi o swoich planach na sesję..." className="w-full resize-none rounded-lg border border-zinc-300 px-4 py-3 text-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-amber-700" />
                 </div>
                 <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-full bg-zinc-900 px-8 py-4 font-semibold text-white transition hover:bg-amber-700">
-                  <Send className="h-5 w-5" />
+                  <span className="text-current"><Send /></span>
                   Wyślij wiadomość
                 </button>
               </form>
