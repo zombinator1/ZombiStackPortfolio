@@ -22,8 +22,8 @@ export function TrainerContactForm({ labels }: { labels: FormLabels }) {
 
   if (state.status === 'success') {
     return (
-      <div className="flex flex-col items-center justify-center gap-4 rounded-[2rem] border border-white/10 bg-white/5 p-10 text-center backdrop-blur-sm">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#f3b24f]/50 text-xl text-[#f3b24f]">
+      <div className="flex flex-col items-center justify-center gap-4 rounded-[2rem] border border-white/10 bg-[#141019] p-10 text-center shadow-[0_18px_45px_rgba(0,0,0,0.24)]">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#c44a7b]/50 text-xl text-[#c44a7b]">
           ✓
         </div>
         <div>
@@ -35,7 +35,7 @@ export function TrainerContactForm({ labels }: { labels: FormLabels }) {
   }
 
   return (
-    <form action={formAction} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+    <form action={formAction} className="rounded-[2rem] border border-white/10 bg-[#141019] p-8 shadow-[0_20px_55px_rgba(0,0,0,0.28)]">
       <div className="flex flex-col gap-5">
         <div>
           <label htmlFor="pt-goal" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-white/45">
@@ -47,14 +47,14 @@ export function TrainerContactForm({ labels }: { labels: FormLabels }) {
             rows={4}
             required
             placeholder={labels.placeholderGoal}
-            className="w-full resize-none rounded-xl border border-white/10 bg-white/6 px-4 py-3 text-sm text-white placeholder-white/28 outline-none transition focus:border-[#f3b24f]/50 focus:bg-white/8"
+            className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/28 outline-none transition focus:border-[#c44a7b]/50 focus:bg-white/[0.07]"
           />
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label htmlFor="pt-name" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-white/45">
-              {labels.labelName} <span className="text-[#b62636]">*</span>
+              {labels.labelName} <span className="text-[#c44a7b]">*</span>
             </label>
             <input
               id="pt-name"
@@ -62,12 +62,12 @@ export function TrainerContactForm({ labels }: { labels: FormLabels }) {
               type="text"
               required
               autoComplete="name"
-              className="w-full rounded-xl border border-white/10 bg-white/6 px-4 py-3 text-sm text-white placeholder-white/28 outline-none transition focus:border-[#f3b24f]/50 focus:bg-white/8"
+              className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/28 outline-none transition focus:border-[#c44a7b]/50 focus:bg-white/[0.07]"
             />
           </div>
           <div>
             <label htmlFor="pt-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-white/45">
-              {labels.labelEmail} <span className="text-[#b62636]">*</span>
+              {labels.labelEmail} <span className="text-[#c44a7b]">*</span>
             </label>
             <input
               id="pt-email"
@@ -75,7 +75,7 @@ export function TrainerContactForm({ labels }: { labels: FormLabels }) {
               type="email"
               required
               autoComplete="email"
-              className="w-full rounded-xl border border-white/10 bg-white/6 px-4 py-3 text-sm text-white placeholder-white/28 outline-none transition focus:border-[#f3b24f]/50 focus:bg-white/8"
+              className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/28 outline-none transition focus:border-[#c44a7b]/50 focus:bg-white/[0.07]"
             />
           </div>
         </div>
@@ -89,18 +89,18 @@ export function TrainerContactForm({ labels }: { labels: FormLabels }) {
             name="phone"
             type="tel"
             autoComplete="tel"
-            className="w-full rounded-xl border border-white/10 bg-white/6 px-4 py-3 text-sm text-white placeholder-white/28 outline-none transition focus:border-[#f3b24f]/50 focus:bg-white/8"
+            className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder-white/28 outline-none transition focus:border-[#c44a7b]/50 focus:bg-white/[0.07]"
           />
         </div>
 
         {state.status === 'error' && (
-          <p className="text-sm text-red-400">{state.message}</p>
+          <p className="text-sm text-[#f1c5d6]">{state.message}</p>
         )}
 
         <button
           type="submit"
           disabled={isPending}
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#f3b24f] py-3.5 text-sm font-extrabold uppercase tracking-[0.14em] text-[#09111d] transition hover:bg-[#ffbf5f] disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#c44a7b] py-3.5 text-sm font-extrabold uppercase tracking-[0.14em] text-[#08070b] transition hover:bg-[#d76592] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isPending ? labels.submitting : (
             <>
