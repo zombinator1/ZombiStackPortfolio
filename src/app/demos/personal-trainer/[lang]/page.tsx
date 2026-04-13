@@ -53,6 +53,7 @@ export default async function PersonalTrainerDemo({ params }: { params: Promise<
         <Audience dict={dict} />
         <AboutSection dict={dict} />
         <OfferSection dict={dict} />
+        <PricingSection dict={dict} />
         <ProcessSection dict={dict} />
         <WhyItWorksSection dict={dict} />
         <TestimonialsSection dict={dict} />
@@ -84,7 +85,7 @@ function DemoBanner({ dict }: { dict: Dict }) {
 }
 
 function Header({ dict, lang }: { dict: Dict; lang: Locale }) {
-  const navHrefs = ['#oferta', '#proces', '#efekty', '#faq', '#kontakt'];
+  const navHrefs = ['#oferta', '#pricing', '#proces', '#efekty', '#faq', '#kontakt'];
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-[#09111d]/88 backdrop-blur-xl">
@@ -311,6 +312,104 @@ function OfferSection({ dict }: { dict: Dict }) {
   );
 }
 
+function PricingSection({ dict }: { dict: Dict }) {
+  return (
+    <section id="pricing" className="bg-[#f2efe8] py-20 text-[#09111d] sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#b62636]">{dict.pricing.label}</p>
+            <h2 className="mt-4 [font-family:var(--font-display)] text-5xl uppercase leading-[0.92] tracking-[0.04em] sm:text-6xl">
+              {dict.pricing.heading}
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-9 text-[#263246]">{dict.pricing.body}</p>
+
+            <div className="mt-8 rounded-[1.75rem] border border-[#09111d]/10 bg-white p-6 shadow-[0_18px_45px_rgba(9,17,29,0.08)]">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#b62636]">{dict.pricing.notesLabel}</p>
+              <ul className="mt-4 space-y-3">
+                {dict.pricing.notes.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-7 text-[#334155]">
+                    <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#f3b24f]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div className="grid gap-6 xl:grid-cols-3">
+              {dict.pricing.plans.map((plan) => (
+                <article
+                  key={plan.name}
+                  className={`relative flex h-full flex-col overflow-hidden rounded-[2rem] border p-7 shadow-[0_18px_45px_rgba(9,17,29,0.08)] transition duration-300 hover:-translate-y-1 ${plan.featured ? 'border-[#09111d] bg-[#09111d] text-white shadow-[0_24px_70px_rgba(9,17,29,0.2)]' : 'border-[#09111d]/10 bg-white text-[#09111d]'}`}
+                >
+                  {plan.featured ? (
+                    <span className="mb-5 inline-flex w-fit rounded-full bg-[#f3b24f] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.22em] text-[#09111d]">
+                      {dict.pricing.featuredBadge}
+                    </span>
+                  ) : (
+                    <span className="mb-5 inline-flex w-fit rounded-full border border-[#09111d]/10 bg-[#f7f4ed] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.22em] text-[#09111d]">
+                      {dict.pricing.planLabel}
+                    </span>
+                  )}
+
+                  <h3 className="text-2xl font-extrabold uppercase tracking-[0.05em]">{plan.name}</h3>
+                  <div className={`mt-6 text-5xl font-black leading-none ${plan.featured ? 'text-[#f3b24f]' : 'text-[#09111d]'}`}>{plan.price}</div>
+                  <p className={`mt-3 text-sm uppercase tracking-[0.18em] ${plan.featured ? 'text-white/62' : 'text-[#5b6576]'}`}>{plan.details}</p>
+                  <p className={`mt-6 text-sm leading-8 ${plan.featured ? 'text-white/72' : 'text-[#425066]'}`}>{plan.description}</p>
+
+                  <ul className="mt-6 space-y-3">
+                    {plan.points.map((point) => (
+                      <li key={point} className={`flex items-start gap-3 text-sm leading-7 ${plan.featured ? 'text-white/84' : 'text-[#334155]'}`}>
+                        <span className={`mt-2 h-2.5 w-2.5 shrink-0 rounded-full ${plan.featured ? 'bg-[#f3b24f]' : 'bg-[#b62636]'}`} />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href="#kontakt"
+                    className={`mt-8 inline-flex items-center justify-center rounded-full px-5 py-3 text-xs font-extrabold uppercase tracking-[0.18em] transition hover:-translate-y-0.5 ${plan.featured ? 'bg-[#f3b24f] text-[#09111d] hover:bg-[#ffbf5f]' : 'border border-[#09111d]/12 bg-[#09111d] text-white hover:bg-[#122038]'}`}
+                  >
+                    {dict.pricing.cta}
+                  </a>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="rounded-[1.8rem] border border-[#09111d]/10 bg-white p-6 shadow-[0_16px_40px_rgba(9,17,29,0.08)]">
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#b62636]">{dict.pricing.extrasLabel}</p>
+                <div className="mt-4 grid gap-3">
+                  {dict.pricing.extras.map((item) => (
+                    <div key={item.label} className="flex items-start justify-between gap-4 border-t border-[#09111d]/8 pt-3 first:border-t-0 first:pt-0">
+                      <span className="text-sm font-semibold uppercase tracking-[0.08em] text-[#09111d]">{item.label}</span>
+                      <span className="max-w-[14rem] text-right text-sm leading-6 text-[#425066]">{item.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-[1.8rem] border border-[#09111d]/10 bg-[#d7d0c4] p-6 shadow-[0_16px_40px_rgba(9,17,29,0.08)]">
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#b62636]">{dict.pricing.label}</p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {dict.pricing.factors.map((item) => (
+                    <span key={item} className="rounded-full border border-[#09111d]/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#09111d]">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-6 text-base leading-8 text-[#263246]">{dict.pricing.positioning}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ProcessSection({ dict }: { dict: Dict }) {
   return (
     <section id="proces" className="relative overflow-hidden bg-[#0d1727] py-20 sm:py-24">
@@ -379,7 +478,7 @@ function TestimonialsSection({ dict }: { dict: Dict }) {
             {dict.testimonials.quotes.map((quote, index) => (
               <article key={quote} className="rounded-[2rem] border border-white/10 bg-[#101a2b] p-7 shadow-[0_14px_35px_rgba(0,0,0,0.22)] transition duration-300 hover:border-[#f3b24f]/20 hover:bg-[#111f35]">
                 <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b62636]">0{index + 1}</p>
-                <p className="mt-2 font-black leading-none text-[#f3b24f]/20 text-5xl">"</p>
+                <p className="mt-2 text-5xl font-black leading-none text-[#f3b24f]/20">&quot;</p>
                 <p className="mt-1 text-lg leading-9 text-white/82">{quote}</p>
               </article>
             ))}

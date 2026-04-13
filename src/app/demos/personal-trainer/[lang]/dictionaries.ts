@@ -38,6 +38,28 @@ export type Dict = {
     imageBody: string;
     items: Array<{ title: string; description: string }>;
   };
+  pricing: {
+    label: string;
+    heading: string;
+    body: string;
+    positioning: string;
+    factors: string[];
+    planLabel: string;
+    featuredBadge: string;
+    cta: string;
+    plans: Array<{
+      name: string;
+      price: string;
+      details: string;
+      description: string;
+      points: string[];
+      featured?: boolean;
+    }>;
+    extrasLabel: string;
+    extras: Array<{ label: string; value: string }>;
+    notesLabel: string;
+    notes: string[];
+  };
   process: {
     label: string;
     heading: string;
@@ -84,7 +106,7 @@ const pl: Dict = {
   },
   header: {
     subtitle: 'Trener personalny',
-    nav: ['Oferta', 'Proces', 'Efekty', 'FAQ', 'Kontakt'],
+    nav: ['Oferta', 'Cennik', 'Proces', 'Efekty', 'FAQ', 'Kontakt'],
     cta: 'Umów konsultację',
   },
   hero: {
@@ -153,6 +175,58 @@ const pl: Dict = {
         description:
           'Plan treningowy, prowadzenie i regularne wsparcie dla osób, które chcą trenować skutecznie także poza spotkaniami stacjonarnymi.',
       },
+    ],
+  },
+  pricing: {
+    label: 'Cennik',
+    heading: 'Jasny model współpracy. Bez zgadywania.',
+    body:
+      'Możesz zacząć od pojedynczej sesji albo wejść od razu w pakiet, jeśli zależy Ci na regularnym progresie. Największą wartość daje stała praca 1:1 dopasowana do Twojego celu, poziomu sprawności i tempa życia.',
+    positioning:
+      'Ten cennik ma komunikować profesjonalizm, specjalizację i pracę 1:1 z realnym celem — bez efektu przypadkowej, taniej oferty.',
+    factors: ['Poziom zaawansowania', 'Cel współpracy', 'Regularność spotkań'],
+    planLabel: 'Pakiet',
+    featuredBadge: 'Najczęściej wybierany',
+    cta: 'Wybierz pakiet',
+    plans: [
+      {
+        name: 'Pojedynczy trening',
+        price: '179 zł',
+        details: '1 sesja 1:1',
+        description:
+          'Dobry start, jeśli chcesz sprawdzić współpracę, wrócić do regularności albo zacząć od konkretnej konsultacji ruchowej.',
+        points: ['60 minut pracy 1:1', 'dopasowanie do celu i poziomu', 'jasne wskazówki do dalszego działania'],
+      },
+      {
+        name: 'Pakiet 4 treningów',
+        price: '676 zł',
+        details: '169 zł / trening',
+        description:
+          'Opcja dla osób, które chcą wejść w system treningowy, poprawić technikę i zacząć budować mierzalny progres.',
+        points: ['4 sesje 1:1', 'priorytetyzacja celu i plan pracy', 'lepsza technika i większa regularność'],
+      },
+      {
+        name: 'Pakiet 8 treningów',
+        price: '1272 zł',
+        details: '159 zł / trening',
+        description:
+          'Najlepszy wybór, jeśli zależy Ci na regularnym progresie, większej sprawności i realnym efekcie w sylwetce oraz kondycji.',
+        points: ['8 sesji 1:1', 'najkorzystniejsza stawka', 'ciągłość pracy i mocniejsza kontrola postępów'],
+        featured: true,
+      },
+    ],
+    extrasLabel: 'Dodatkowe opcje',
+    extras: [
+      { label: 'Konsultacja wstępna', value: '149 zł lub gratis przy pakiecie' },
+      { label: 'Opieka online', value: 'od 249 zł / miesiąc' },
+      { label: 'Przygotowanie do testów sprawnościowych', value: 'wycena indywidualna' },
+      { label: 'Trening sportów walki', value: 'w formule 1:1 lub jako moduł specjalistyczny' },
+    ],
+    notesLabel: 'Ważne informacje',
+    notes: [
+      'Współpraca odbywa się stacjonarnie w Warszawie lub online.',
+      'Pakiet 8 jest najczęściej wybierany przez osoby, które chcą pracować regularnie.',
+      'Zakres współpracy jest dopasowywany do celu, poziomu i dostępności czasowej.',
     ],
   },
   process: {
@@ -256,7 +330,7 @@ const en: Dict = {
   },
   header: {
     subtitle: 'Personal trainer',
-    nav: ['Offer', 'Process', 'Results', 'FAQ', 'Contact'],
+    nav: ['Offer', 'Pricing', 'Process', 'Results', 'FAQ', 'Contact'],
     cta: 'Book a consultation',
   },
   hero: {
@@ -325,6 +399,58 @@ const en: Dict = {
         description:
           'A training plan, guidance, and regular support for those who want to train effectively outside of in-person sessions.',
       },
+    ],
+  },
+  pricing: {
+    label: 'Pricing',
+    heading: 'A clear way to work together. No guesswork.',
+    body:
+      'You can start with a single session or go straight into a package if you want steady progress. The best value comes from consistent 1:1 work tailored to your goal, fitness level, and weekly rhythm.',
+    positioning:
+      'This pricing is meant to signal professionalism, specialization, and serious 1:1 coaching — not a cheap, generic fitness offer.',
+    factors: ['Current level', 'Training goal', 'Session frequency'],
+    planLabel: 'Package',
+    featuredBadge: 'Most chosen',
+    cta: 'Choose package',
+    plans: [
+      {
+        name: 'Single session',
+        price: '179 PLN',
+        details: '1 one-to-one session',
+        description:
+          'A good starting point if you want to test the collaboration, get back into routine, or begin with a focused movement consultation.',
+        points: ['60 minutes of 1:1 work', 'tailored to your goal and level', 'clear next-step guidance'],
+      },
+      {
+        name: '4-session package',
+        price: '676 PLN',
+        details: '169 PLN / session',
+        description:
+          'A strong option if you want to enter a training system, improve technique, and start building measurable progress.',
+        points: ['4 one-to-one sessions', 'goal prioritization and work plan', 'better technique and stronger consistency'],
+      },
+      {
+        name: '8-session package',
+        price: '1272 PLN',
+        details: '159 PLN / session',
+        description:
+          'The best choice if you care about regular progress, better fitness, and visible changes in physique and conditioning.',
+        points: ['8 one-to-one sessions', 'best rate per session', 'continuity and tighter progress control'],
+        featured: true,
+      },
+    ],
+    extrasLabel: 'Additional options',
+    extras: [
+      { label: 'Initial consultation', value: '149 PLN or free with a package' },
+      { label: 'Online coaching', value: 'from 249 PLN / month' },
+      { label: 'Fitness test preparation', value: 'individual quote' },
+      { label: 'Combat sports training', value: 'as 1:1 sessions or a specialist module' },
+    ],
+    notesLabel: 'Good to know',
+    notes: [
+      'Sessions are available in Warsaw or online.',
+      'The 8-session package is the most common choice for people who want consistent progress.',
+      'The scope of work is adjusted to your goal, level, and schedule.',
     ],
   },
   process: {
@@ -425,7 +551,7 @@ const es: Dict = {
   },
   header: {
     subtitle: 'Entrenador personal',
-    nav: ['Oferta', 'Proceso', 'Resultados', 'FAQ', 'Contacto'],
+    nav: ['Oferta', 'Precios', 'Proceso', 'Resultados', 'FAQ', 'Contacto'],
     cta: 'Reservar consulta',
   },
   hero: {
@@ -494,6 +620,58 @@ const es: Dict = {
         description:
           'Plan de entrenamiento, orientación y apoyo regular para quienes quieren entrenar eficazmente fuera de las sesiones presenciales.',
       },
+    ],
+  },
+  pricing: {
+    label: 'Precios',
+    heading: 'Modelo de trabajo claro. Sin adivinar.',
+    body:
+      'Puedes empezar con una sola sesión o elegir directamente un paquete si quieres progreso constante. El mayor valor está en el trabajo 1:1 regular, ajustado a tu objetivo, nivel físico y ritmo de vida.',
+    positioning:
+      'Este precio debe comunicar profesionalismo, especialización y trabajo 1:1 serio, no una oferta barata y genérica de fitness.',
+    factors: ['Nivel actual', 'Objetivo de trabajo', 'Frecuencia de sesiones'],
+    planLabel: 'Paquete',
+    featuredBadge: 'Más elegido',
+    cta: 'Elegir paquete',
+    plans: [
+      {
+        name: 'Sesión individual',
+        price: '179 PLN',
+        details: '1 sesión 1:1',
+        description:
+          'Una buena forma de empezar si quieres probar la colaboración, recuperar regularidad o comenzar con una consulta de movimiento enfocada.',
+        points: ['60 minutos de trabajo 1:1', 'ajuste al objetivo y al nivel', 'indicaciones claras para el siguiente paso'],
+      },
+      {
+        name: 'Paquete de 4 sesiones',
+        price: '676 PLN',
+        details: '169 PLN / sesión',
+        description:
+          'Una opción sólida si quieres entrar en un sistema de entrenamiento, mejorar la técnica y empezar a construir progreso medible.',
+        points: ['4 sesiones 1:1', 'priorización del objetivo y plan de trabajo', 'mejor técnica y mayor regularidad'],
+      },
+      {
+        name: 'Paquete de 8 sesiones',
+        price: '1272 PLN',
+        details: '159 PLN / sesión',
+        description:
+          'La mejor elección si te importa el progreso regular, una mejor condición física y cambios visibles en el físico y la resistencia.',
+        points: ['8 sesiones 1:1', 'mejor tarifa por sesión', 'continuidad y control más fuerte del progreso'],
+        featured: true,
+      },
+    ],
+    extrasLabel: 'Opciones adicionales',
+    extras: [
+      { label: 'Consulta inicial', value: '149 PLN o gratis con paquete' },
+      { label: 'Coaching online', value: 'desde 249 PLN / mes' },
+      { label: 'Preparación para pruebas físicas', value: 'presupuesto individual' },
+      { label: 'Entrenamiento de artes marciales', value: 'en formato 1:1 o como módulo especializado' },
+    ],
+    notesLabel: 'Información importante',
+    notes: [
+      'La colaboración puede ser presencial en Varsovia u online.',
+      'El paquete de 8 sesiones es la opción más elegida por quienes quieren progresar con regularidad.',
+      'El alcance del trabajo se ajusta al objetivo, nivel y disponibilidad horaria.',
     ],
   },
   process: {
