@@ -150,7 +150,7 @@ const pl: Dict = {
     label: 'Oferta',
     heading: 'Oferta dopasowana do celu, nie do gotowego szablonu.',
     description:
-      'Mocny sportowy charakter nie oznacza chaosu. Każda forma współpracy ma swój cel, zakres i konkretny rezultat.',
+      '',
     imageLabel: 'Podejście treningowe',
     imageBody:
       'Technika, kontrola ruchu, progres i pełne dopasowanie planu do poziomu oraz celu. Tu nie ma miejsca na przypadkowy wysiłek.',
@@ -181,12 +181,12 @@ const pl: Dict = {
     label: 'Cennik',
     heading: 'Jasny model współpracy. Bez zgadywania.',
     body:
-      'Możesz zacząć od pojedynczej sesji albo wejść od razu w pakiet, jeśli zależy Ci na regularnym progresie. Największą wartość daje stała praca 1:1 dopasowana do Twojego celu, poziomu sprawności i tempa życia.',
+      'Możesz zacząć od pojedynczej sesji albo wejść od razu w pakiet, jeśli zależy Ci na regularnym progresie.',
     positioning:
       'Ten cennik ma komunikować profesjonalizm, specjalizację i pracę 1:1 z realnym celem — bez efektu przypadkowej, taniej oferty.',
     factors: ['Poziom zaawansowania', 'Cel współpracy', 'Regularność spotkań'],
     planLabel: 'Pakiet',
-    featuredBadge: 'Najczęściej wybierany',
+    featuredBadge: 'Najbardziej opłacalny',
     cta: 'Wybierz pakiet',
     plans: [
       {
@@ -217,10 +217,7 @@ const pl: Dict = {
     ],
     extrasLabel: 'Dodatkowe opcje',
     extras: [
-      { label: 'Konsultacja wstępna', value: '149 zł lub gratis przy pakiecie' },
       { label: 'Opieka online', value: 'od 249 zł / miesiąc' },
-      { label: 'Przygotowanie do testów sprawnościowych', value: 'wycena indywidualna' },
-      { label: 'Trening sportów walki', value: 'w formule 1:1 lub jako moduł specjalistyczny' },
     ],
     notesLabel: 'Ważne informacje',
     notes: [
