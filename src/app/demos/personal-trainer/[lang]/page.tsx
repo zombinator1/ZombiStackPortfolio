@@ -447,14 +447,12 @@ function TestimonialsSection({ dict }: { dict: Dict }) {
                         <span key={starIndex} className="text-sm leading-none">★</span>
                       ))}
                     </div>
-                    <p className="mt-4 text-sm font-black uppercase tracking-[0.22em] text-[#8d2c57]">0{index + 1}</p>
                   </div>
                   <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white/68">
                     {item.focus}
                   </span>
                 </div>
 
-                <p className="mt-5 text-5xl font-black leading-none text-[#c44a7b]/20">&quot;</p>
                 <p className="mt-1 text-lg leading-9 text-white/84">{item.quote}</p>
 
                 <div className="mt-6 rounded-[1.4rem] border border-white/8 bg-black/20 px-4 py-4">
