@@ -182,8 +182,6 @@ const pl: Dict = {
     heading: 'Jasny model współpracy. Bez zgadywania.',
     body:
       'Możesz zacząć od pojedynczej sesji albo wejść od razu w pakiet, jeśli zależy Ci na regularnym progresie.',
-    positioning:
-      'Ten cennik ma komunikować profesjonalizm, specjalizację i pracę 1:1 z realnym celem — bez efektu przypadkowej, taniej oferty.',
     factors: ['Poziom zaawansowania', 'Cel współpracy', 'Regularność spotkań'],
     planLabel: 'Pakiet',
     featuredBadge: 'Najbardziej opłacalny',

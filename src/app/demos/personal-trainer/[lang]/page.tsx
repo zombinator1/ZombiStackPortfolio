@@ -315,32 +315,6 @@ function PricingSection({ dict }: { dict: Dict }) {
           <p className="mt-6 max-w-3xl text-lg leading-9 text-white/70">{dict.pricing.body}</p>
         </div>
 
-        <div className="mt-10 grid gap-8 border-y border-white/10 py-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
-          <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#c44a7b]">{dict.pricing.notesLabel}</p>
-            <ul className="mt-5 space-y-3">
-              {dict.pricing.notes.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm leading-7 text-white/72">
-                  <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#c44a7b]" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#c44a7b]">{dict.pricing.label}</p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              {dict.pricing.factors.map((item) => (
-                <span key={item} className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white/78">
-                  {item}
-                </span>
-              ))}
-            </div>
-            <p className="mt-6 max-w-xl text-base leading-8 text-white/68">{dict.pricing.positioning}</p>
-          </div>
-        </div>
-
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {dict.pricing.plans.map((plan) => (
