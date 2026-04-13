@@ -116,8 +116,8 @@ export function Pricing() {
       <Container>
         <div className="relative z-10">
           <SectionHeading
-            title="Przejrzyste ceny, bez niespodzianek"
-            subtitle="Każdy projekt wyceniam indywidualnie po bezpłatnej konsultacji. Poniżej znajdziesz orientacyjne widełki, żebyś wiedział czego się spodziewać."
+            title="Jasny model współpracy. Bez zgadywania."
+            subtitle="Możesz zacząć od pojedynczej sesji albo wejść od razu w pakiet, jeśli zależy Ci na regularnym"
           />
 
           {/* Portfolio offer callout */}
