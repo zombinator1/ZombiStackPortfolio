@@ -25,14 +25,20 @@ export default function AboutPage() {
         image="/demo-electrician/about-team.jpg"
       />
 
-      <section className="bg-white py-20 sm:py-24">
-        <Container className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-zinc-100">
-            <div className="relative aspect-[4/3]">
-              <Image src="/demo-electrician/about-team.jpg" alt="Zespół firmy elektrycznej" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 45vw" />
-            </div>
-          </div>
-          <div>
+      <section className="relative overflow-hidden bg-white py-20 sm:py-24">
+        <div className="absolute inset-0">
+          <Image
+            src="/demo-electrician/about-team.jpg"
+            alt="Zespół firmy elektrycznej"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.84)_48%,rgba(255,255,255,0.74)_100%)]" />
+
+        <Container className="relative">
+          <div className="max-w-3xl rounded-[2rem] border border-white/40 bg-white/70 p-8 shadow-[0_30px_100px_rgba(15,23,42,0.12)] backdrop-blur-[4px] sm:p-10 lg:p-12">
             <SectionTitle
               eyebrow="Kim jesteśmy"
               title="Pracujemy konkretnie, odpowiedzialnie i bez zbędnego zamieszania"

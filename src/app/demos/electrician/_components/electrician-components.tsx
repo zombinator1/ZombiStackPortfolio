@@ -317,16 +317,20 @@ export function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden border-b border-zinc-200 bg-zinc-950 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.18),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_28%)]" />
-      <Container className="relative grid gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
-        <div>
+      <div className="absolute inset-0">
+        <Image src={image} alt={title} fill className="object-cover" priority sizes="100vw" />
+      </div>
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,9,11,0.88)_0%,rgba(9,9,11,0.76)_46%,rgba(9,9,11,0.68)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.22),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_30%)]" />
+      <Container className="relative py-20 sm:py-24 lg:py-32">
+        <div className="max-w-3xl rounded-[2rem] border border-white/10 bg-black/20 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.35)] backdrop-blur-[3px] sm:p-10 lg:p-12">
           <p className="inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-sm font-medium text-amber-300">
             {eyebrow}
           </p>
           <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
             {title}
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 sm:text-lg">{description}</p>
+          <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-200 sm:text-lg">{description}</p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
               href={primaryHref}
@@ -342,13 +346,6 @@ export function PageHero({
                 {secondaryLabel}
               </Link>
             ) : null}
-          </div>
-        </div>
-
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-[0_30px_100px_rgba(0,0,0,0.35)]">
-          <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/15 via-transparent to-transparent" />
-          <div className="relative aspect-[16/10]">
-            <Image src={image} alt={title} fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 50vw" />
           </div>
         </div>
       </Container>
