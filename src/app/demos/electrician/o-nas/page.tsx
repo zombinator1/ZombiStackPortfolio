@@ -17,8 +17,7 @@ export default function AboutPage() {
   return (
     <SiteShell>
       <PageHero
-        eyebrow="Podstrona wizerunkowa"
-        title="Firma elektryczna, która stawia na dobrą robotę i jasne zasady współpracy"
+title="Firma elektryczna, która stawia na dobrą robotę i jasne zasady współpracy"
         description="W branży lokalnej klient najczęściej kupuje nie samą usługę, ale poczucie bezpieczeństwa i przewidywalności. Dlatego podstrona O nas nie jest tu wypełniaczem, tylko ważnym elementem sprzedażowym całego serwisu."
         secondaryHref="/demos/electrician/realizacje"
         secondaryLabel="Zobacz realizacje"

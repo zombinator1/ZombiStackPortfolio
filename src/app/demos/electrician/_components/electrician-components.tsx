@@ -306,7 +306,7 @@ export function PageHero({
   secondaryLabel,
   image = '/demo-electrician/hero-reference.jpg',
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description: string;
   primaryHref?: string;
@@ -324,9 +324,9 @@ export function PageHero({
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.22),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_30%)]" />
       <Container className="relative py-20 sm:py-24 lg:py-32">
         <div className="max-w-3xl rounded-[2rem] border border-white/10 bg-black/20 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.35)] backdrop-blur-[3px] sm:p-10 lg:p-12">
-          <p className="inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-sm font-medium text-amber-300">
+          {eyebrow && <p className="inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-sm font-medium text-amber-300">
             {eyebrow}
-          </p>
+          </p>}
           <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
             {title}
           </h1>

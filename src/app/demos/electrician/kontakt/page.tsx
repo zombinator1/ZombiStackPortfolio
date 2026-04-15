@@ -17,8 +17,7 @@ export default function ContactPage() {
   return (
     <SiteShell>
       <PageHero
-        eyebrow="Podstrona kontaktowa"
-        title="Porozmawiajmy o Twojej instalacji"
+title="Porozmawiajmy o Twojej instalacji"
         description="Napisz lub zadzwoń i opisz, czego potrzebujesz. W dobrze zaprojektowanej stronie firmowej kontakt nie powinien być ukryty na końcu długiego landingu, tylko dostępny jako osobna i wygodna ścieżka działania."
         secondaryHref="/demos/electrician/uslugi"
         secondaryLabel="Zobacz usługi"

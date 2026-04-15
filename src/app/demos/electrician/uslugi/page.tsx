@@ -18,8 +18,7 @@ export default function ServicesPage() {
   return (
     <SiteShell>
       <PageHero
-        eyebrow="Podstrona usługowa"
-        title="Kompleksowe usługi elektryczne dla klientów prywatnych i firm"
+title="Kompleksowe usługi elektryczne dla klientów prywatnych i firm"
         description="Realizujemy instalacje elektryczne, modernizacje, pomiary oraz usuwanie usterek w domach, mieszkaniach, lokalach usługowych i małych obiektach firmowych. Ta podstrona pokazuje dokładniej, jak wygląda zakres strony firmowej względem zwykłej wizytówki."
         secondaryHref="/demos/electrician/kontakt"
         secondaryLabel="Skonsultuj zakres"

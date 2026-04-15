@@ -18,8 +18,7 @@ export default function RealizationsPage() {
   return (
     <SiteShell>
       <PageHero
-        eyebrow="Podstrona realizacji"
-        title="Wybrane realizacje instalacji elektrycznych"
+        title="Nasze realizacje"
         description="Zobacz przykłady prac wykonanych dla domów, mieszkań i lokali usługowych. Ta część strony wzmacnia wiarygodność i pokazuje, że serwis nie kończy się na ładnym homepage, tylko prowadzi użytkownika dalej przez sensowną architekturę treści."
         secondaryHref="/demos/electrician/kontakt"
         secondaryLabel="Zapytaj o podobny zakres"

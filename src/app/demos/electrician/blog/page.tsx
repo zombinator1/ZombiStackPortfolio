@@ -18,8 +18,7 @@ export default function BlogPage() {
   return (
     <SiteShell>
       <PageHero
-        eyebrow="Podstrona contentowa"
-        title="Praktyczne porady i aktualności z branży elektrycznej"
+title="Praktyczne porady i aktualności z branży elektrycznej"
         description="Blog w tym demie nie jest ozdobą. Ma pokazać, że strona firmowa może wspierać pozycjonowanie, budować eksperckość i odpowiadać na pytania klientów jeszcze przed kontaktem."
         secondaryHref="/demos/electrician/kontakt"
         secondaryLabel="Skonsultuj swój przypadek"
@@ -44,29 +43,6 @@ export default function BlogPage() {
                 </div>
               </article>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-[#f6f7f8] py-20 sm:py-24">
-        <Container className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <SectionTitle
-              eyebrow="Dlaczego to ważne"
-              title="Blog dobrze pokazuje różnicę między prostą wizytówką a pełną stroną firmową"
-              description="Jeśli klient ma zobaczyć sens droższego pakietu, potrzebuje czegoś więcej niż tylko kilku sekcji na stronie głównej. Blog jest jednym z tych elementów, które wzmacniają poczucie, że serwis został zaprojektowany długofalowo."
-            />
-          </div>
-          <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 sm:p-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">Rekomendacja wdrożeniowa</p>
-            <p className="mt-5 text-base leading-8 text-zinc-600">
-              Na etapie demo wystarczy lista kilku wpisów. To rozsądny kompromis: pokazuje architekturę strony i potencjał SEO, ale nie rozciąga implementacji na dziesiątki dodatkowych widoków bez realnej wartości sprzedażowej.
-            </p>
-            <div className="mt-8">
-              <Link href="/demos/electrician/kontakt" className="inline-flex rounded-full bg-zinc-950 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-zinc-800">
-                Zobacz, jak można rozwinąć to dalej
-              </Link>
-            </div>
           </div>
         </Container>
       </section>
