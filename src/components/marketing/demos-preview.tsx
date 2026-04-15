@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { BackgroundDecor } from '@/components/background-decor';
-
+// #08070b
 const demos = [
   {
     href: '/demos/personal-trainer',
@@ -16,13 +16,13 @@ const demos = [
     description: 'Strona z przejrzystym przekazem oferty FAQ i finałowa sekcja kontaktowa CTA pod sprzedaż konsultacji.',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-hero-combat-athletic-mF4o3dvFfSLZG9GPf7Erp2.webp',
     accent: 'Wizytówka',
-    accentClass: 'bg-rose-600 text-white',
+    accentClass: 'bg-[#c44a7b] text-white',
   },
   {
     href: '/demos/electrician',
-    name: 'Elektryk — strona usługowa',
-    description: 'Hero z dużym CTA, sekcja usług, realizacje ze zdjęciami, opinie Google i formularz kontaktowy.',
-    image: 'demo-electrician/hero-reference.jpg',
+    name: 'Strona Firmowa - Elektyka',
+    description: 'Przykład dla firmy o szerszej ofercie, z przemyślaną architekturą treści. Podstrony z realizacjami i blogiem budują zaufanie.',
+    image: 'demo-electrician/electrician-demo-preview.jpg',
     accent: 'Strona Firmowa',
     accentClass: 'bg-amber-400 text-zinc-900',
   },

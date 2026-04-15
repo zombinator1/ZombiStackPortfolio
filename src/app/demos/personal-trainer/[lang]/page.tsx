@@ -90,7 +90,7 @@ function Header({ dict, lang }: { dict: Dict; lang: Locale }) {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
         <a href="#hero" className="flex min-w-0 flex-col">
           <span className="text-[0.7rem] uppercase tracking-[0.32em] text-[#c44a7b]">{dict.header.subtitle}</span>
-          <span className="text-lg font-extrabold tracking-[0.08em] text-white">Anna Maria</span>
+          <span className="text-lg font-extrabold tracking-[0.08em] text-white">Anna Domańska</span>
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
@@ -251,6 +251,33 @@ function AboutSection({ dict }: { dict: Dict }) {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="flex gap-3">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-[#17111b] text-white/60 transition duration-300 hover:border-[#c44a7b]/50 hover:text-[#c44a7b]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-[#17111b] text-white/60 transition duration-300 hover:border-[#c44a7b]/50 hover:text-[#c44a7b]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
