@@ -3,8 +3,8 @@ import { DemosPreview } from '@/components/marketing/demos-preview';
 import { ProcessSteps } from '@/components/marketing/process-steps';
 import { CtaBand } from '@/components/marketing/cta-band';
 import { Pricing } from '@/components/marketing/pricing';
-import { PremiumHero } from '@/components/marketing/premium-hero';
-import { OfferIncludes } from '@/components/marketing/offer-includes/dark-accent-offer-includes';
+import { PremiumHero } from '@/components/marketing/hero';
+import { OfferIncludes } from '@/components/marketing/offer-includes';
 import {  AboutMeE } from '@/components/marketing/about-me';
 
 export const metadata: Metadata = {

@@ -56,7 +56,6 @@ export function DemosPreview() {
           </div>
 
           <p className="mt-10 text-center text-sm text-zinc-400">
-            Nie widzisz swojej branży?{' '}
             <Link href="/#kontakt" className="underline hover:text-zinc-600">
               Napisz — zrobię coś na miarę.
             </Link>
