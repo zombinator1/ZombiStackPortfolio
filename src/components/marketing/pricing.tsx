@@ -116,8 +116,8 @@ export function Pricing() {
       <Container>
         <div className="relative z-10">
           <SectionHeading
-            title="Jasny model współpracy. Bez zgadywania."
-            subtitle="Możesz zacząć od pojedynczej sesji albo wejść od razu w pakiet, jeśli zależy Ci na regularnym"
+            title="Co możesz otrzymać"
+            
           />
 
           {/* Portfolio offer callout */}

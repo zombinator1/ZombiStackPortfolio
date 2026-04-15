@@ -73,6 +73,24 @@ const steps = [
     iconColor: 'text-emerald-600',
     iconBg: 'bg-emerald-50',
   },
+  {
+    number: '05',
+    title: 'Gwarancja satysfakcji',
+    description:
+      'Za domenę płacisz po akceptacji projektu, resztę po publikacji strony.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="M9 12l2 2 4-4" />
+      </svg>
+    ),
+    gradient: 'from-rose-500 to-pink-600',
+    glow: 'from-rose-500/12 via-transparent to-transparent',
+    orb: 'bg-rose-300/20',
+    line: 'via-rose-400/50',
+    iconColor: 'text-rose-600',
+    iconBg: 'bg-rose-50',
+  },
 ];
 
 export function ProcessSteps() {
