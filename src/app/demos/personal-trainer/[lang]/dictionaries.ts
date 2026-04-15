@@ -344,7 +344,7 @@ const pl: Dict = {
     reassurances: ['Odpowiem w ciągu 24h', 'Pierwsza konsultacja bezpłatna', 'Bez zobowiązań'],
   },
   footer: {
-    name: 'Anna Maria — demo wizytówki trenera personalnego',
+    name: 'Anna Domańska — demo wizytówki trenera personalnego',
     disclaimer: 'Wszystkie dane kontaktowe i treści na tej stronie są fikcyjne.',
   },
 };
@@ -581,7 +581,7 @@ const en: Dict = {
     reassurances: ['Reply within 24h', 'First consultation free', 'No commitments'],
   },
   footer: {
-    name: 'Anna Maria — personal trainer demo page',
+    name: 'Anna Domańska — personal trainer demo page',
     disclaimer: 'All contact details and content on this page are fictional.',
   },
 };
@@ -817,7 +817,7 @@ const es: Dict = {
     reassurances: ['Respondo en 24h', 'Primera consulta gratuita', 'Sin compromisos'],
   },
   footer: {
-    name: 'Anna Maria — demo de página de entrenador personal',
+    name: 'Anna Domańska — demo de página de entrenador personal',
     disclaimer: 'Todos los datos de contacto y contenidos de esta página son ficticios.',
   },
 };
