@@ -14,7 +14,7 @@ const demos = [
     href: '/demos/personal-trainer',
     name: 'Wizytówka - Trenerka personalna',
     description: 'Strona z przejrzystym przekazem oferty FAQ i finałowa sekcja kontaktowa CTA pod sprzedaż konsultacji.',
-    image: '/personal-trainer/personal-trainer-dem-preview.jpg',
+    image: '/personal-trainer/personal-trainer-dem-preview2.jpg',
     accent: 'Wizytówka',
     accentClass: 'bg-[#c44a7b] text-white',
   },

@@ -102,7 +102,7 @@ function HeroPreview() {
           </div>
         </div>
 
-        <div className="relative w-full bg-white">
+        <div className="relative w-full bg-white aspect-[4/3]">
           <Image
             src="/personal-trainer/personal-trainer-dem-preview2.jpg"
             alt="Przykładowa nowoczesna strona internetowa dla firmy usługowej"
