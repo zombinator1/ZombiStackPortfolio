@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'ZombiStack',
+  name: 'Bartłomiej Ząbek',
   tagline: 'Gotowe strony dla firm',
   description:
     'Profesjonalne strony WWW oparte na gotowych szablonach. Wybierz wygląd, podaj treści — gotowe w 7 dni.',

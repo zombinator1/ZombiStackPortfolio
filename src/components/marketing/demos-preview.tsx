@@ -14,7 +14,7 @@ const demos = [
     href: '/demos/personal-trainer',
     name: 'Wizytówka - Trenerka personalna',
     description: 'Strona z przejrzystym przekazem oferty FAQ i finałowa sekcja kontaktowa CTA pod sprzedaż konsultacji.',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029894603/juYegqbJvnQD5Aw8NESMdG/trener-hero-combat-athletic-mF4o3dvFfSLZG9GPf7Erp2.webp',
+    image: '/personal-trainer/personal-trainer-dem-preview.jpg',
     accent: 'Wizytówka',
     accentClass: 'bg-[#c44a7b] text-white',
   },
