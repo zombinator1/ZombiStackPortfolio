@@ -18,7 +18,7 @@ export default function BlogPage() {
   return (
     <SiteShell>
       <PageHero
-title="Praktyczne porady i aktualności z branży elektrycznej"
+        title="Praktyczne porady i aktualności z branży elektrycznej"
         description="Blog w tym demie nie jest ozdobą. Ma pokazać, że strona firmowa może wspierać pozycjonowanie, budować eksperckość i odpowiadać na pytania klientów jeszcze przed kontaktem."
         secondaryHref="/demos/electrician/kontakt"
         secondaryLabel="Skonsultuj swój przypadek"

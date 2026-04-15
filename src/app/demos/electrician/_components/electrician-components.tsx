@@ -136,17 +136,17 @@ export const testimonials = [
   {
     quote:
       'Zakres prac został dobrze omówiony już na początku. Realizacja przebiegła sprawnie, a instalacja została wykonana bardzo estetycznie.',
-    author: 'Właścicielka mieszkania po generalnym remoncie',
+    author: 'Adam Nowak, właściciel mieszkania po remoncie',
   },
   {
     quote:
       'Potrzebowaliśmy firmy, która nie tylko wykona instalację, ale też pomoże ją dobrze zaplanować. Tutaj dostaliśmy konkret i dobrą organizację.',
-    author: 'Inwestor budujący dom jednorodzinny',
+    author: 'Sławomir Michalski, inwestor budujący dom jednorodzinny',
   },
   {
     quote:
       'Prace w lokalu usługowym były wykonane bez chaosu i z jasną komunikacją. To szczególnie ważne, kiedy termin otwarcia działalności jest blisko.',
-    author: 'Właściciel lokalu usługowego',
+    author: 'Agnieszka Wrona, fyzjer przy ulicy Piłsudskiego 5',
   },
 ];
 
@@ -520,9 +520,9 @@ export function TestimonialsSection() {
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {testimonials.map((item) => (
-            <blockquote key={item.author} className="rounded-[1.75rem] border border-zinc-200 bg-zinc-50 p-7">
-              <p className="text-base leading-8 text-zinc-700">“{item.quote}”</p>
-              <footer className="mt-6 text-sm font-semibold text-zinc-950">{item.author}</footer>
+            <blockquote key={item.author} className={'flex flex-col rounded-[1.75rem] border border-zinc-200 bg-zinc-50 p-7'}>
+              <p className={'text-base leading-8 text-zinc-700'}>&#8220;{item.quote}&#8221;</p>
+              <footer className={'mt-auto pt-6 text-sm font-semibold text-zinc-950'}>{item.author}</footer>
             </blockquote>
           ))}
         </div>

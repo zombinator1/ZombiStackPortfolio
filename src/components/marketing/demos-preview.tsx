@@ -22,7 +22,7 @@ const demos = [
     href: '/demos/electrician',
     name: 'Elektryk — strona usługowa',
     description: 'Hero z dużym CTA, sekcja usług, realizacje ze zdjęciami, opinie Google i formularz kontaktowy.',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+    image: 'demo-electrician/hero-reference.jpg',
     accent: 'Strona Firmowa',
     accentClass: 'bg-amber-400 text-zinc-900',
   },
