@@ -34,14 +34,16 @@ title="Praktyczne porady i aktualności z branży elektrycznej"
 
           <div className="mt-12 grid gap-6 xl:grid-cols-3">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="rounded-[2rem] border border-zinc-200 bg-zinc-50 p-8">
+              <Link
+                key={post.slug}
+                href={`/demos/electrician/blog/${post.slug}`}
+                className="group flex flex-col rounded-[2rem] border border-zinc-200 bg-zinc-50 p-8 transition hover:border-amber-400/50 hover:bg-amber-50/30"
+              >
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-600">{post.category}</p>
-                <h2 className="mt-4 text-2xl font-semibold tracking-[-0.02em] text-zinc-950">{post.title}</h2>
+                <h2 className="mt-4 text-2xl font-semibold tracking-[-0.02em] text-zinc-950 group-hover:text-amber-700 transition">{post.title}</h2>
                 <p className="mt-5 text-sm leading-7 text-zinc-600">{post.excerpt}</p>
-                <div className="mt-8 rounded-[1.25rem] border border-zinc-200 bg-white p-5 text-sm leading-7 text-zinc-600">
-                  To jest widok listy wpisów. Zgodnie z ustaleniami demo pokazuje stronę bloga bez wdrażania pełnych widoków pojedynczych artykułów, żeby nie spowalniać realizacji.
-                </div>
-              </article>
+                <p className="mt-auto pt-8 text-sm font-semibold text-amber-600">Czytaj dalej →</p>
+              </Link>
             ))}
           </div>
         </Container>

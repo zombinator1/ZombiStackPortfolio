@@ -176,6 +176,20 @@ export const blogPosts = [
     excerpt:
       'Sprawdź, które sygnały mogą oznaczać, że dalsze odkładanie modernizacji przestaje być rozsądną decyzją.',
     category: 'Modernizacja',
+    content: [
+      {
+        heading: 'Wiek instalacji to tylko jeden z sygnałów',
+        body: 'Instalacje wykonane przed 1990 rokiem często nie spełniają dzisiejszych norm — zarówno pod kątem bezpieczeństwa, jak i obciążenia. Współczesne gospodarstwo domowe pobiera kilkakrotnie więcej energii niż kilkadziesiąt lat temu. Samo to powinno skłonić do przeglądu.',
+      },
+      {
+        heading: 'Na co zwrócić uwagę w codziennym użytkowaniu',
+        body: 'Częste wypadanie bezpieczników, ciepłe gniazdka, widoczne uszkodzenia przewodów, trzaskające włączniki — to nie są drobne usterki. To sygnały, że instalacja pracuje na granicy swojej wydolności lub poza nią. Ignorowanie ich nie zmniejsza ryzyka, tylko przesuwa problem w czasie.',
+      },
+      {
+        heading: 'Modernizacja a remont — różnica w podejściu',
+        body: 'Wymiana instalacji w starym budynku nie zawsze wymaga generalnego remontu. W wielu przypadkach da się poprowadzić nowe obwody w sposób mało inwazyjny. Kluczem jest dobra wycena i plan prac przed wejściem na budowę, a nie improvizacja na etapie realizacji.',
+      },
+    ],
   },
   {
     slug: 'jak-zaplanowac-elektryke-w-nowym-domu',
@@ -183,6 +197,20 @@ export const blogPosts = [
     excerpt:
       'Dobrze rozpisana instalacja na starcie ogranicza liczbę późniejszych przeróbek i niepotrzebnych kosztów.',
     category: 'Nowa inwestycja',
+    content: [
+      {
+        heading: 'Zacznij od projektu, nie od zakupu materiałów',
+        body: 'Największy błąd przy nowej inwestycji to zlecanie elektryki bez projektu. Dobry schemat instalacji pozwala przewidzieć rozłożenie obwodów, moc przyłączeniową i liczbę punktów. Bez tego każda zmiana na etapie budowy kosztuje więcej czasu i pieniędzy.',
+      },
+      {
+        heading: 'Ile obwodów to wystarczająco?',
+        body: 'Kuchnia, łazienka, pralnia, piece i klimatyzacja wymagają osobnych obwodów. Do tego gniazda ogólne i oświetlenie w każdym pomieszczeniu. Skąpienie na obwodach na etapie projektu to prosta droga do przeciążeń i kłopotów kilka lat po przeprowadzce.',
+      },
+      {
+        heading: 'Myśl z wyprzedzeniem — infrastruktura na przyszłość',
+        body: 'Warto już teraz zaplanować miejsce na ładowarkę do samochodu elektrycznego, instalację fotowoltaiczną albo inteligentny dom. Przeprowadzenie pustej rury kablowej podczas budowy kosztuje ułamek tego, co jej późniejsze wkuwanie w gotowe ściany.',
+      },
+    ],
   },
   {
     slug: 'najczestsze-bledy-przy-remoncie-mieszkania',
@@ -190,6 +218,20 @@ export const blogPosts = [
     excerpt:
       'Zobacz, o czym warto pamiętać, zanim ściany zostaną zamknięte i wykończone.',
     category: 'Remont',
+    content: [
+      {
+        heading: 'Elektryka na końcu zamiast na początku',
+        body: 'Jednym z najczęstszych błędów jest traktowanie elektryki jako ostatniego etapu remontu. Tymczasem zmiana układu gniazdek, przesunięcie punktów świetlnych czy modernizacja rozdzielnicy musi odbyć się zanim powstaną tynki i wylewki. Poprawki po zamknięciu ścian są kosztowne.',
+      },
+      {
+        heading: 'Oszczędzanie na przekrojach przewodów',
+        body: 'Przewody o za małym przekroju nagrzewają się pod obciążeniem. To nie tylko problem z bezpiecznikami — to realne ryzyko pożaru. Koszt grubszego kabla na etapie remontu jest pomijalny w porównaniu z konsekwencjami oszczędzania na nim.',
+      },
+      {
+        heading: 'Brak dokumentacji powykonawczej',
+        body: 'Po zakończonym remoncie warto mieć schemat instalacji z zaznaczonymi trasami przewodów. Przy każdej późniejszej przeróbce — wierceniu, wykuwaniu, instalowaniu klimatyzacji — taki rysunek pozwala uniknąć kosztownej wpadki. Dobra firma zostawia dokumentację bez dodatkowego pytania.',
+      },
+    ],
   },
 ];
 
@@ -523,11 +565,16 @@ export function BlogPreviewSection() {
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {blogPosts.map((post) => (
-            <article key={post.slug} className="rounded-[1.75rem] border border-zinc-200 bg-zinc-50 p-7">
+            <Link
+              key={post.slug}
+              href={`/demos/electrician/blog/${post.slug}`}
+              className="group flex flex-col rounded-[1.75rem] border border-zinc-200 bg-zinc-50 p-7 transition hover:border-amber-400/50 hover:bg-amber-50/30"
+            >
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-600">{post.category}</p>
-              <h3 className="mt-4 text-xl font-semibold text-zinc-950">{post.title}</h3>
+              <h3 className="mt-4 text-xl font-semibold text-zinc-950 transition group-hover:text-amber-700">{post.title}</h3>
               <p className="mt-4 text-sm leading-7 text-zinc-600">{post.excerpt}</p>
-            </article>
+              <p className="mt-auto pt-6 text-sm font-semibold text-amber-600">Czytaj dalej →</p>
+            </Link>
           ))}
         </div>
         <div className="mt-10">
