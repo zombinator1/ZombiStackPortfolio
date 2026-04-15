@@ -22,7 +22,7 @@ const demos = [
     href: '/demos/electrician',
     name: 'Strona Firmowa - Elektyka',
     description: 'Przykład dla firmy o szerszej ofercie, z przemyślaną architekturą treści. Podstrony z realizacjami i blogiem budują zaufanie.',
-    image: 'demo-electrician/electrician-demo-preview.jpg',
+    image: '/demo-electrician/electrician-demo-preview2.jpg',
     accent: 'Strona Firmowa',
     accentClass: 'bg-amber-400 text-zinc-900',
   },
