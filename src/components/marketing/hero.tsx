@@ -19,7 +19,6 @@ export function PremiumHero() {
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-24 sm:px-8 lg:px-12 lg:pb-28 lg:pt-32">
         <div className="grid items-center gap-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-20">
           <div className="relative z-10 max-w-2xl">
-            <HeroBadge />
             <HeroHeading />
             <HeroActions />
             <HeroProof />
@@ -34,15 +33,6 @@ export function PremiumHero() {
   );
 }
 
-function HeroBadge() {
-  return (
-    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-zinc-200/80 bg-white/90 px-4 py-2 text-sm font-medium text-zinc-700 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur">
-      <span className="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600" />
-      Nowoczesne strony internetowe i treści dla firm usługowych
-    </div>
-  );
-}
-
 function HeroHeading() {
   return (
     <div>
@@ -53,7 +43,7 @@ function HeroHeading() {
 
       <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-600 sm:text-xl">
         Projektuję i wdrażam nowoczesne strony dla małych biznesów oraz pomagam uporządkować
-        treści i copy, żeby Twoja oferta była jasna, profesjonalna i gotowa do pokazania
+        treści i copywriting, żeby Twoja oferta była jasna, profesjonalna i gotowa do pokazania
         klientom.
       </p>
     </div>
@@ -114,7 +104,7 @@ function HeroPreview() {
 
         <div className="relative w-full bg-white">
           <Image
-            src="/mockup-personal-trainer.jpg"
+            src="/personal-trainer/personal-trainer-dem-preview2.jpg"
             alt="Przykładowa nowoczesna strona internetowa dla firmy usługowej"
             width={1280}
             height={820}
