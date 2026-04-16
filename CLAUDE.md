@@ -2,6 +2,7 @@
 
 ## Projekt
 
+- to nie koniecznie będzie deployed na vercelu, mimo ze są tutaj vercelowe pliki
 - zajmuje się robieniem stron internetowych, dla jednoosobowych, małych i średnich firm
 - ten projekt to moja strona internetowa, która ma na celu pozyskiwanie klientów
 - jestem z zawodu programistą, więc rozumiem co się dzieje
