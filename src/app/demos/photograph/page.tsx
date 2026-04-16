@@ -109,10 +109,10 @@ function IntroSection() {
 
 function StatsSection() {
   const stats = [
-    { Icon: Camera, value: '500+', label: 'Sesji' },
-    { Icon: Users, value: '300+', label: 'Zadowolonych Klientów' },
+    { Icon: Camera, value: '200+', label: 'Sesji' },
+    { Icon: Users, value: '150+', label: 'Zadowolonych Klientów' },
     { Icon: Award, value: '15+', label: 'Lat Doświadczenia' },
-    { Icon: Star, value: '5.0', label: 'Średnia Ocen' },
+    { Icon: Star, value: '4.9', label: 'Średnia Ocen' },
   ];
   return (
     <section className="bg-zinc-50 py-16">
