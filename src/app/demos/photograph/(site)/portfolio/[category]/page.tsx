@@ -1,10 +1,14 @@
-'use client';
-
 import Link from 'next/link';
-import { use, useState } from 'react';
 import { notFound } from 'next/navigation';
+import { client, isSanityConfigured } from '@/sanity/client';
+import { urlFor } from '@/sanity/imageUrl';
+import { categoryWithPhotosQuery } from '@/sanity/queries';
+import type { PortfolioCategoryWithPhotos } from '@/sanity/types';
+import { GalleryClient } from './gallery-client';
 
-const categoryData: Record<string, { title: string; description: string; images: string[] }> = {
+/* ─── Fallback data ───────────────────────────────────────────────────────── */
+
+const fallbackData: Record<string, { title: string; description: string; images: string[] }> = {
   weddings: {
     title: 'Śluby',
     description: 'Każdy ślub to wyjątkowa historia miłości. Uwieczniam najpiękniejsze momenty tego szczególnego dnia — od pierwszego spojrzenia, przez wzruszające ceremonie, po zabawę do białego rana.',
@@ -67,12 +71,37 @@ const categoryData: Record<string, { title: string; description: string; images:
   },
 };
 
-export default function PortfolioCategoryPage({ params }: { params: Promise<{ category: string }> }) {
-  const { category } = use(params);
-  const data = categoryData[category];
-  const [lightbox, setLightbox] = useState<number | null>(null);
+/* ─── Page ────────────────────────────────────────────────────────────────── */
 
-  if (!data) notFound();
+export default async function PortfolioCategoryPage({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}) {
+  const { category } = await params;
+
+  let title: string;
+  let description: string;
+  let images: string[];
+
+  if (isSanityConfigured) {
+    const data: PortfolioCategoryWithPhotos | null = await client.fetch(
+      categoryWithPhotosQuery,
+      { slug: category },
+    );
+
+    if (!data) notFound();
+
+    title = data.title;
+    description = data.description;
+    images = data.photos.map((p) => urlFor(p.image).width(1080).url());
+  } else {
+    const data = fallbackData[category];
+    if (!data) notFound();
+    title = data.title;
+    description = data.description;
+    images = data.images;
+  }
 
   return (
     <div className="font-sans antialiased">
@@ -87,79 +116,15 @@ export default function PortfolioCategoryPage({ params }: { params: Promise<{ ca
           </Link>
           <div className="max-w-3xl">
             <h1 className="mb-6 font-serif text-4xl font-semibold text-zinc-900 md:text-5xl lg:text-6xl">
-              {data.title}
+              {title}
             </h1>
-            <p className="text-lg leading-relaxed text-zinc-600 md:text-xl">{data.description}</p>
+            <p className="text-lg leading-relaxed text-zinc-600 md:text-xl">{description}</p>
           </div>
         </div>
       </section>
 
-      {/* Gallery — CSS columns masonry */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
-            {data.images.map((src, i) => (
-              <div
-                key={i}
-                className="mb-6 cursor-pointer overflow-hidden rounded-xl break-inside-avoid"
-                onClick={() => setLightbox(i)}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={src}
-                  alt={`${data.title} ${i + 1}`}
-                  className="w-full h-auto transition-transform duration-500 hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Lightbox */}
-      {lightbox !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95">
-          <button
-            onClick={() => setLightbox(null)}
-            className="absolute right-6 top-6 p-2 text-white transition-colors hover:text-amber-400"
-            aria-label="Zamknij"
-          >
-            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <button
-            onClick={() => setLightbox((p) => (p! > 0 ? p! - 1 : data.images.length - 1))}
-            className="absolute left-6 p-3 text-white transition-colors hover:text-amber-400"
-            aria-label="Poprzednie"
-          >
-            <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-            </svg>
-          </button>
-          <button
-            onClick={() => setLightbox((p) => (p! < data.images.length - 1 ? p! + 1 : 0))}
-            className="absolute right-6 p-3 text-white transition-colors hover:text-amber-400"
-            aria-label="Następne"
-          >
-            <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-            </svg>
-          </button>
-          <div className="max-h-[90vh] max-w-5xl px-20">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={data.images[lightbox]}
-              alt={`${data.title} ${lightbox + 1}`}
-              className="max-h-[90vh] max-w-full object-contain"
-            />
-          </div>
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-white">
-            {lightbox + 1} / {data.images.length}
-          </div>
-        </div>
-      )}
+      {/* Gallery — lightbox obsługiwany po stronie klienta */}
+      <GalleryClient title={title} images={images} />
 
       {/* CTA */}
       <section className="bg-zinc-50 py-16">

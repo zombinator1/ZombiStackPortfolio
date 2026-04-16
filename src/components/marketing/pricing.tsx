@@ -47,7 +47,7 @@ const plans = [
   {
     name: 'Strona Firmowa CMS',
     tagline: 'Zarządzam treścią sam',
-    price: 'od 4 000 zł',
+    price: 'od 3 000 zł',
     timeline: 'ok. 4–6 tygodni',
     description:
       'Wszystko z Firmowej, plus panel CMS — edytujesz teksty i zdjęcia bez programisty.',
