@@ -141,7 +141,7 @@ const portfolioImages = [
   { src: 'https://images.unsplash.com/photo-1603367563698-67012943fd67?auto=format&fit=crop&w=800&q=80', title: 'Rodzinne', href: '/demos/photograph/portfolio/family' },
   { src: 'https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?auto=format&fit=crop&w=800&q=80', title: 'Biznesowe', href: '/demos/photograph/portfolio/business' },
   { src: 'https://images.unsplash.com/photo-1621797005674-48e0150206da?auto=format&fit=crop&w=800&q=80', title: 'Narzeczeńskie', href: '/demos/photograph/portfolio/weddings' },
-  { src: 'https://images.unsplash.com/photo-1770896686915-140095250023?auto=format&fit=crop&w=800&q=80', title: 'Artystyczne', href: '/demos/photograph/portfolio/portraits' },
+  { src: 'https://images.unsplash.com/photo-1770896686915-140095250023?auto=format&fit=crop&w=800&q=80', title: 'Artystyczne', href: '/demos/photograph/portfolio/artistic' },
 ];
 
 function PortfolioSection() {

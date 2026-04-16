@@ -53,6 +53,18 @@ const categoryData: Record<string, { title: string; description: string; images:
       'https://images.unsplash.com/photo-1772690445981-78b22eacda4b?auto=format&fit=crop&w=600&q=80',
     ],
   },
+  artistic: {
+    title: 'Artystyczne',
+    description: 'Fotografia artystyczna to ekspresja, nastrój i niepowtarzalna wizja. Tworzę obrazy wykraczające poza dosłowność — pełne symboliki, światła i emocji.',
+    images: [
+      'https://images.unsplash.com/photo-1770896686915-140095250023?auto=format&fit=crop&w=1080&q=80',
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1080&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1080&q=80',
+      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1080&q=80',
+      'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&w=1080&q=80',
+      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1080&q=80',
+    ],
+  },
 };
 
 export default function PortfolioCategoryPage({ params }: { params: Promise<{ category: string }> }) {

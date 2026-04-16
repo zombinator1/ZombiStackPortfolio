@@ -30,6 +30,13 @@ const categories = [
     image: 'https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?auto=format&fit=crop&w=1080&q=80',
     count: '80+ sesji',
   },
+  {
+    id: 'artistic',
+    title: 'Artystyczne',
+    description: 'Ekspresja, nastrój i niepowtarzalna wizja fotograficzna',
+    image: 'https://images.unsplash.com/photo-1770896686915-140095250023?auto=format&fit=crop&w=1080&q=80',
+    count: '60+ projektów',
+  },
 ];
 
 export default function PortfolioPage() {
