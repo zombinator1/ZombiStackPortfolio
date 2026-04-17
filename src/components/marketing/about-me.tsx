@@ -18,25 +18,22 @@ export function AboutMeE() {
       <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-indigo-500/6 blur-3xl" />
 
       <Container>
-        <div className="relative z-10">
-
-          {/* Heading — pełna szerokość */}
-          <h2 className="text-3xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl">
-            Strony internetowe nastawione na budowanie zaufania i jasną kumunikacje.
-          </h2>
-
-          {/* Dwie kolumny poniżej */}
-          <div className="mt-12 grid items-center gap-14 lg:grid-cols-2">
+        <div className="relative z-10 grid items-center gap-14 lg:grid-cols-2">
 
           {/* Content */}
           <div>
+            <h2 className="text-3xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl">
+              Kto stworzy Twoją stronę.
+            </h2>
             {/* font-size: text-sm text-base text-lg text-xl text-2xl */}
             {/* line-height: leading-5 leading-6 leading-7 leading-8 leading-9 */}
             <p className="text-xl leading-7 text-zinc-400">
-              Od ponad 3 lat pracuje jako programista w dużych firmach technologicznych jak Snowflake i Visa. Dlatego jestem mocny technicznie, wiem jak dowieźć projekt i postanowiłem zająć się tworzeniem stron www.
-            </p>
+              Od ponad 3 lat pracuję jako programista w dużych firmach technologicznych, takich jak Snowflake i Visa. Dlatego jestem mocny technicznie, wiem, jak dowozić projekty, i postanowiłem zająć się tworzeniem stron WWW.
+                 </p>
             <p className="mt-4 text-xl leading-7 text-zinc-400">
-              Moim celem jest pomóc Ci nie tylko od strony technicznej, ale także od strony projektowej oraz z opracowaniem treści, które mają jasno pokazywać, co oferujesz, i dawać klientowi pewność, że może na Tobie polegać.
+            
+              Moim celem jest pomóc Ci nie tylko od strony technicznej, ale także projektowej oraz w opracowaniu treści, które mają jasno pokazywać, co oferujesz, i dawać klientowi pewność, że może na Tobie polegać.
+            
             </p>
 
 
@@ -86,7 +83,6 @@ export function AboutMeE() {
             </div>
           </div>
 
-          </div>{/* koniec dwóch kolumn */}
         </div>
       </Container>
     </section>
