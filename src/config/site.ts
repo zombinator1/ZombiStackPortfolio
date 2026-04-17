@@ -8,7 +8,6 @@ export const siteConfig = {
     email: 'kontakt@zombistack.pl',
   },
   nav: [
-    { label: 'Demo', href: '/#demo' },
     { label: 'Jak to działa', href: '/#jak-to-dziala' },
     { label: 'Cennik', href: '/#cennik' },
     { label: 'Kontakt', href: '/#kontakt' },
