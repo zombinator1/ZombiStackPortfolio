@@ -9,12 +9,6 @@ import { Container } from '@/components/ui/container';
    WARIANT E — Premium, bez "junior vibe"
 ───────────────────────────────────────────────────────────────────────────── */
 
-const premiumBullets = [
-  'Doświadczenie programistyczne (backend)',
-  'Nacisk na wydajność i czytelność',
-  'Brak gotowych motywów i przypadkowych rozwiązań',
-  'Jasny proces współpracy',
-];
 
 export function AboutMeE() {
   return (
@@ -24,30 +18,25 @@ export function AboutMeE() {
       <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-indigo-500/6 blur-3xl" />
 
       <Container>
-        <div className="relative z-10 grid items-center gap-14 lg:grid-cols-2">
+        <div className="relative z-10">
+
+          {/* Heading — pełna szerokość */}
+          <h2 className="text-3xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl">
+            Strony internetowe nastawione na budowanie zaufania i jasną kumunikacje.
+          </h2>
+
+          {/* Dwie kolumny poniżej */}
+          <div className="mt-12 grid items-center gap-14 lg:grid-cols-2">
 
           {/* Content */}
           <div>
-            <h2 className="text-3xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl">
-              Strony internetowe nastawione na budowanie zaufania i jasną kumunikacje.
-            </h2>
-            
-            <p className="mt-4 text-base leading-7 text-zinc-400">
-              Moim celem jest pomóc Ci nie tylko od strony technicznej, ale także od strony projektowej oraz z opracowaniem treści które będą przejrzyste dla użytkowników Twojej strony.
+            <p className="text-lg leading-8 text-zinc-400">
+              Od ponad 3 lat pracuje jako programista w dużych firmach technologicznych jak Snowflake czy Visa. Dlatego jestem mocny technicznie, wiem jak dowieźć projekt i postanowiłem zająć się tworzeniem stron www.
             </p>
-            <p className="mt-4 text-base leading-7 text-zinc-400">
-              Strony, które tworzę, mają jasno pokazywać, co oferujesz, i dawać klientowi pewność, że może na Tobie polegać.
+            <p className="text-lg leading-8 text-zinc-400">
+              Moim celem jest pomóc Ci nie tylko od strony technicznej, ale także od strony projektowej oraz z opracowaniem treści, które mają jasno pokazywać, co oferujesz, i dawać klientowi pewność, że może na Tobie polegać.
             </p>
-            
 
-            <ul className="mt-6 space-y-3">
-              {premiumBullets.map((item) => (
-                <li key={item} className="flex items-start gap-4">
-                  <div className="mt-0.5 h-px w-5 shrink-0 translate-y-3 bg-gradient-to-r from-indigo-500 to-indigo-400" />
-                  <span className="text-sm leading-6 text-zinc-300">{item}</span>
-                </li>
-              ))}
-            </ul>
 
             {/* Trust builder */}
             <div className="mt-7 border-l-2 border-indigo-500 pl-5">
@@ -55,11 +44,6 @@ export function AboutMeE() {
                 Pracujesz bezpośrednio ze mną — bez agencji i pośredników.
               </p>
             </div>
-
-            {/* Disclaimer */}
-            <p className="mt-5 text-sm leading-6 text-zinc-500">
-              Aktualnie buduję portfolio, dlatego możesz liczyć na pełne zaangażowanie i uczciwe podejście do projektu.
-            </p>
 
             <a
               href="#kontakt"
@@ -100,6 +84,7 @@ export function AboutMeE() {
             </div>
           </div>
 
+          </div>{/* koniec dwóch kolumn */}
         </div>
       </Container>
     </section>
