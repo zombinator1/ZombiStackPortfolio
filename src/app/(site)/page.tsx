@@ -3,9 +3,8 @@ import { DemosPreview } from '@/components/marketing/demos-preview';
 import { ProcessSteps } from '@/components/marketing/process-steps';
 import { CtaBand } from '@/components/marketing/cta-band';
 import { Pricing } from '@/components/marketing/pricing';
-import { PremiumHero } from '@/components/marketing/hero';
-import { OfferIncludes } from '@/components/marketing/offer-includes';
 import { AboutMeD } from '@/components/marketing/about-me';
+import { HeroD } from '@/components/marketing/hero-d';
 
 export const metadata: Metadata = {
   title: 'Strony WWW dla firm — szybko i bez przepłacania',
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <PremiumHero />
+      <HeroD />
       <DemosPreview />
       <AboutMeD />
       <ProcessSteps />
