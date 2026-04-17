@@ -5,19 +5,6 @@ import { Container } from '@/components/ui/container';
    Shared photo placeholder — swap src="/bartek.jpg" gdy masz zdjęcie
 ───────────────────────────────────────────────────────────────────────────── */
 
-function PhotoPlaceholder({ className }: { className?: string }) {
-  return (
-    <div className={`relative overflow-hidden bg-gradient-to-br from-zinc-100 to-zinc-200 ${className}`}>
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-zinc-400">
-        <svg className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-        </svg>
-        <span className="text-xs font-medium">Twoje zdjęcie</span>
-      </div>
-    </div>
-  );
-}
-
 /* ─────────────────────────────────────────────────────────────────────────────
    WARIANT E — Premium, bez "junior vibe"
 ───────────────────────────────────────────────────────────────────────────── */
@@ -42,11 +29,16 @@ export function AboutMeE() {
           {/* Content */}
           <div>
             <h2 className="text-3xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl">
-              Kto stworzy Twoją stronę
+              Strony internetowe nastawione na budowanie zaufania i jasną kumunikacje.
             </h2>
+            
             <p className="mt-4 text-base leading-7 text-zinc-400">
-              Tworzę strony internetowe dla małych biznesów, które mają być proste, szybkie i skuteczne.
+              Moim celem jest pomóc Ci nie tylko od strony technicznej, ale także od strony projektowej oraz z opracowaniem treści które będą przejrzyste dla użytkowników Twojej strony.
             </p>
+            <p className="mt-4 text-base leading-7 text-zinc-400">
+              Strony, które tworzę, mają jasno pokazywać, co oferujesz, i dawać klientowi pewność, że może na Tobie polegać.
+            </p>
+            
 
             <ul className="mt-6 space-y-3">
               {premiumBullets.map((item) => (
@@ -82,17 +74,29 @@ export function AboutMeE() {
 
           {/* Photo */}
           <div className="relative mx-auto w-full max-w-xs lg:mx-0">
-            <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-indigo-500/10 to-transparent blur-2xl" />
+            <div className="pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-indigo-500/10 to-transparent blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] ring-1 ring-white/8 shadow-[0_32px_80px_rgba(0,0,0,0.6)]">
-              <PhotoPlaceholder className="aspect-[3/4] w-full" />
+              <Image
+                src="/myself/ja1.jpg"
+                alt="Bartek Żabekk"
+                width={400}
+                height={533}
+                className="aspect-[3/4] w-full object-cover"
+              />
             </div>
-            {/* Floating label */}
-            <div className="absolute -bottom-4 left-6 rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-3 shadow-xl ring-1 ring-white/5">
-              <p className="text-xs text-zinc-500">Dostępny na nowe projekty</p>
-              <div className="mt-1 flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.6)]" />
-                <span className="text-sm font-semibold text-zinc-200">Otwórz na zlecenia</span>
-              </div>
+            <div className="mt-4 flex justify-center">
+              <a
+                href="https://www.linkedin.com/in/bzabekk"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="inline-flex items-center gap-2 text-zinc-500 transition hover:text-zinc-200"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span className="text-sm font-medium">LinkedIn</span>
+              </a>
             </div>
           </div>
 

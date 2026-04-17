@@ -44,36 +44,7 @@ Demo pod `/demos/photograph` obsługuje dwa tryby:
 - **bez Sanity** — strona działa normalnie na hardkodowanych danych
 - **z Sanity** — treści (kategorie, zdjęcia) pobierane są z CMS; klient zarządza nimi przez wbudowane Studio
 
-### Podłączenie Sanity
-
-**1. Utwórz projekt Sanity i uzupełnij `.env.local`**
-
-```bash
-npx sanity@latest init --env
-```
-
-Komenda poprowadzi przez tworzenie projektu na sanity.io i automatycznie dopisze do `.env.local`:
-
-```env
-NEXT_PUBLIC_SANITY_PROJECT_ID=twoj_project_id
-NEXT_PUBLIC_SANITY_DATASET=production
-```
-
-**2. Uruchom aplikację**
-
-```bash
-npm run dev
-```
-
-**3. Otwórz Studio i dodaj treści**
-
-Wejdź na `http://localhost:3000/demos/photograph/studio`.
-
-Dodaj najpierw **Kategorie portfolio** (z polem slug np. `weddings`, `portraits`), a następnie **Zdjęcia portfolio** przypisane do tych kategorii.
-
-**4. Deployment**
-
-Na serwerze docelowym ustaw te same zmienne środowiskowe co w `.env.local`. Studio będzie dostępne pod `/demos/photograph/studio` na docelowej domenie.
+Instrukcja podłączenia: [docs/sanity-setup.md](docs/sanity-setup.md)
 
 ### Struktura plików Sanity
 
