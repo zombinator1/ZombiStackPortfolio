@@ -4,7 +4,7 @@ import { ContactForm } from '@/components/marketing/contact-form';
 const reassurances = [
   'Odpowiadam w ciągu 24h',
   'Bez zobowiązań i zaliczek na starcie',
-  'Proponuję konkretny szablon, nie ogólniki',
+  'Proponuję projekt, nie ogólniki',
 ];
 
 export function CtaBand() {

@@ -30,10 +30,12 @@ export function AboutMeE() {
 
           {/* Content */}
           <div>
-            <p className="text-lg leading-8 text-zinc-400">
-              Od ponad 3 lat pracuje jako programista w dużych firmach technologicznych jak Snowflake czy Visa. Dlatego jestem mocny technicznie, wiem jak dowieźć projekt i postanowiłem zająć się tworzeniem stron www.
+            {/* font-size: text-sm text-base text-lg text-xl text-2xl */}
+            {/* line-height: leading-5 leading-6 leading-7 leading-8 leading-9 */}
+            <p className="text-xl leading-7 text-zinc-400">
+              Od ponad 3 lat pracuje jako programista w dużych firmach technologicznych jak Snowflake i Visa. Dlatego jestem mocny technicznie, wiem jak dowieźć projekt i postanowiłem zająć się tworzeniem stron www.
             </p>
-            <p className="text-lg leading-8 text-zinc-400">
+            <p className="mt-4 text-xl leading-7 text-zinc-400">
               Moim celem jest pomóc Ci nie tylko od strony technicznej, ale także od strony projektowej oraz z opracowaniem treści, które mają jasno pokazywać, co oferujesz, i dawać klientowi pewność, że może na Tobie polegać.
             </p>
 
