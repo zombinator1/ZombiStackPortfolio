@@ -5,7 +5,7 @@ import { CtaBand } from '@/components/marketing/cta-band';
 import { Pricing } from '@/components/marketing/pricing';
 import { PremiumHero } from '@/components/marketing/hero';
 import { OfferIncludes } from '@/components/marketing/offer-includes';
-import {  AboutMeE } from '@/components/marketing/about-me';
+import { AboutMeD } from '@/components/marketing/about-me';
 
 export const metadata: Metadata = {
   title: 'Strony WWW dla firm — szybko i bez przepłacania',
@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <PremiumHero />
       <DemosPreview />
-      <AboutMeE />
+      <AboutMeD />
       <ProcessSteps />
       <Pricing />
       <CtaBand />
