@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const proofItems = ['Projekt indywidualny', 'Pomoc w treściach i copy', 'Pełne wdrożenie'];
+const proofItems = ['Projekt indywidualny', 'Pomoc w treściach i copy', '30 dni darmowych poprawek'];
 
 export function HeroD() {
   return (
@@ -32,16 +32,14 @@ export function HeroD() {
             </p>
 
             <h1 className="text-[clamp(2.2rem,4vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white">
-              Strona, która podnosi<br />
+              Pokaż się klientom<br />
               <span className="bg-gradient-to-br from-indigo-300 via-violet-300 to-indigo-400 bg-clip-text text-transparent">
-                wiarygodność Twojej firmy
+                przedstaw klarowną ofertę
               </span>
             </h1>
 
             <p className="mt-8 max-w-md text-base leading-7 text-zinc-400 lg:text-lg">
-              Projektuję i wdrażam nowoczesne strony dla małych biznesów oraz pomagam uporządkować
-              treści i copywriting, żeby Twoja oferta była jasna, profesjonalna i gotowa do pokazania
-              klientom.
+              Stosując najlepsze praktyki marketingowe i techniczne, stworzę stronę skrojoną pod Twoją firmę.
             </p>
 
             <div className="mt-10 flex shrink-0 flex-col gap-3 sm:flex-row">
