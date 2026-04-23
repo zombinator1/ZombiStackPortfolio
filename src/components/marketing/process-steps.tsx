@@ -73,30 +73,30 @@ function IconHeadset() {
 const stage1 = [
   {
     id: 's1-1',
-    title: 'Poznajemy Twój biznes',
+    title: 'Poznanie Twojego biznesu',
     description:
-      'Poświęcam czas, żeby naprawdę zrozumieć Ciebie i to, co chcesz osiągnąć. Umawiamy się na rozmowę odkrywczą, podczas której opowiadasz mi o swojej firmie, a ja robię notatki. Poznając sposób, w jaki działasz, oraz Twoje cele biznesowe, mogę doradzić, jakie rozwiązania przyniosą Ci największe korzyści.',
+      'Poświęcam czas na to, żeby naprawdę poznać Ciebie i to, co chcesz osiągnąć. Umawiamy się na rozmowę, podczas której mówisz mi wszystko o swojej firmie, a ja słucham i robię notatki. Dzięki temu, że rozumiem jak działasz i jakie masz cele biznesowe, jestem w stanie doradzić Ci, które rozwiązania przyniosą Ci największe korzyści — i pomóc Ci je osiągnąć.',
     icon: <IconSearch />,
   },
   {
     id: 's1-2',
-    title: 'Poznajemy Twoich klientów',
+    title: 'Poznanie Twoich klientów',
     description:
-      'Definiujemy Twoją grupę docelową — badamy ją tak dokładnie, jak to potrzebne. Gdy już wiemy, kogo chcesz przyciągnąć, możemy ukształtować przekaz i wygląd strony tak, żeby trafiał dokładnie do tych ludzi. Zrozumienie zachowań klientów daje nam kierunek i pozwala wypełnić luki w Twojej ofercie.',
+      'Precyzyjnie określamy Twoją grupę docelową — zagłębiamy się w temat tak bardzo, jak jest to potrzebne. Gdy już wiemy, kogo chcesz przyciągnąć, możemy ukształtować wygląd i komunikację strony tak, żeby trafiały dokładnie do tych osób. Zrozumienie zachowań konsumentów daje nam kierunek działania i pozwala zidentyfikować luki, które warto wypełnić.',
     icon: <IconUsers />,
   },
   {
     id: 's1-3',
-    title: 'Strategia i treści',
+    title: 'Strategia',
     description:
-      'Opracowuję solidny plan, który doprowadzi Cię tam, gdzie chcesz być. Doradzam w kwestiach copywritingu, struktury oferty, SEO i projektu strony. To nie jest tylko "ładna strona" — to narzędzie sprzedażowe. Razem układamy mapę drogową, która prowadzi do realnych wyników.',
+      'Opracowuję solidny plan, który doprowadzi Cię tam, gdzie chcesz być. Doradzam w kwestiach copywritingu, struktury oferty, SEO i projektu graficznego. Chcę, żebyś widział realne efekty. Jesteś na dobrej drodze do sukcesu — wspólnie ułożymy mapę drogową, która Cię tam zaprowadzi.',
     icon: <IconMap />,
   },
   {
     id: 's1-4',
-    title: 'Projekt i Twoja akceptacja',
+    title: 'Projekt i prototyp',
     description:
-      'Projektuję pierwszą wersję strony, biorąc pod uwagę wszystko, o czym rozmawialiśmy. Następnie poznaję Twoją opinię. Powiedz mi, co Ci się podoba, a co zmienić — dopracuję projekt do perfekcji. Dopiero po Twojej akceptacji przechodzimy do właściwego wdrożenia.',
+      'Zaczynam projektować pierwszą stronę Twojej witryny, uwzględniając wszystko, o czym rozmawialiśmy. Następnie zebieram Twoje pierwsze uwagi — powiedz mi, co Ci się podoba, a co chciałbyś zmienić, a ja to dopracuję. Potem projekt trafia do fazy wdrożenia. Możesz liczyć na najwyższą jakość, sprawną realizację i kogoś, kto naprawdę rozumie Twoje wymagania.',
     icon: <IconPencil />,
   },
 ];
@@ -104,23 +104,23 @@ const stage1 = [
 const stage2 = [
   {
     id: 's2-1',
-    title: 'Wdrożenie i testy',
+    title: 'Wizja staje się rzeczywistością',
     description:
-      'Buduję stronę od podstaw, dbając o to, by ładowała się błyskawicznie i wyglądała świetnie na każdym urządzeniu. Podpinam formularze kontaktowe, analitykę i SEO, aby klienci mogli Cię łatwo znaleźć w Google. Możesz oczekiwać najwyższej jakości i terminowości.',
+      'Nie ma nic bardziej satysfakcjonującego niż postęp. Etap 2 to moment, w którym projekt ożywa. Buduję stronę od podstaw — szybką, responsywną, dopracowaną w każdym detalu. Podpinam formularze kontaktowe, analitykę i SEO. Możesz oczekiwać najwyższej jakości i terminowej realizacji.',
     icon: <IconCode />,
   },
   {
     id: 's2-2',
     title: 'Szkolenie z obsługi',
     description:
-      'W krótkim czasie opanujesz obsługę swojej strony. Pokażę Ci wszystko, co musisz wiedzieć, żeby samodzielnie zarządzać treściami — dodawać podstrony, zmieniać teksty, aktualizować zdjęcia. Prosto, wygodnie, bez potrzeby angażowania programisty.',
+      'W krótkim czasie będziesz sprawnie zarządzać swoją stroną. Pokażę Ci wszystko, co musisz wiedzieć, żeby samodzielnie dodawać podstrony, zmieniać teksty i aktualizować zdjęcia. Jest prosto i wygodnie — przeprowadzę Cię przez cały proces krok po kroku.',
     icon: <IconGraduate />,
   },
   {
     id: 's2-3',
     title: 'Wsparcie po wdrożeniu',
     description:
-      'Przez pierwsze 30 dni po starcie masz u mnie darmowe wsparcie — zmiany treści, nowe zdjęcia, poprawki. Bez dodatkowych opłat. Jeśli chcesz, żebym działał samodzielnie, sam zastosuję optymalne rozwiązania. Twoja strona będzie zawsze działać na najwyższym poziomie.',
+      'Przez pierwsze 30 dni po starcie masz u mnie dedykowane wsparcie — porady, poprawki, nowe treści, aktualizacje zdjęć i wszystko inne, czego możesz potrzebować. Jeśli wolisz, żebym działał samodzielnie, sam zastosuję optymalne rozwiązania. Twoja strona będzie zawsze działać na najwyższym poziomie.',
     icon: <IconHeadset />,
   },
 ];
@@ -182,7 +182,7 @@ export function ProcessSteps() {
             Działamy w&nbsp;dwóch etapach.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-zinc-400">
-            Inne firmy wyceniają cały projekt zanim jeszcze poznają Twoje potrzeby. Ja robię to inaczej — najpierw rozumiem, potem buduję.
+            Inne firmy wyceniają cały projekt, zanim jeszcze wiedzą, czego naprawdę potrzebujesz. Ja robię to inaczej — pracuję w 2 etapach.
           </p>
         </div>
 
