@@ -39,7 +39,7 @@ export function HeroD() {
             </h1>
 
             <p className="mt-8 max-w-md text-base leading-7 text-zinc-400 lg:text-lg">
-              Stosując najlepsze praktyki marketingowe i techniczne, stworzę stronę skrojoną pod Twoją firmę.
+              Analizuje oferty konkurencji, wdrażam najlepsze praktyki marketingowe i techniczne, stworzę stronę skrojoną pod Twoją firmę/JDG.
             </p>
 
             <div className="mt-10 flex shrink-0 flex-col gap-3 sm:flex-row">
