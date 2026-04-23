@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const proofItems = ['Projekt indywidualny', 'Pomoc w treściach i copy', 'Pełne wdrożenie'];
+const proofItems = ['Projekt indywidualny', 'Pomoc w treściach i copy', '30 dni darmowych poprawek'];
 
 export function HeroD() {
   return (
@@ -32,32 +32,32 @@ export function HeroD() {
             </p>
 
             <h1 className="text-[clamp(2.2rem,4vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white">
-              Strona, która podnosi<br />
+              Pokaż się klientom<br />
               <span className="bg-gradient-to-br from-indigo-300 via-violet-300 to-indigo-400 bg-clip-text text-transparent">
-                wiarygodność Twojej firmy
+                przedstaw klarowną ofertę
               </span>
             </h1>
 
-            <p className="mt-8 max-w-md text-base leading-7 text-zinc-400 lg:text-lg">
-              Projektuję i wdrażam nowoczesne strony dla małych biznesów oraz pomagam uporządkować
-              treści i copywriting, żeby Twoja oferta była jasna, profesjonalna i gotowa do pokazania
-              klientom.
-            </p>
+        <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <p className="max-w-md text-base leading-7 text-zinc-400 lg:text-lg">
+Analizuje oferty konkurencji, wdrażam najlepsze praktyki marketingowe i techniczne, stworzę stronę skrojoną pod Twoją firmę/JDG.
+          </p>
 
-            <div className="mt-10 flex shrink-0 flex-col gap-3 sm:flex-row">
-              <Link
-                href="#kontakt"
-                className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-zinc-950 transition hover:-translate-y-0.5 hover:bg-zinc-100"
-              >
-                Umów bezpłatną konsultację
-              </Link>
-              <Link
-                href="#demo"
-                className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/5"
-              >
-                Zobacz przykładowe strony
-              </Link>
-            </div>
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+            <Link
+              href="#kontakt"
+              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-zinc-950 transition hover:-translate-y-0.5 hover:bg-zinc-100"
+            >
+              Umów bezpłatną konsultację
+            </Link>
+            <Link
+              href="#demo"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/5"
+            >
+              Zobacz przykładowe strony
+            </Link>
+          </div>
+        </div>
 
             <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/8 pt-8">
               {proofItems.map((item) => (

@@ -130,7 +130,7 @@ export function Pricing() {
                 <p className="mt-1 text-sm leading-relaxed text-zinc-600">
                   Buduję portfolio — pierwsze 3 strony tworzę{' '}
                   <strong className="text-zinc-800">bez opłaty za pracę</strong>.
-                  Płacisz tylko za domenę i hosting (~250 zł/rok).
+                  Płacisz tylko za domenę i hosting (~100 zł/rok).
                   W zamian proszę o możliwość umieszczenia projektu w portfolio i krótką opinię.
                 </p>
               </div>
