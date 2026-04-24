@@ -169,30 +169,31 @@ export function PricingE() {
           />
 
           {/* Accordion trigger */}
-          <div className="mb-10">
+          <div className="relative mb-10">
             <button
               onClick={() => setOpen((v) => !v)}
               className="flex items-center gap-2 rounded-full border border-indigo-200/60 bg-indigo-50/60 px-3 py-1.5 text-xs text-indigo-700 transition-colors hover:bg-indigo-100/60"
             >
               <span className="font-semibold uppercase tracking-widest text-[10px]">Oferta dla pierwszych klientów</span>
               <svg
-                className={`h-3 w-3 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+                className={`h-3 w-3 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
               >
                 <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
 
-            {open && (
-              <div className="mt-2 max-w-xl rounded-xl border border-indigo-100 bg-indigo-50/50 px-4 py-3">
-                <p className="text-xs leading-relaxed text-zinc-600">
-                  Buduję portfolio — pierwsze 3 strony tworzę{' '}
-                  <strong className="text-zinc-800">bez opłaty za pracę</strong>.
-                  Płacisz tylko za domenę i hosting (~100 zł/rok).
-                  W zamian proszę o możliwość umieszczenia projektu w portfolio i krótką opinię.
-                </p>
-              </div>
-            )}
+            <div
+              className={`absolute left-0 top-full z-20 mt-2 max-w-xl rounded-xl border border-indigo-100 bg-indigo-50/95 px-4 py-3 shadow-md backdrop-blur-sm transition-all duration-500 ease-in-out
+                ${open ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-1 opacity-0'}`}
+            >
+              <p className="text-xs leading-relaxed text-zinc-600">
+                Buduję portfolio — pierwsze 3 strony tworzę{' '}
+                <strong className="text-zinc-800">bez opłaty za pracę</strong>.
+                Płacisz tylko za domenę i hosting (~100 zł/rok).
+                W zamian proszę o możliwość umieszczenia projektu w portfolio i krótką opinię.
+              </p>
+            </div>
           </div>
 
           {/* Pricing cards */}
