@@ -6,16 +6,16 @@ import { SectionHeading } from '@/components/ui/section-heading';
 
 const plans = [
   {
-    name: 'Wizytówka',
+    name: 'Landing Page',
     tagline: 'Jestem w internecie',
     price: 'od 1 500 zł',
     timeline: 'ok. 2 tygodnie',
     description:
-      'Profesjonalna one-page dla firmy, która chce być widoczna w Google i zrobić dobre pierwsze wrażenie.',
+      'One-page prowadzący Twojego klienta przez Twoją ofertę i do kontaktu.',
     highlights: [
       'One-page — wszystko w jednym miejscu',
-      'Sekcje: usługi, o firmie, opinie, kontakt',
-      'Formularz kontaktowy + Google Maps',
+      'Idealne dla małej firmy, JDG',
+      'Nowa kampania reklamowa',
     ],
     accent: {
       glow: 'from-indigo-500/8 via-transparent to-transparent',
@@ -32,11 +32,11 @@ const plans = [
     price: 'od 2 500 zł',
     timeline: 'ok. 3–4 tygodnie',
     description:
-      'Rozbudowana strona z wieloma podstronami, kontem e-mail na domenie i integracją z Google Analytics.',
+      'Pokaż swoją szeroką ofertę, i treści budujące Twój autorytet.',
     highlights: [
-      'Do 6 podstron (usługi, blog, cennik…)',
-      'Konto e-mail na domenie (ty@firma.pl)',
-      'Blog / aktualności + Google Analytics',
+      'Wiele podstron',
+      'Dla firmy z szerszą ofertą',
+      'Prezentuj blog, galerie zdjęć itp.'
     ],
     accent: {
       glow: 'from-sky-500/8 via-transparent to-transparent',
@@ -49,36 +49,6 @@ const plans = [
   },
 ];
 
-const tableRows = [
-  { label: 'Liczba podstron', values: ['1 (one-page)', 'wiele'] },
-  { label: 'Konto e-mail na domenie', values: [false, true] },
-  { label: 'Blog / aktualności', values: [false, true] },
-  { label: 'Google Analytics', values: [false, true] },
-];
-
-const checkColors = ['text-indigo-600', 'text-sky-600'];
-const colHighlight = [false, true];
-
-function TableCell({ val, colIdx }: { val: boolean | string; colIdx: number }) {
-  if (typeof val === 'string') {
-    return (
-      <div className={`flex items-center justify-center p-4 ${colHighlight[colIdx] ? 'bg-zinc-900/[0.03]' : ''}`}>
-        <span className="text-sm font-medium text-zinc-700">{val}</span>
-      </div>
-    );
-  }
-  return (
-    <div className={`flex items-center justify-center p-4 ${colHighlight[colIdx] ? 'bg-zinc-900/[0.03]' : ''}`}>
-      {val ? (
-        <svg className={`h-5 w-5 ${checkColors[colIdx]}`} viewBox="0 0 20 20" fill="currentColor">
-          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-        </svg>
-      ) : (
-        <span className="h-[2px] w-4 rounded-full bg-zinc-200" />
-      )}
-    </div>
-  );
-}
 
 // WARIANT E — rozwijany accordion pod headingiem
 export function PricingE() {
@@ -149,8 +119,9 @@ export function PricingE() {
                   </span>
                   <h3 className="text-xl font-bold tracking-tight text-zinc-900">{plan.name}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-zinc-500">{plan.description}</p>
-                  <div className="mt-6 flex items-baseline gap-1">
-                    <span className="text-3xl font-extrabold tracking-tight text-zinc-900">{plan.price}</span>
+                  <div className="mt-6 flex items-baseline gap-3">
+                    <span className="text-3xl font-extrabold tracking-tight text-zinc-900">0 zł</span>
+                    <span className="text-lg font-medium text-zinc-400 line-through decoration-zinc-400">{plan.price}</span>
                   </div>
                   <p className="mt-1 text-xs text-zinc-400">Czas realizacji: {plan.timeline}</p>
                   <div className="my-6 h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
@@ -162,9 +133,6 @@ export function PricingE() {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 text-xs leading-relaxed text-zinc-400">
-                    + projekt graficzny, responsywność, SSL, SEO, Google Maps, pomoc z tekstami, szkolenie, 30 dni darmowych poprawek
-                  </p>
                   <a
                     href="/#kontakt"
                     className={`mt-6 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all duration-200 ${
@@ -181,36 +149,6 @@ export function PricingE() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Comparison table */}
-          <div className="mt-16">
-            <h3 className="mb-6 text-center text-lg font-semibold tracking-tight text-zinc-700">Co różni pakiety?</h3>
-            <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-[0_8px_40px_rgba(15,23,42,0.06)]">
-              <div className="grid grid-cols-3 border-b border-zinc-100">
-                <div className="p-4" />
-                {plans.map((plan, i) => (
-                  <div key={plan.name} className={`p-4 text-center ${colHighlight[i] ? 'bg-zinc-900' : 'bg-zinc-50/80'}`}>
-                    <span className={`text-sm font-bold ${colHighlight[i] ? 'text-white' : 'text-zinc-800'}`}>{plan.name}</span>
-                    <p className={`mt-0.5 text-xs ${colHighlight[i] ? 'text-zinc-300' : 'text-zinc-400'}`}>{plan.price}</p>
-                  </div>
-                ))}
-              </div>
-              {tableRows.map((row, rowIdx) => (
-                <div key={row.label} className={`grid grid-cols-3 border-b border-zinc-100 last:border-0 ${rowIdx % 2 === 0 ? 'bg-white' : 'bg-zinc-50/40'}`}>
-                  <div className="flex items-center p-4 text-sm text-zinc-600">{row.label}</div>
-                  {row.values.map((val, colIdx) => (
-                    <TableCell key={colIdx} val={val} colIdx={colIdx} />
-                  ))}
-                </div>
-              ))}
-            </div>
-            <p className="mt-5 text-center text-xs text-zinc-400">
-              Wszystkie pakiety zawierają:{' '}
-              <span className="text-zinc-500">
-                indywidualny projekt graficzny, responsywność, SSL, szybkie ładowanie, SEO, Google Maps, pomoc z tekstami i zdjęciami, szkolenie z obsługi (30 min), kopia zapasowa oraz 30 dni darmowych poprawek po wdrożeniu.
-              </span>
-            </p>
           </div>
 
           <p className="mt-10 text-center text-sm text-zinc-400">

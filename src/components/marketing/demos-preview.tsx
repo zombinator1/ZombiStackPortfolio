@@ -12,10 +12,10 @@ import { BackgroundDecor } from '@/components/background-decor';
 const demos = [
   {
     href: '/demos/personal-trainer',
-    name: 'Wizytówka - Trenerka personalna',
+    name: 'Landing Page - Trenerka personalna',
     description: 'Strona z przejrzystym przekazem oferty FAQ i finałowa sekcja kontaktowa CTA pod sprzedaż konsultacji.',
     image: '/personal-trainer/personal-trainer-dem-preview2.jpg',
-    accent: 'Wizytówka',
+    accent: 'Landing Page',
     accentClass: 'bg-[#c44a7b] text-white',
   },
   {
