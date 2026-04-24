@@ -116,31 +116,21 @@ export function Pricing() {
       <Container>
         <div className="relative z-10">
           <SectionHeading
-            title="Co możesz otrzymać"
+            title="Wystarczy Ci jednostronny Landing, czy Twoje potrzeby są szersze?"
             
           />
 
           {/* Portfolio offer callout */}
           <div className="mb-12 overflow-hidden rounded-2xl border border-indigo-200/60 bg-gradient-to-r from-indigo-50/80 via-white to-sky-50/80 p-6 shadow-sm ring-1 ring-indigo-100/40">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <span className="mb-2 inline-block rounded-full bg-indigo-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-indigo-700">
-                  Oferta dla pierwszych klientów
-                </span>
-                <p className="mt-1 text-sm leading-relaxed text-zinc-600">
-                  Buduję portfolio — pierwsze 3 strony tworzę{' '}
-                  <strong className="text-zinc-800">bez opłaty za pracę</strong>.
-                  Płacisz tylko za domenę i hosting (~100 zł/rok).
-                  W zamian proszę o możliwość umieszczenia projektu w portfolio i krótką opinię.
-                </p>
-              </div>
-              <a
-                href="/#kontakt"
-                className="shrink-0 rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-zinc-700"
-              >
-                Bądź pierwszym klientem
-              </a>
-            </div>
+            <span className="mb-2 inline-block rounded-full bg-indigo-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-indigo-700">
+              Oferta dla pierwszych klientów
+            </span>
+            <p className="mt-1 text-sm leading-relaxed text-zinc-600">
+              Buduję portfolio — pierwsze 3 strony tworzę{' '}
+              <strong className="text-zinc-800">bez opłaty za pracę</strong>.
+              Płacisz tylko za domenę i hosting (~100 zł/rok).
+              W zamian proszę o możliwość umieszczenia projektu w portfolio i krótką opinię.
+            </p>
           </div>
 
           {/* Pricing cards */}
