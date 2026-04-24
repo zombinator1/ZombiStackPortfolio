@@ -47,39 +47,17 @@ const plans = [
     },
     featured: true,
   },
-  {
-    name: 'Strona Firmowa CMS',
-    tagline: 'Zarządzam treścią sam',
-    price: 'od 3 000 zł',
-    timeline: 'ok. 4–6 tygodni',
-    description:
-      'Wszystko z Firmowej, plus panel CMS — edytujesz teksty i zdjęcia bez programisty.',
-    highlights: [
-      'Wszystko ze Strony Firmowej',
-      'Panel CMS — zmieniasz treści sam',
-      'Priorytetowa opieka po wdrożeniu',
-    ],
-    accent: {
-      glow: 'from-violet-500/8 via-transparent to-transparent',
-      orb: 'bg-violet-300/20',
-      line: 'via-violet-400/50',
-      checkBg: 'bg-violet-600',
-      badge: 'bg-violet-50 text-violet-700',
-    },
-    featured: false,
-  },
 ];
 
 const tableRows = [
-  { label: 'Liczba podstron', values: ['1 (one-page)', 'wiele', 'wiele'] },
-  { label: 'Konto e-mail na domenie', values: [false, true, true] },
-  { label: 'Blog / aktualności', values: [false, true, true] },
-  { label: 'Google Analytics', values: [false, true, true] },
-  { label: 'Panel CMS', values: [false, false, true] },
+  { label: 'Liczba podstron', values: ['1 (one-page)', 'wiele'] },
+  { label: 'Konto e-mail na domenie', values: [false, true] },
+  { label: 'Blog / aktualności', values: [false, true] },
+  { label: 'Google Analytics', values: [false, true] },
 ];
 
-const checkColors = ['text-indigo-600', 'text-sky-600', 'text-violet-600'];
-const colHighlight = [false, true, false];
+const checkColors = ['text-indigo-600', 'text-sky-600'];
+const colHighlight = [false, true];
 
 function TableCell({ val, colIdx }: { val: boolean | string; colIdx: number }) {
   if (typeof val === 'string') {
@@ -150,7 +128,7 @@ export function PricingE() {
           </div>
 
           {/* Pricing cards */}
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="mx-auto grid max-w-2xl gap-6 sm:grid-cols-2">
             {plans.map((plan) => (
               <div
                 key={plan.name}
@@ -208,8 +186,8 @@ export function PricingE() {
           {/* Comparison table */}
           <div className="mt-16">
             <h3 className="mb-6 text-center text-lg font-semibold tracking-tight text-zinc-700">Co różni pakiety?</h3>
-            <div className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-[0_8px_40px_rgba(15,23,42,0.06)]">
-              <div className="grid grid-cols-4 border-b border-zinc-100">
+            <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-[0_8px_40px_rgba(15,23,42,0.06)]">
+              <div className="grid grid-cols-3 border-b border-zinc-100">
                 <div className="p-4" />
                 {plans.map((plan, i) => (
                   <div key={plan.name} className={`p-4 text-center ${colHighlight[i] ? 'bg-zinc-900' : 'bg-zinc-50/80'}`}>
@@ -219,7 +197,7 @@ export function PricingE() {
                 ))}
               </div>
               {tableRows.map((row, rowIdx) => (
-                <div key={row.label} className={`grid grid-cols-4 border-b border-zinc-100 last:border-0 ${rowIdx % 2 === 0 ? 'bg-white' : 'bg-zinc-50/40'}`}>
+                <div key={row.label} className={`grid grid-cols-3 border-b border-zinc-100 last:border-0 ${rowIdx % 2 === 0 ? 'bg-white' : 'bg-zinc-50/40'}`}>
                   <div className="flex items-center p-4 text-sm text-zinc-600">{row.label}</div>
                   {row.values.map((val, colIdx) => (
                     <TableCell key={colIdx} val={val} colIdx={colIdx} />
