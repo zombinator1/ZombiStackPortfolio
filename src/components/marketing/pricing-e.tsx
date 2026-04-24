@@ -36,7 +36,7 @@ const plans = [
     highlights: [
       'Wiele podstron',
       'Dla firmy z szerszą ofertą',
-      'Prezentuj blog, galerie zdjęć itp.'
+      'Prezentuj blog, galerie zdjęć itp.',
     ],
     accent: {
       glow: 'from-sky-500/8 via-transparent to-transparent',
@@ -49,7 +49,7 @@ const plans = [
   },
 ];
 
-const features = [
+const standardFeatures = [
   {
     title: 'Integracja z e-mailem',
     description: 'Formularze kontaktowe wysyłające wiadomości bezpośrednio na Twój adres.',
@@ -61,31 +61,11 @@ const features = [
     ),
   },
   {
-    title: 'Panel CMS',
-    description: 'Edytujesz teksty i zdjęcia samodzielnie, bez pomocy programisty.',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
-        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
-      </svg>
-    ),
-  },
-  {
     title: 'Google Analytics',
     description: 'Wiesz ilu masz odwiedzających, skąd przychodzą i co ich interesuje.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M18 20V10M12 20V4M6 20v-6" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Wielojęzyczność',
-    description: 'Strona w kilku językach — dotrzesz do klientów z różnych rynków.',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
       </svg>
     ),
   },
@@ -101,16 +81,41 @@ const features = [
   },
 ];
 
+const extraFeatures = [
+  {
+    title: 'Panel CMS',
+    description: 'Edytujesz teksty i zdjęcia samodzielnie, bez pomocy programisty.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Wielojęzyczność',
+    description: 'Strona w kilku językach — dotrzesz do klientów z różnych rynków.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+      </svg>
+    ),
+  },
+];
+
 function FeatureCard({
   title,
   description,
   icon,
   index,
+  variant = 'standard',
 }: {
   title: string;
   description: string;
   icon: React.ReactNode;
   index: number;
+  variant?: 'standard' | 'extra';
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -131,15 +136,21 @@ function FeatureCard({
     return () => observer.disconnect();
   }, []);
 
+  const isExtra = variant === 'extra';
+
   return (
     <div
       ref={ref}
       style={{ transitionDelay: `${index * 80}ms` }}
-      className={`group relative rounded-xl border border-zinc-200 bg-transparent p-5 shadow-sm transition-all duration-500
-        hover:-translate-y-1 hover:border-zinc-900 hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]
+      className={`group relative rounded-xl border p-5 shadow-sm transition-all duration-500
+        hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]
+        ${isExtra
+          ? 'border-dashed border-zinc-300 bg-zinc-50/60 hover:border-zinc-400'
+          : 'border-zinc-200 bg-transparent hover:border-zinc-900'
+        }
         ${visible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
     >
-      <div className="absolute right-4 top-4 text-zinc-400 transition-colors duration-200 group-hover:text-zinc-900">
+      <div className={`absolute right-4 top-4 transition-colors duration-200 ${isExtra ? 'text-zinc-300 group-hover:text-zinc-500' : 'text-zinc-400 group-hover:text-zinc-900'}`}>
         {icon}
       </div>
       <p className="pr-8 text-sm font-semibold text-zinc-900">{title}</p>
@@ -258,17 +269,36 @@ export function PricingE() {
             — każdy projekt wyceniam indywidualnie.
           </p>
 
-          {/* Features */}
-          <div className="mt-10">
+          {/* Standard features */}
+          <div className="mt-14">
             <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-zinc-400">
-              Dostępne funkcjonalności
+              Co otrzymujesz w każdym pakiecie (bez dopłat)
             </p>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {features.map(({ title, description, icon }, i) => (
-                <FeatureCard key={title} title={title} description={description} icon={icon} index={i} />
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              {standardFeatures.map(({ title, description, icon }, i) => (
+                <FeatureCard key={title} title={title} description={description} icon={icon} index={i} variant="standard" />
               ))}
             </div>
           </div>
+
+          {/* Extra features */}
+          <div className="mt-8">
+            <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-zinc-400">
+              Opcjonalne dodatki — wyceniane indywidualnie
+            </p>
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-2">
+              {extraFeatures.map(({ title, description, icon }, i) => (
+                <FeatureCard key={title} title={title} description={description} icon={icon} index={i} variant="extra" />
+              ))}
+            </div>
+            <p className="mt-5 text-center text-sm text-zinc-400">
+              Interesuje Cię któryś z dodatków?{' '}
+              <a href="/#kontakt" className="font-medium text-zinc-700 underline underline-offset-2 hover:text-zinc-900">
+                Zapytaj o wycenę
+              </a>
+            </p>
+          </div>
+
         </div>
       </Container>
     </section>
