@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 
@@ -49,6 +49,104 @@ const plans = [
   },
 ];
 
+const features = [
+  {
+    title: 'Integracja z e-mailem',
+    description: 'Formularze kontaktowe wysyłające wiadomości bezpośrednio na Twój adres.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <path d="M2 7l10 7 10-7" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Panel CMS',
+    description: 'Edytujesz teksty i zdjęcia samodzielnie, bez pomocy programisty.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Google Analytics',
+    description: 'Wiesz ilu masz odwiedzających, skąd przychodzą i co ich interesuje.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M18 20V10M12 20V4M6 20v-6" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Wielojęzyczność',
+    description: 'Strona w kilku językach — dotrzesz do klientów z różnych rynków.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Google Maps',
+    description: 'Mapa z lokalizacją Twojej firmy — klienci łatwo Cię znajdą.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+    ),
+  },
+];
+
+function FeatureCard({
+  title,
+  description,
+  icon,
+  index,
+}: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  index: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={{ transitionDelay: `${index * 80}ms` }}
+      className={`group relative rounded-xl border border-zinc-200 bg-transparent p-5 shadow-sm transition-all duration-500
+        hover:-translate-y-1 hover:border-zinc-900 hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]
+        ${visible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+    >
+      <div className="absolute right-4 top-4 text-zinc-400 transition-colors duration-200 group-hover:text-zinc-900">
+        {icon}
+      </div>
+      <p className="pr-8 text-sm font-semibold text-zinc-900">{title}</p>
+      <p className="mt-1 pr-8 text-xs leading-relaxed text-zinc-500">{description}</p>
+    </div>
+  );
+}
 
 // WARIANT E — rozwijany accordion pod headingiem
 export function PricingE() {
@@ -158,6 +256,18 @@ export function PricingE() {
             </a>{' '}
             — każdy projekt wyceniam indywidualnie.
           </p>
+
+          {/* Features */}
+          <div className="mt-10">
+            <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-zinc-400">
+              Dostępne funkcjonalności
+            </p>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {features.map(({ title, description, icon }, i) => (
+                <FeatureCard key={title} title={title} description={description} icon={icon} index={i} />
+              ))}
+            </div>
+          </div>
         </div>
       </Container>
     </section>
