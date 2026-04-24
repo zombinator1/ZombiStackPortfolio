@@ -38,26 +38,24 @@ export function HeroD() {
               </span>
             </h1>
 
-        <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-          <p className="max-w-md text-base leading-7 text-zinc-400 lg:text-lg">
-Analizuje oferty konkurencji, wdrażam najlepsze praktyki marketingowe i techniczne, stworzę stronę skrojoną pod Twoją firmę/JDG.
-          </p>
+            <p className="mt-8 max-w-md text-base leading-7 text-zinc-400 lg:text-lg">
+              Analizuję oferty konkurencji, wdrażam najlepsze praktyki marketingowe i techniczne, stworzę stronę skrojoną pod Twoją firmę/JDG.
+            </p>
 
-          <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-            <Link
-              href="#kontakt"
-              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-zinc-950 transition hover:-translate-y-0.5 hover:bg-zinc-100"
-            >
-              Umów bezpłatną konsultację
-            </Link>
-            <Link
-              href="#demo"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/5"
-            >
-              Zobacz przykładowe strony
-            </Link>
-          </div>
-        </div>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="#kontakt"
+                className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-zinc-950 transition hover:-translate-y-0.5 hover:bg-zinc-100"
+              >
+                Umów bezpłatną konsultację
+              </Link>
+              <Link
+                href="#demo"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/5"
+              >
+                Zobacz przykładowe strony
+              </Link>
+            </div>
 
             <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/8 pt-8">
               {proofItems.map((item) => (
