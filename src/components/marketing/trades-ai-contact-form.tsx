@@ -34,7 +34,7 @@ export function TradesAiContactForm() {
             name="description"
             rows={5}
             required
-            placeholder="Np. prowadzę firmę hydrauliczną w Krakowie, dużo telefonów wpada, gdy jestem na robocie albo po 17:00. Chcę, żeby ktoś zebrał adres, typ awarii i pilność zgłoszenia."
+            placeholder="Np. prowadzę firmę hydrauliczną w Krakowie, część telefonów wpada w trakcie realizacji zleceń albo po godzinach. Chcę, żeby ktoś zebrał adres, typ zgłoszenia i pilność kontaktu."
             className="w-full resize-none rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-zinc-500"
           />
         </div>

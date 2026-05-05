@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { AboutMeD } from '@/components/marketing/about-me';
+import { TradesAiAbout } from '@/components/marketing/trades-ai-about';
 import { TradesAiContactForm } from '@/components/marketing/trades-ai-contact-form';
 import { Container } from '@/components/ui/container';
 
 export const metadata: Metadata = {
   title: 'Nie trać zleceń przez nieodebrane telefony — asystent dla firm usługowych',
   description:
-    'Telefoniczny backup dla hydraulików, HVAC, elektryków i wykonawców. Odbiera, kwalifikuje zgłoszenia i zbiera dane, gdy jesteś na robocie albo po godzinach.',
+    'Telefoniczny backup dla hydraulików, firm od klimatyzacji i ogrzewania, elektryków oraz wykonawców. Odbiera, kwalifikuje zgłoszenia i zbiera dane, gdy prowadzisz zlecenie albo jesteś po godzinach pracy.',
 };
 
-const tradeSegments = ['Hydraulicy', 'HVAC', 'Elektrycy', 'Wykonawcy'];
+const tradeSegments = ['Hydraulicy', 'Klimatyzacja i ogrzewanie', 'Elektrycy', 'Wykonawcy'];
 
 const painPoints = [
-  'Klient dzwoni, gdy jesteś pod zlewem, na drabinie, w aucie albo przy innym kliencie.',
+  'Klient dzwoni, gdy prowadzisz zlecenie, jesteś w trasie albo obsługujesz innego klienta.',
   'Nie zostawia wiadomości głosowej, tylko wybiera kolejną firmę z Google lub Map.',
   'Płacisz za widoczność, ale część telefonów przepada, zanim ktokolwiek zdąży zebrać adres i problem.',
 ];
@@ -22,15 +22,15 @@ const benefits = [
   {
     title: 'Więcej zgłoszeń z telefonów, które już masz',
     description:
-      'Nie obiecuję magicznie większego ruchu. Chodzi o to, żeby nie tracić ludzi, którzy już zadzwonili, bo potrzebują hydraulika, elektryka, HVAC albo wykonawcy.',
+      'Nie obiecuję magicznie większego ruchu. Chodzi o to, żeby nie tracić osób, które już zadzwoniły, bo potrzebują hydraulika, elektryka, serwisu klimatyzacji lub ogrzewania albo wykonawcy.',
   },
   {
-    title: 'Szybka kwalifikacja bez odrywania Cię od roboty',
+    title: 'Szybka kwalifikacja bez przerywania pracy',
     description:
       'Asystent zbiera typ usterki, adres, pilność, preferowany termin i dane kontaktowe. Ty wracasz do klienta z kontekstem, a nie z pustym numerem w historii połączeń.',
   },
   {
-    title: 'Backup po godzinach i w czasie pracy w terenie',
+    title: 'Backup 24/7 i w czasie pracy w terenie',
     description:
       'Może działać na osobnym numerze albo jako przekierowanie, gdy nie odbierzesz po kilku sekundach. Recepcja lub Ty nadal odbieracie, gdy możecie.',
   },
@@ -65,7 +65,7 @@ const faqItems = [
   {
     question: 'Czy to zastępuje mnie albo moją recepcję?',
     answer:
-      'Nie. To backup wtedy, gdy Ty albo recepcja nie możecie odebrać: jesteś na robocie, prowadzisz, masz zajęte ręce, jest po godzinach albo linia jest zajęta. Jeśli odbierasz normalnie, nic się nie zmienia.',
+      'Nie. To backup wtedy, gdy Ty albo recepcja nie możecie odebrać: prowadzisz zlecenie, jesteś w trasie, obsługujesz innego klienta, jest po godzinach albo linia jest zajęta. Jeśli odbierasz normalnie, nic się nie zmienia.',
   },
   {
     question: 'Co jeśli klient ma pilną awarię?',
@@ -112,11 +112,11 @@ function HeroSection() {
             <h1 className="max-w-4xl text-[clamp(2.35rem,5vw,5rem)] font-bold leading-[1.02] tracking-[-0.05em] text-white">
               Nie trać zleceń, kiedy jesteś{' '}
               <span className="bg-gradient-to-br from-orange-200 via-amber-300 to-orange-500 bg-clip-text text-transparent">
-                na robocie.
+                w trakcie zlecenia.
               </span>
             </h1>
             <p className="mt-8 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-              Klient z awarią nie czeka, aż skończysz montaż, zejdziesz z drabiny albo oddzwonisz po godzinie. Ustawiam asystenta, który odbiera, zbiera dane zgłoszenia i daje Ci drugą szansę na zlecenie.
+              Klient z pilnym problemem nie zawsze poczeka, aż skończysz montaż, dojedziesz na miejsce albo oddzwonisz po godzinie. Ustawiam asystenta, który odbiera, zbiera dane zgłoszenia i daje Ci drugą szansę na kontakt z potencjalnym klientem.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -168,7 +168,7 @@ function HeroSection() {
               </div>
 
               <div className="mt-6 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 text-sm leading-6 text-emerald-100">
-                Zamiast pustego missed call masz gotowy kontekst do oddzwonienia.
+                    Zamiast samego nieodebranego połączenia masz gotowy kontekst do oddzwonienia.
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@ function BenefitsSection() {
             Asystent ma robić jedną rzecz: pilnować, żeby telefon od potencjalnego klienta nie zniknął.
           </h2>
           <p className="mt-5 text-lg leading-8 text-zinc-600">
-            Komunikacja jest ustawiona pod firmy usługowe, które pracują w terenie, a nie pod biurowe SaaS-y. Liczy się adres, typ roboty, pilność i szybki powrót do klienta.
+            Komunikacja jest ustawiona pod firmy usługowe, które pracują w terenie, a nie pod biurowe rozwiązania SaaS. Liczy się adres, zakres zgłoszenia, pilność i szybki powrót do klienta.
           </p>
         </div>
 
@@ -301,6 +301,7 @@ function PricingSection() {
               'Asystent ustawiony pod Twoje usługi, obszar działania i typowe zgłoszenia.',
               'Nowy numer telefonu lub przekierowanie po kilku sekundach bez odpowiedzi.',
               'Zbieranie danych: problem, adres, pilność, termin i kontakt.',
+              'Nagrania rozmów są dostępne do odsłuchu; klient jest informowany o nagrywaniu, a materiał pomaga poprawiać obsługę i szybciej wracać do kontekstu zgłoszenia.',
               'Stały support i poprawki scenariusza rozmowy po realnych telefonach.',
             ].map((item) => (
               <li key={item} className="flex gap-3">
@@ -354,7 +355,7 @@ function FaqSection() {
 function CtaSection() {
   const reassurances = [
     'Najpierw rozmowa o Twoich realnych telefonach',
-    'Demo dopasowane do hydraulika, HVAC, elektryka lub wykonawcy',
+    'Demo dopasowane do hydraulika, firmy od klimatyzacji i ogrzewania, elektryka lub wykonawcy',
     'Jeśli problem jest zbyt mały, powiem to wprost',
   ];
 
@@ -398,7 +399,7 @@ export default function TradesAiReceptionistPage() {
     <>
       <HeroSection />
       <ProblemSection />
-      <AboutMeD />
+      <TradesAiAbout />
       <BenefitsSection />
       <ProcessSection />
       <PricingSection />
