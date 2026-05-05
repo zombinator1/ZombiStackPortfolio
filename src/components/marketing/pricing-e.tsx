@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 
@@ -243,7 +244,7 @@ export function PricingE() {
                       </li>
                     ))}
                   </ul>
-                  <a
+                  <Link
                     href="/#kontakt"
                     className={`mt-6 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all duration-200 ${
                       plan.featured
@@ -255,7 +256,7 @@ export function PricingE() {
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -263,9 +264,9 @@ export function PricingE() {
 
           <p className="mt-10 text-center text-sm text-zinc-400">
             Potrzebujesz czegoś innego?{' '}
-            <a href="/#kontakt" className="font-medium text-zinc-700 underline underline-offset-2 hover:text-zinc-900">
+            <Link href="/#kontakt" className="font-medium text-zinc-700 underline underline-offset-2 hover:text-zinc-900">
               Napisz do mnie
-            </a>{' '}
+            </Link>{' '}
             — każdy projekt wyceniam indywidualnie.
           </p>
 
@@ -293,9 +294,9 @@ export function PricingE() {
             </div>
             <p className="mt-5 text-center text-sm text-zinc-400">
               Interesuje Cię któryś z dodatków?{' '}
-              <a href="/#kontakt" className="font-medium text-zinc-700 underline underline-offset-2 hover:text-zinc-900">
+              <Link href="/#kontakt" className="font-medium text-zinc-700 underline underline-offset-2 hover:text-zinc-900">
                 Zapytaj o wycenę
-              </a>
+              </Link>
             </p>
           </div>
 
