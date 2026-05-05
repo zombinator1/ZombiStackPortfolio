@@ -275,7 +275,7 @@ function PricingSection() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">Cena</p>
           <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] text-zinc-900 sm:text-4xl">
-            Na start prosto: 249 zł miesięcznie.
+            7 dni okresu próbnego, potem od 249 zł miesięcznie.
           </h2>
           <p className="mt-5 text-lg leading-8 text-zinc-600">
             Cena jest ustawiona tak, żeby łatwo przetestować, czy przechwytywanie zgłoszeń ma sens w Twojej firmie. Jeżeli jedno dodatkowe zlecenie pokrywa koszt, rozmowa robi się konkretna.
