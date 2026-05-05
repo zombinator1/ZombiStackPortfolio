@@ -25,7 +25,10 @@ export function PhotoNav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => { setMenuOpen(false); }, [pathname]);
+  useEffect(() => {
+    const timeout = window.setTimeout(() => setMenuOpen(false), 0);
+    return () => window.clearTimeout(timeout);
+  }, [pathname]);
 
   const isActive = (href: string) =>
     href === BASE ? pathname === href : pathname.startsWith(href);
